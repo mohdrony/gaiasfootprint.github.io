@@ -1,325 +1,359 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gaia’s Footprint – Smart Posture Corrector</title>
-    <style>
-        :root {
-            --bg: #f7f2ec;
-            --card: #ffffff;
-            --accent: #b76b42;
-            --accent-soft: #e4c3a8;
-            --text-main: #2b221b;
-            --text-soft: #6f645c;
-            --brand-green: #0b7b5f;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gaia’s Footprint – Sustainable Essentials for Modern Living</title>
+  <style>
+    :root {
+      --bg: #f7f2ec;
+      --card: #ffffff;
+      --accent: #b76b42;
+      --accent-soft: #e4c3a8;
+      --text-main: #2b221b;
+      --text-soft: #6f645c;
+      --brand-green: #0b7b5f;
+    }
 
-        * {
-            box-sizing: border-box;
-        }
+    * { box-sizing: border-box; }
 
-        body {
-            margin: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background: var(--bg);
-            color: var(--text-main);
-        }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text-main);
+    }
 
-        a {
-            color: inherit;
-        }
+    a { color: inherit; text-decoration: none; }
 
-        /* Top nav */
-        .nav {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 18px 20px 10px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+    /* NAVBAR */
+    .nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 14px 20px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
 
-        .nav-logo {
-            font-weight: 700;
-            letter-spacing: 0.16em;
-            font-size: 14px;
-        }
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
 
-        .nav-pill {
-            font-size: 12px;
-            padding: 6px 12px;
-            border-radius: 999px;
-            border: 1px solid rgba(0,0,0,0.06);
-            background: rgba(255,255,255,0.8);
-        }
+    .nav-logo-img {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+    }
 
-        /* Hero */
-        .hero {
-            max-width: 1100px;
-            margin: 10px auto 40px;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-            gap: 32px;
-            align-items: center;
-        }
+    .nav-brand {
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      font-size: 13px;
+    }
 
-        .hero-eyebrow {
-            text-transform: uppercase;
-            font-size: 12px;
-            letter-spacing: 0.16em;
-            color: var(--text-soft);
-            margin-bottom: 8px;
-        }
+    .nav-links {
+      display: flex;
+      gap: 16px;
+      font-size: 14px;
+    }
 
-        .hero-title {
-            font-size: 40px;
-            line-height: 1.1;
-            margin: 0 0 14px;
-        }
+    .nav-link {
+      opacity: 0.8;
+    }
 
-        .hero-sub {
-            font-size: 16px;
-            color: var(--text-soft);
-            margin-bottom: 18px;
-        }
+    .nav-link:hover {
+      opacity: 1;
+    }
 
-        .hero-badges {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-            margin-bottom: 18px;
-        }
+    .nav-pill {
+      font-size: 12px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(0,0,0,0.06);
+      background: rgba(255,255,255,0.9);
+    }
 
-        .hero-badge {
-            font-size: 12px;
-            padding: 6px 10px;
-            border-radius: 999px;
-            background: rgba(255,255,255,0.8);
-            border: 1px solid rgba(0,0,0,0.04);
-        }
+    /* HERO */
+    .hero {
+      max-width: 1100px;
+      margin: 10px auto 50px;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+      gap: 32px;
+      align-items: center;
+    }
 
-        .hero-cta-row {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-            align-items: center;
-        }
+    .hero-eyebrow {
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      color: var(--text-soft);
+      margin-bottom: 8px;
+    }
 
-        .btn-primary {
-            display: inline-block;
-            background: var(--brand-green);
-            color: white;
-            padding: 11px 20px;
-            border-radius: 999px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 14px;
-        }
+    .hero-title {
+      font-size: 40px;
+      line-height: 1.1;
+      margin: 0 0 14px;
+    }
 
-        .btn-primary:hover {
-            background: #08644c;
-        }
+    .hero-sub {
+      font-size: 16px;
+      color: var(--text-soft);
+      margin-bottom: 18px;
+    }
 
-        .hero-note {
-            font-size: 12px;
-            color: var(--text-soft);
-        }
+    .hero-cta-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
 
-        .hero-img-wrap {
-            position: relative;
-        }
+    .btn-primary {
+      display: inline-block;
+      background: var(--brand-green);
+      color: #fff;
+      padding: 11px 20px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 14px;
+    }
 
-        .hero-tag {
-            position: absolute;
-            bottom: 14px;
-            left: 14px;
-            background: rgba(0,0,0,0.7);
-            color: white;
-            padding: 6px 10px;
-            border-radius: 999px;
-            font-size: 11px;
-        }
+    .btn-primary:hover { background: #08644c; }
 
-        .hero-img {
-            width: 100%;
-            border-radius: 22px;
-            box-shadow: 0 14px 30px rgba(0,0,0,0.18);
-            display: block;
-        }
+    .hero-note {
+      font-size: 12px;
+      color: var(--text-soft);
+    }
 
-        /* “Breathe and Be Light” section */
-        .section {
-            max-width: 1100px;
-            margin: 0 auto 60px;
-            padding: 0 20px;
-        }
+    .hero-img-wrap {
+      position: relative;
+    }
 
-        .card {
-            display: grid;
-            grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
-            gap: 30px;
-            align-items: center;
-            background: var(--card);
-            border-radius: 26px;
-            padding: 26px 26px;
-            border: 1px solid rgba(0,0,0,0.04);
-        }
+    .hero-img {
+      width: 100%;
+      border-radius: 22px;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.18);
+      display: block;
+    }
 
-        .card-img-wrap {
-            position: relative;
-        }
+    .hero-tag {
+      position: absolute;
+      bottom: 14px;
+      left: 14px;
+      background: rgba(0,0,0,0.7);
+      color: white;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+    }
 
-        .shape-bg {
-            position: absolute;
-            inset: 14% -10% auto auto;
-            background: var(--accent-soft);
-            border-radius: 999px;
-            opacity: 0.4;
-            z-index: 0;
-        }
+    /* FEATURED PRODUCT STRIP */
+    .strip {
+      max-width: 1100px;
+      margin: 0 auto 50px;
+      padding: 0 20px;
+    }
 
-        .card-img {
-            position: relative;
-            width: 100%;
-            border-radius: 18px;
-            display: block;
-            box-shadow: 0 10px 18px rgba(0,0,0,0.12);
-        }
+    .strip-card {
+      background: var(--card);
+      border-radius: 24px;
+      padding: 20px 22px;
+      border: 1px solid rgba(0,0,0,0.05);
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
 
-        .card-title {
-            font-size: 26px;
-            margin: 0 0 10px;
-            color: var(--accent);
-        }
+    .strip-tag {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--text-soft);
+      margin-bottom: 4px;
+    }
 
-        .card-text {
-            font-size: 15px;
-            color: var(--text-soft);
-            margin-bottom: 12px;
-        }
+    .strip-title {
+      font-size: 18px;
+      margin: 0 0 6px;
+    }
 
-        .bullet-list {
-            padding-left: 18px;
-            font-size: 14px;
-            color: var(--text-soft);
-        }
+    .strip-text {
+      font-size: 14px;
+      color: var(--text-soft);
+    }
 
-        .badge-small {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 12px;
-            padding: 5px 9px;
-            border-radius: 999px;
-            background: rgba(11,123,95,0.06);
-            color: var(--brand-green);
-            margin-top: 8px;
-        }
+    .btn-ghost {
+      font-size: 13px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(0,0,0,0.08);
+      background: transparent;
+    }
 
-        .badge-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: var(--brand-green);
-        }
+    /* IMAGE GRID SECTION */
+    .section {
+      max-width: 1100px;
+      margin: 0 auto 60px;
+      padding: 0 20px;
+    }
 
-        footer {
-            text-align: center;
-            padding: 34px 16px 40px;
-            font-size: 13px;
-            color: var(--text-soft);
-        }
+    .section-title {
+      font-size: 24px;
+      margin-bottom: 6px;
+    }
 
-        @media (max-width: 850px) {
-            .hero {
-                grid-template-columns: minmax(0,1fr);
-            }
-            .hero {
-                text-align: left;
-            }
-        }
+    .section-sub {
+      font-size: 15px;
+      color: var(--text-soft);
+      margin-bottom: 20px;
+    }
 
-        @media (max-width: 720px) {
-            .hero-title {
-                font-size: 30px;
-            }
-            .card {
-                grid-template-columns: minmax(0,1fr);
-            }
-        }
-    </style>
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 18px;
+    }
+
+    .grid-item {
+      background: var(--card);
+      border-radius: 18px;
+      padding: 10px;
+      border: 1px solid rgba(0,0,0,0.04);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .grid-img {
+      width: 100%;
+      border-radius: 12px;
+      display: block;
+    }
+
+    .grid-label {
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .grid-text {
+      font-size: 13px;
+      color: var(--text-soft);
+    }
+
+    footer {
+      text-align: center;
+      padding: 34px 16px 40px;
+      font-size: 13px;
+      color: var(--text-soft);
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: minmax(0,1fr);
+      }
+    }
+
+    @media (max-width: 700px) {
+      .hero-title { font-size: 30px; }
+      .grid {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+      }
+    }
+
+    @media (max-width: 500px) {
+      .grid {
+        grid-template-columns: minmax(0,1fr);
+      }
+    }
+  </style>
 </head>
 <body>
 
-<!-- Top Navbar -->
-<div class="nav">
-    <div class="nav-logo">GAIA’S FOOTPRINT</div>
-    <div class="nav-pill">Sustainable Essentials for Modern Living</div>
-</div>
+<!-- NAVBAR -->
+<header class="nav">
+  <div class="nav-left">
+    <img src="gaias-logo.png" alt="Gaia’s Footprint logo" class="nav-logo-img" />
+    <div class="nav-brand">GAIA’S FOOTPRINT</div>
+  </div>
+  <nav class="nav-links">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="posture-corrector.html" class="nav-link">Posture Corrector</a>
+  </nav>
+  <div class="nav-pill">Sustainable essentials for modern living</div>
+</header>
 
 <!-- HERO -->
 <section class="hero">
-    <div>
-        <div class="hero-eyebrow">Smart Posture Corrector</div>
-        <h1 class="hero-title">Light on your shoulders.<br>Strong on your posture.</h1>
-        <p class="hero-sub">
-            An ergonomic posture corrector designed to support your back gently, 
-            so you can sit, stand and move with confidence—at your desk, on the go, or at home.
-        </p>
-
-        <div class="hero-badges">
-            <div class="hero-badge">Adjustable unisex fit</div>
-            <div class="hero-badge">Soft, breathable fabric</div>
-            <div class="hero-badge">Discreet under clothing</div>
-        </div>
-
-        <div class="hero-cta-row">
-            <a class="btn-primary" href="https://amzn.eu/d/cJO91wE" target="_blank" rel="noopener noreferrer">
-                Buy on Amazon
-            </a>
-            <span class="hero-note">Free delivery with Amazon Prime in many regions.</span>
-        </div>
+  <div>
+    <div class="hero-eyebrow">Introducing</div>
+    <h1 class="hero-title">Feel lighter in your body.<br />Leave a softer footprint.</h1>
+    <p class="hero-sub">
+      Gaia’s Footprint creates everyday products that support your body and your routine—starting with a smart posture
+      corrector designed for real life: work, running, home, and everything in between.
+    </p>
+    <div class="hero-cta-row">
+      <a class="btn-primary" href="posture-corrector.html">Explore Posture Corrector</a>
+      <span class="hero-note">More products coming soon.</span>
     </div>
+  </div>
 
-    <div class="hero-img-wrap">
-        <!-- Replace filename with your actual uploaded hero image -->
-        <img src="posture-hero.jpg" alt="Gaia’s Footprint posture corrector worn by two people" class="hero-img">
-        <div class="hero-tag">Gaia’s Footprint · Posture Corrector</div>
-    </div>
+  <div class="hero-img-wrap">
+    <img src="posture-hero.jpg" alt="Gaia’s Footprint posture corrector" class="hero-img" />
+    <div class="hero-tag">Smart Posture Corrector · By Gaia’s Footprint</div>
+  </div>
 </section>
 
-<!-- BREATHE & BE LIGHT SECTION -->
-<section class="section">
-    <div class="card">
-        <div class="card-img-wrap">
-            <div class="shape-bg"></div>
-            <!-- Replace filename with your close-up image -->
-            <img src="posture-closeup.jpg" alt="Close-up of Gaia’s Footprint posture corrector fabric" class="card-img">
-        </div>
-        <div>
-            <h2 class="card-title">To Breathe and be Light</h2>
-            <p class="card-text">
-                Crafted from an airy, breathable fabric that moves with you—so light, it feels like wearing nothing at all.
-                The wide straps and soft edges help reduce pressure points while gently guiding your shoulders back.
-            </p>
-            <ul class="bullet-list">
-                <li>Flexible neoprene blend for comfort and durability.</li>
-                <li>Wide waist support to stabilize your lower back.</li>
-                <li>Simple adjustment straps to fit different body types.</li>
-                <li>Designed to be worn discreetly under or over clothing.</li>
-            </ul>
-            <div class="badge-small">
-                <span class="badge-dot"></span>
-                Designed with care by Gaia’s Footprint
-            </div>
-        </div>
+<!-- FEATURED STRIP -->
+<section class="strip">
+  <div class="strip-card">
+    <div>
+      <div class="strip-tag">Featured product</div>
+      <h2 class="strip-title">Smart Posture Corrector with Lumbar Support</h2>
+      <p class="strip-text">
+        A breathable, adjustable posture brace designed to gently guide your shoulders back, support your lower back,
+        and help reduce everyday back &amp; neck strain.
+      </p>
     </div>
+    <a href="posture-corrector.html" class="btn-ghost">View details &amp; Amazon link →</a>
+  </div>
+</section>
+
+<!-- LIFESTYLE GRID -->
+<section class="section">
+  <h2 class="section-title">Designed for real life</h2>
+  <p class="section-sub">From desk work to runs by the river—your posture support should move with you.</p>
+
+  <div class="grid">
+    <div class="grid-item">
+      <img src="posture-running.jpg" alt="Using posture corrector while running" class="grid-img" />
+      <div class="grid-label">Running &amp; training</div>
+      <div class="grid-text">Stay open through the chest and keep your shoulders relaxed while you move.</div>
+    </div>
+
+    <div class="grid-item">
+      <img src="posture-fitness-home.jpg" alt="Fitness and home use" class="grid-img" />
+      <div class="grid-label">Fitness &amp; at home</div>
+      <div class="grid-text">Whether lifting, cleaning or cooking—support that blends into your day.</div>
+    </div>
+
+    <div class="grid-item">
+      <img src="posture-office-pain.jpg" alt="Office sitting posture" class="grid-img" />
+      <div class="grid-label">Long desk hours</div>
+      <div class="grid-text">Helps you avoid slouching and relieve tension in your neck and upper back.</div>
+    </div>
+  </div>
 </section>
 
 <footer>
-    © 2025 Gaia’s Footprint — All rights reserved.
+  © 2025 Gaia’s Footprint — All rights reserved.
 </footer>
 
 </body>
