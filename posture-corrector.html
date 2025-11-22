@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gaia’s Footprint – Smart Posture Corrector</title>
+  <style>
+    :root {
+      --bg: #f7f2ec;
+      --card: #ffffff;
+      --accent: #b76b42;
+      --accent-soft: #e4c3a8;
+      --text-main: #2b221b;
+      --text-soft: #6f645c;
+      --brand-green: #0b7b5f;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text-main);
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* NAVBAR (same as index) */
+    .nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 14px 20px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-logo-img {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+    }
+
+    .nav-brand {
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      font-size: 13px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 16px;
+      font-size: 14px;
+    }
+
+    .nav-link { opacity: 0.8; }
+    .nav-link:hover { opacity: 1; }
+
+    .nav-pill {
+      font-size: 12px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(0,0,0,0.06);
+      background: rgba(255,255,255,0.9);
+    }
+
+    /* HERO PRODUCT */
+    .hero {
+      max-width: 1100px;
+      margin: 10px auto 40px;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+      gap: 30px;
+      align-items: center;
+    }
+
+    .hero-eyebrow {
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      color: var(--text-soft);
+      margin-bottom: 8px;
+    }
+
+    .hero-title {
+      font-size: 34px;
+      line-height: 1.15;
+      margin: 0 0 10px;
+    }
+
+    .hero-sub {
+      font-size: 15px;
+      color: var(--text-soft);
+      margin-bottom: 14px;
+    }
+
+    .hero-list {
+      padding-left: 18px;
+      font-size: 14px;
+      color: var(--text-soft);
+      margin-bottom: 16px;
+    }
+
+    .hero-cta-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--brand-green);
+      color: #fff;
+      padding: 11px 20px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .btn-primary:hover { background: #08644c; }
+
+    .hero-note {
+      font-size: 12px;
+      color: var(--text-soft);
+    }
+
+    .hero-img-wrap {
+      position: relative;
+    }
+
+    .hero-img {
+      width: 100%;
+      border-radius: 22px;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.18);
+      display: block;
+    }
+
+    .hero-tag {
+      position: absolute;
+      bottom: 14px;
+      left: 14px;
+      background: rgba(0,0,0,0.7);
+      color: white;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+    }
+
+    /* SECTIONS */
+    .section {
+      max-width: 1100px;
+      margin: 0 auto 50px;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    .section-sub {
+      font-size: 15px;
+      color: var(--text-soft);
+      margin-bottom: 20px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 24px;
+      padding: 22px;
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .card-grid-2 {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+      gap: 26px;
+      align-items: center;
+    }
+
+    .card-img {
+      width: 100%;
+      border-radius: 18px;
+      display: block;
+    }
+
+    .pill {
+      display: inline-block;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--text-soft);
+      margin-bottom: 4px;
+    }
+
+    .pill-green {
+      color: var(--brand-green);
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 16px;
+    }
+
+    .two-col img {
+      width: 100%;
+      border-radius: 18px;
+      display: block;
+    }
+
+    .text-small {
+      font-size: 13px;
+      color: var(--text-soft);
+      margin-top: 6px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 34px 16px 40px;
+      font-size: 13px;
+      color: var(--text-soft);
+    }
+
+    @media (max-width: 900px) {
+      .hero, .card-grid-2 {
+        grid-template-columns: minmax(0,1fr);
+      }
+    }
+
+    @media (max-width: 700px) {
+      .hero-title { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="nav">
+  <div class="nav-left">
+    <img src="gaias-logo.png" alt="Gaia’s Footprint logo" class="nav-logo-img" />
+    <div class="nav-brand">GAIA’S FOOTPRINT</div>
+  </div>
+  <nav class="nav-links">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="posture-corrector.html" class="nav-link">Posture Corrector</a>
+  </nav>
+  <div class="nav-pill">Thoughtful support for your body</div>
+</header>
+
+<!-- HERO: PRODUCT -->
+<section class="hero">
+  <div>
+    <div class="hero-eyebrow">Smart posture corrector</div>
+    <h1 class="hero-title">Lightweight support for everyday posture.</h1>
+    <p class="hero-sub">
+      An ergonomic posture brace with lumbar support that gently guides your shoulders back and stabilises your lower back,
+      helping to reduce tension in your neck and shoulders.
+    </p>
+    <ul class="hero-list">
+      <li>Soft, breathable fabric that moves with you.</li>
+      <li>Adjustable straps for a unisex fit (S–XL).</li>
+      <li>Discreet under clothing for work, home, and training.</li>
+    </ul>
+    <div class="hero-cta-row">
+      <a class="btn-primary" href="https://amzn.eu/d/cJO91wE" target="_blank" rel="noopener noreferrer">
+        Buy on Amazon
+      </a>
+      <span class="hero-note">You’ll be redirected to our Amazon product page.</span>
+    </div>
+  </div>
+
+  <div class="hero-img-wrap">
+    <img src="posture-hero.jpg" alt="Gaia’s Footprint posture corrector" class="hero-img" />
+    <div class="hero-tag">Available now on Amazon</div>
+  </div>
+</section>
+
+<!-- SECTION: TO BREATHE AND BE LIGHT -->
+<section class="section">
+  <div class="card card-grid-2">
+    <div>
+      <span class="pill">Comfort</span>
+      <h2 class="section-title">To breathe and be light</h2>
+      <p class="section-sub">
+        Crafted from an airy, breathable fabric that moves with you—so light it feels like wearing nothing at all.
+        Wide straps and soft edges help reduce pressure points while guiding you into a more open posture.
+      </p>
+      <ul class="hero-list">
+        <li>Flexible neoprene blend for comfort and durability.</li>
+        <li>Wide waist support to stabilise your lower back.</li>
+        <li>Designed to be worn over or under clothing.</li>
+      </ul>
+    </div>
+    <div>
+      <img src="posture-closeup.jpg" alt="Close-up of Gaia’s Footprint posture corrector fabric" class="card-img" />
+    </div>
+  </div>
+</section>
+
+<!-- SECTION: USE CASES (RUNNING / FITNESS / HOME) -->
+<section class="section">
+  <span class="pill">Versatility</span>
+  <h2 class="section-title">From running to relaxing at home</h2>
+  <p class="section-sub">
+    Your posture doesn’t just matter at the desk. The brace is designed to move with you—whether you run, lift, or just
+    take care of things around the house.
+  </p>
+
+  <div class="two-col">
+    <div class="card">
+      <img src="posture-running.jpg" alt="Posture corrector used while running" />
+      <div class="text-small"><strong>Running:</strong> stay open through the chest and keep your stride relaxed.</div>
+    </div>
+    <div class="card">
+      <img src="posture-fitness-home.jpg" alt="Posture corrector for fitness and at-home use" />
+      <div class="text-small">
+        <strong>Fitness &amp; home:</strong> lifting, cleaning, ironing—support that blends into daily life.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION: BEFORE / AFTER + PAIN RELIEF -->
+<section class="section">
+  <div class="card card-grid-2">
+    <div>
+      <span class="pill pill-green">Support</span>
+      <h2 class="section-title">See and feel the difference</h2>
+      <p class="section-sub">
+        By encouraging a more upright alignment, the brace can help relieve the strain that builds up from hours of
+        slouching—especially in the neck, shoulders and upper back.
+      </p>
+      <p class="section-sub">
+        Wear it for short sessions at first and gradually increase the time as your muscles adapt.
+      </p>
+    </div>
+    <div>
+      <img src="posture-before-after.jpg" alt="Before and after posture comparison" class="card-img" />
+    </div>
+  </div>
+
+  <div style="height:16px;"></div>
+
+  <div class="card">
+    <img src="posture-office-pain.jpg" alt="Office posture, back and neck pain" class="card-img" />
+    <p class="text-small">
+      Long desk days? The brace gently reminds you not to collapse into your chair and can help reduce typical back &amp;
+      neck tension from screen work.
+    </p>
+  </div>
+</section>
+
+<!-- SECTION: DESIGN DETAILS (FULL BACK + BELT) -->
+<section class="section">
+  <span class="pill">Design details</span>
+  <h2 class="section-title">Full-length support and an improved belt</h2>
+  <p class="section-sub">
+    We listened to feedback and updated the design with a more stable back panel and a longer belt for extra adjustability.
+  </p>
+
+  <div class="two-col">
+    <div class="card">
+      <img src="posture-full-back.jpg" alt="Full-length back design of posture corrector" />
+      <div class="text-small">
+        <strong>Full-length flows:</strong> stable back loop for a more secure, even support along the spine.
+      </div>
+    </div>
+    <div class="card">
+      <img src="posture-long-belt.jpg" alt="Extra long belt of posture corrector" />
+      <div class="text-small">
+        <strong>Extra long belt:</strong> extended belt and extra Velcro help you get a snug fit across different body types.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION: SIZE CHART -->
+<section class="section">
+  <div class="card">
+    <span class="pill">Fit guide</span>
+    <h2 class="section-title">Find your size</h2>
+    <p class="section-sub">
+      Choose your size based on your waist circumference. If you are between sizes or taller than average, consider
+      sizing up for more comfort. The belt is adjustable to fit a range of body shapes.
+    </p>
+    <img src="posture-size-chart.jpg" alt="Gaia’s Footprint posture corrector size chart" class="card-img" />
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="section">
+  <div class="card card-grid-2">
+    <div>
+      <span class="pill pill-green">Ready when you are</span>
+      <h2 class="section-title">Start building a gentler posture habit.</h2>
+      <p class="section-sub">
+        Wear the posture corrector for short, regular periods instead of all day. Over time, your muscles learn what
+        “upright” feels like—so you can rely less on the brace and more on your own strength.
+      </p>
+      <a class="btn-primary" href="https://amzn.eu/d/cJO91wE" target="_blank" rel="noopener noreferrer">
+        Go to Amazon product page
+      </a>
+    </div>
+    <div>
+      <img src="posture-closeup.jpg" alt="Detail of posture corrector fabric and logo" class="card-img" />
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2025 Gaia’s Footprint — All rights reserved.
+</footer>
+
+</body>
+</html>
