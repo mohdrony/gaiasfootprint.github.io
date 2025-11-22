@@ -3,156 +3,320 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gaia’s Footprint – Sustainable Essentials for Modern Living</title>
+    <title>Gaia’s Footprint – Smart Posture Corrector</title>
     <style>
+        :root {
+            --bg: #f7f2ec;
+            --card: #ffffff;
+            --accent: #b76b42;
+            --accent-soft: #e4c3a8;
+            --text-main: #2b221b;
+            --text-soft: #6f645c;
+            --brand-green: #0b7b5f;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background: #ffffff;
-            color: #111;
+            background: var(--bg);
+            color: var(--text-main);
         }
 
-        /* Header */
-        header {
-            padding: 40px 20px;
-            text-align: center;
+        a {
+            color: inherit;
+        }
+
+        /* Top nav */
+        .nav {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 18px 20px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            font-size: 14px;
+        }
+
+        .nav-pill {
+            font-size: 12px;
+            padding: 6px 12px;
+            border-radius: 999px;
+            border: 1px solid rgba(0,0,0,0.06);
+            background: rgba(255,255,255,0.8);
+        }
+
+        /* Hero */
+        .hero {
+            max-width: 1100px;
+            margin: 10px auto 40px;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+            gap: 32px;
+            align-items: center;
+        }
+
+        .hero-eyebrow {
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 0.16em;
+            color: var(--text-soft);
+            margin-bottom: 8px;
         }
 
         .hero-title {
-            font-size: 42px;
-            font-weight: 700;
-            margin: 0;
-            letter-spacing: -1px;
+            font-size: 40px;
+            line-height: 1.1;
+            margin: 0 0 14px;
         }
 
         .hero-sub {
-            margin-top: 10px;
-            font-size: 18px;
-            color: #555;
+            font-size: 16px;
+            color: var(--text-soft);
+            margin-bottom: 18px;
         }
 
-        /* Hero image banner */
+        .hero-badges {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 18px;
+        }
+
+        .hero-badge {
+            font-size: 12px;
+            padding: 6px 10px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.8);
+            border: 1px solid rgba(0,0,0,0.04);
+        }
+
+        .hero-cta-row {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: var(--brand-green);
+            color: white;
+            padding: 11px 20px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .btn-primary:hover {
+            background: #08644c;
+        }
+
+        .hero-note {
+            font-size: 12px;
+            color: var(--text-soft);
+        }
+
+        .hero-img-wrap {
+            position: relative;
+        }
+
+        .hero-tag {
+            position: absolute;
+            bottom: 14px;
+            left: 14px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 6px 10px;
+            border-radius: 999px;
+            font-size: 11px;
+        }
+
         .hero-img {
             width: 100%;
-            height: 350px;
-            object-fit: cover;
+            border-radius: 22px;
+            box-shadow: 0 14px 30px rgba(0,0,0,0.18);
             display: block;
-            margin-top: 20px;
         }
 
-        /* Section */
+        /* “Breathe and Be Light” section */
         .section {
-            max-width: 950px;
-            margin: 60px auto;
+            max-width: 1100px;
+            margin: 0 auto 60px;
             padding: 0 20px;
         }
 
-        .section h2 {
-            font-size: 28px;
-            margin-bottom: 25px;
-            text-align: center;
+        .card {
+            display: grid;
+            grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+            gap: 30px;
+            align-items: center;
+            background: var(--card);
+            border-radius: 26px;
+            padding: 26px 26px;
+            border: 1px solid rgba(0,0,0,0.04);
         }
 
-        /* Product Cards */
-        .product-card {
-            background: #fafafa;
-            padding: 25px;
-            border-radius: 14px;
-            margin-bottom: 40px;
-            border: 1px solid #eee;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
+        .card-img-wrap {
+            position: relative;
         }
 
-        .product-img {
+        .shape-bg {
+            position: absolute;
+            inset: 14% -10% auto auto;
+            background: var(--accent-soft);
+            border-radius: 999px;
+            opacity: 0.4;
+            z-index: 0;
+        }
+
+        .card-img {
+            position: relative;
             width: 100%;
-            border-radius: 10px;
-            object-fit: contain;
+            border-radius: 18px;
+            display: block;
+            box-shadow: 0 10px 18px rgba(0,0,0,0.12);
         }
 
-        .product-title {
-            font-size: 22px;
-            margin: 0;
-            font-weight: 600;
+        .card-title {
+            font-size: 26px;
+            margin: 0 0 10px;
+            color: var(--accent);
         }
 
-        .product-desc {
-            font-size: 16px;
-            color: #555;
+        .card-text {
+            font-size: 15px;
+            color: var(--text-soft);
+            margin-bottom: 12px;
         }
 
-        .buy-btn {
-            display: inline-block;
-            background: #1f7a4e;
-            color: white;
-            padding: 12px 24px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            text-align: center;
-            margin-top: 10px;
+        .bullet-list {
+            padding-left: 18px;
+            font-size: 14px;
+            color: var(--text-soft);
         }
 
-        .buy-btn:hover {
-            background: #16633e;
+        .badge-small {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            padding: 5px 9px;
+            border-radius: 999px;
+            background: rgba(11,123,95,0.06);
+            color: var(--brand-green);
+            margin-top: 8px;
         }
 
-        /* Footer */
+        .badge-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--brand-green);
+        }
+
         footer {
             text-align: center;
-            padding: 40px;
-            font-size: 14px;
-            color: #666;
-            background: #fafafa;
-            border-top: 1px solid #eee;
+            padding: 34px 16px 40px;
+            font-size: 13px;
+            color: var(--text-soft);
         }
 
-        @media (max-width: 700px) {
-            .hero-title { font-size: 32px; }
-            .hero-img { height: 250px; }
+        @media (max-width: 850px) {
+            .hero {
+                grid-template-columns: minmax(0,1fr);
+            }
+            .hero {
+                text-align: left;
+            }
+        }
+
+        @media (max-width: 720px) {
+            .hero-title {
+                font-size: 30px;
+            }
+            .card {
+                grid-template-columns: minmax(0,1fr);
+            }
         }
     </style>
 </head>
-
 <body>
 
-<header>
-    <h1 class="hero-title">Gaia’s Footprint</h1>
-    <p class="hero-sub">Thoughtful. Sustainable. Designed for Everyday Well-Being.</p>
-</header>
-
-<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=2000&auto=format&fit=crop" 
-     alt="Nature banner" class="hero-img">
-
-<div class="section">
-    <h2>Our Products</h2>
-
-    <!-- POSTURE CORRECTOR -->
-    <div class="product-card">
-        <img src="https://m.media-amazon.com/images/I/61qRs05BuFL._AC_SX679_.jpg" class="product-img">
-        <h3 class="product-title">Smart Posture Corrector – Premium Back Support</h3>
-        <p class="product-desc">
-            Improve your posture effortlessly with our ergonomic posture corrector. 
-            Designed for comfort, flexibility, and everyday use. Perfect for long office hours, 
-            studying, or relieving back strain. Available in multiple sizes.
-        </p>
-        <a class="buy-btn"
-           href="https://www.amazon.de/Gaias-Footprint-Geradehalter-Haltungskorrektor-R%C3%BCckenst%C3%BCtze/dp/B0F313TYSS/ref=sr_1_5?crid=1LVC9RZ3GBNFM&qid=1763838856&sprefix=gaia%27s+footprint+posture+corrector&sr=8-5&th=1"
-           target="_blank">Buy on Amazon</a>
-    </div>
-
-    <!-- SECOND PRODUCT (COMING SOON) -->
-    <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1589571894960-20bbe2828d0a?q=80&w=1800&auto=format&fit=crop"
-             class="product-img">
-        <h3 class="product-title">Premium Thermo Bottle (Coming Soon)</h3>
-        <p class="product-desc">
-            Made from high-grade stainless steel with advanced insulation technology. 
-            Keeps beverages hot or cold for up to 24 hours. Durable, elegant, and sustainable.
-        </p>
-    </div>
+<!-- Top Navbar -->
+<div class="nav">
+    <div class="nav-logo">GAIA’S FOOTPRINT</div>
+    <div class="nav-pill">Sustainable Essentials for Modern Living</div>
 </div>
+
+<!-- HERO -->
+<section class="hero">
+    <div>
+        <div class="hero-eyebrow">Smart Posture Corrector</div>
+        <h1 class="hero-title">Light on your shoulders.<br>Strong on your posture.</h1>
+        <p class="hero-sub">
+            An ergonomic posture corrector designed to support your back gently, 
+            so you can sit, stand and move with confidence—at your desk, on the go, or at home.
+        </p>
+
+        <div class="hero-badges">
+            <div class="hero-badge">Adjustable unisex fit</div>
+            <div class="hero-badge">Soft, breathable fabric</div>
+            <div class="hero-badge">Discreet under clothing</div>
+        </div>
+
+        <div class="hero-cta-row">
+            <a class="btn-primary" href="https://amzn.eu/d/cJO91wE" target="_blank" rel="noopener noreferrer">
+                Buy on Amazon
+            </a>
+            <span class="hero-note">Free delivery with Amazon Prime in many regions.</span>
+        </div>
+    </div>
+
+    <div class="hero-img-wrap">
+        <!-- Replace filename with your actual uploaded hero image -->
+        <img src="posture-hero.jpg" alt="Gaia’s Footprint posture corrector worn by two people" class="hero-img">
+        <div class="hero-tag">Gaia’s Footprint · Posture Corrector</div>
+    </div>
+</section>
+
+<!-- BREATHE & BE LIGHT SECTION -->
+<section class="section">
+    <div class="card">
+        <div class="card-img-wrap">
+            <div class="shape-bg"></div>
+            <!-- Replace filename with your close-up image -->
+            <img src="posture-closeup.jpg" alt="Close-up of Gaia’s Footprint posture corrector fabric" class="card-img">
+        </div>
+        <div>
+            <h2 class="card-title">To Breathe and be Light</h2>
+            <p class="card-text">
+                Crafted from an airy, breathable fabric that moves with you—so light, it feels like wearing nothing at all.
+                The wide straps and soft edges help reduce pressure points while gently guiding your shoulders back.
+            </p>
+            <ul class="bullet-list">
+                <li>Flexible neoprene blend for comfort and durability.</li>
+                <li>Wide waist support to stabilize your lower back.</li>
+                <li>Simple adjustment straps to fit different body types.</li>
+                <li>Designed to be worn discreetly under or over clothing.</li>
+            </ul>
+            <div class="badge-small">
+                <span class="badge-dot"></span>
+                Designed with care by Gaia’s Footprint
+            </div>
+        </div>
+    </div>
+</section>
 
 <footer>
     © 2025 Gaia’s Footprint — All rights reserved.
