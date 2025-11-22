@@ -3,98 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gaia’s Footprint – Sustainable Essentials, Designed Thoughtfully</title>
+    <title>Gaia’s Footprint – Sustainable Essentials for Modern Living</title>
     <style>
         body {
             margin: 0;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background: #fafafa;
-            color: #222;
-        }
-
-        header {
-            padding: 50px 20px;
-            text-align: center;
             background: #ffffff;
-            border-bottom: 1px solid #eee;
+            color: #111;
         }
 
-        h1 {
-            font-size: 44px;
-            font-weight: 600;
-            margin-bottom: 5px;
+        /* Header */
+        header {
+            padding: 40px 20px;
+            text-align: center;
         }
 
-        p.tagline {
+        .hero-title {
+            font-size: 42px;
+            font-weight: 700;
+            margin: 0;
+            letter-spacing: -1px;
+        }
+
+        .hero-sub {
+            margin-top: 10px;
             font-size: 18px;
             color: #555;
-            margin-top: 0;
         }
 
+        /* Hero image banner */
+        .hero-img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            display: block;
+            margin-top: 20px;
+        }
+
+        /* Section */
         .section {
-            max-width: 900px;
+            max-width: 950px;
             margin: 60px auto;
             padding: 0 20px;
         }
 
         .section h2 {
             font-size: 28px;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            text-align: center;
         }
 
+        /* Product Cards */
         .product-card {
-            background: white;
-            border-radius: 12px;
-            padding: 24px;
-            margin: 25px 0;
+            background: #fafafa;
+            padding: 25px;
+            border-radius: 14px;
+            margin-bottom: 40px;
             border: 1px solid #eee;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
         }
 
+        .product-img {
+            width: 100%;
+            border-radius: 10px;
+            object-fit: contain;
+        }
+
+        .product-title {
+            font-size: 22px;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .product-desc {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .buy-btn {
+            display: inline-block;
+            background: #1f7a4e;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .buy-btn:hover {
+            background: #16633e;
+        }
+
+        /* Footer */
         footer {
             text-align: center;
             padding: 40px;
             font-size: 14px;
-            color: #777;
+            color: #666;
             background: #fafafa;
             border-top: 1px solid #eee;
         }
+
+        @media (max-width: 700px) {
+            .hero-title { font-size: 32px; }
+            .hero-img { height: 250px; }
+        }
     </style>
 </head>
+
 <body>
 
 <header>
-    <h1>Gaia’s Footprint</h1>
-    <p class="tagline">Thoughtful. Sustainable. Modern Essentials.</p>
+    <h1 class="hero-title">Gaia’s Footprint</h1>
+    <p class="hero-sub">Thoughtful. Sustainable. Designed for Everyday Well-Being.</p>
 </header>
 
-<div class="section">
-    <h2>About Us</h2>
-    <p>Gaia’s Footprint is a design-driven brand focused on sustainable lifestyle essentials.
-       Our mission is to create products that are ethically sourced, environmentally conscious,
-       and made to elevate everyday life with simplicity and care.</p>
-</div>
+<img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=2000&auto=format&fit=crop" 
+     alt="Nature banner" class="hero-img">
 
 <div class="section">
     <h2>Our Products</h2>
 
+    <!-- POSTURE CORRECTOR -->
     <div class="product-card">
-        <h3>Smart Posture Corrector</h3>
-        <p>An ergonomic, comfortable posture device designed to support long-term wellbeing.
-           Available now on Amazon.</p>
-        <p><strong>Amazon Link:</strong> Coming soon</p>
+        <img src="https://m.media-amazon.com/images/I/61qRs05BuFL._AC_SX679_.jpg" class="product-img">
+        <h3 class="product-title">Smart Posture Corrector – Premium Back Support</h3>
+        <p class="product-desc">
+            Improve your posture effortlessly with our ergonomic posture corrector. 
+            Designed for comfort, flexibility, and everyday use. Perfect for long office hours, 
+            studying, or relieving back strain. Available in multiple sizes.
+        </p>
+        <a class="buy-btn"
+           href="https://www.amazon.de/Gaias-Footprint-Geradehalter-Haltungskorrektor-R%C3%BCckenst%C3%BCtze/dp/B0F313TYSS/ref=sr_1_5?crid=1LVC9RZ3GBNFM&qid=1763838856&sprefix=gaia%27s+footprint+posture+corrector&sr=8-5&th=1"
+           target="_blank">Buy on Amazon</a>
     </div>
 
+    <!-- SECOND PRODUCT (COMING SOON) -->
     <div class="product-card">
-        <h3>Thermal Bottle (Coming Soon)</h3>
-        <p>A premium stainless-steel thermal bottle designed with durability and sustainability in mind.</p>
+        <img src="https://images.unsplash.com/photo-1589571894960-20bbe2828d0a?q=80&w=1800&auto=format&fit=crop"
+             class="product-img">
+        <h3 class="product-title">Premium Thermo Bottle (Coming Soon)</h3>
+        <p class="product-desc">
+            Made from high-grade stainless steel with advanced insulation technology. 
+            Keeps beverages hot or cold for up to 24 hours. Durable, elegant, and sustainable.
+        </p>
     </div>
-
-    <div class="product-card">
-        <h3>Eco Apparel (Print-on-Demand)</h3>
-        <p>Designed with care in Germany. Printed locally within Europe to reduce carbon footprint.</p>
-    </div>
-
 </div>
 
 <footer>
