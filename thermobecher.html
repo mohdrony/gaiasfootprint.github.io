@@ -54,6 +54,36 @@
       white-space: nowrap;
     }
 
+    .lang-switch {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.9);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .lang-btn {
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      padding: 4px 8px;
+      border-radius: 999px;
+      font-weight: 700;
+      color: var(--text-main);
+      opacity: 0.7;
+    }
+
+    .lang-btn.active {
+      background: var(--accent-soft);
+      color: #0b7b5f;
+      opacity: 1;
+      border: 1px solid rgba(11,123,95,0.2);
+    }
+
     /* HERO */
     .hero {
       max-width: 1200px;
@@ -211,31 +241,37 @@
     <div class="nav-brand">GAIA’S FOOTPRINT</div>
   </div>
   <nav class="nav-links">
-    <a href="index.html" class="nav-link">Startseite</a>
-    <a href="#details" class="nav-link">Details</a>
-    <a href="#faq" class="nav-link">FAQ</a>
-    <a href="posture-corrector.html" class="nav-link">Posture Corrector</a>
+    <a href="index.html" class="nav-link" data-i18n="nav.home">Startseite</a>
+    <a href="#details" class="nav-link" data-i18n="nav.details">Details</a>
+    <a href="#faq" class="nav-link" data-i18n="nav.faq">FAQ</a>
+    <a href="posture-corrector.html" class="nav-link" data-i18n="nav.posture">Posture Corrector</a>
   </nav>
-  <div class="nav-pill">Thermobecher 350 ml</div>
+  <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+    <div class="lang-switch" aria-label="Language switch">
+      <button class="lang-btn active" data-lang="de">DE</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+    <div class="nav-pill" data-i18n="nav.tagline">Thermobecher 350 ml</div>
+  </div>
 </header>
 
 <section class="hero" id="top">
   <div>
-    <div class="hero-eyebrow">Produktdetails</div>
-    <h1 class="hero-title">Thermobecher 350&nbsp;ml – auslaufsicher, vakuumisoliert, bereit für jeden Tag.</h1>
-    <p class="hero-sub">
+    <div class="hero-eyebrow" data-i18n="hero.eyebrow">Produktdetails</div>
+    <h1 class="hero-title" data-i18n="hero.title">Thermobecher 350&nbsp;ml – auslaufsicher, vakuumisoliert, bereit für jeden Tag.</h1>
+    <p class="hero-sub" data-i18n="hero.sub">
       Unser neuer Gaia’s Footprint Thermobecher kombiniert einen druckstabilen Schnellverschluss mit doppelwandigem
       Edelstahl. So bleibt dein Getränk geschützt – im Becherhalter, in der Tasche oder in der Hand.
     </p>
     <ul class="hero-list">
-      <li><span class="dot"></span><span>350&nbsp;ml Fassungsvermögen für Kaffee, Tee &amp; kalte Drinks.</span></li>
-      <li><span class="dot"></span><span>Auslaufsicherer Schnellverschluss – Einhandbedienung.</span></li>
-      <li><span class="dot"></span><span>Doppelwandig, vakuumisoliert, außen ohne Kondenswasser.</span></li>
-      <li><span class="dot"></span><span>Edelstahl, BPA-frei, geruchsneutral.</span></li>
+      <li><span class="dot"></span><span data-i18n="hero.bullet1">350&nbsp;ml Fassungsvermögen für Kaffee, Tee &amp; kalte Drinks.</span></li>
+      <li><span class="dot"></span><span data-i18n="hero.bullet2">Auslaufsicherer Schnellverschluss – Einhandbedienung.</span></li>
+      <li><span class="dot"></span><span data-i18n="hero.bullet3">Doppelwandig, vakuumisoliert, außen ohne Kondenswasser.</span></li>
+      <li><span class="dot"></span><span data-i18n="hero.bullet4">Edelstahl, BPA-frei, geruchsneutral.</span></li>
     </ul>
     <div class="hero-cta-row">
-      <a class="btn-primary" href="https://amzn.eu/d/hH6QRSc" target="_blank" rel="noopener noreferrer">Auf Amazon kaufen</a>
-      <a class="btn-ghost" href="index.html">Zur Übersicht</a>
+      <a class="btn-primary" href="https://amzn.eu/d/hH6QRSc" target="_blank" rel="noopener noreferrer" data-i18n="hero.ctaBuy">Auf Amazon kaufen</a>
+      <a class="btn-ghost" href="index.html" data-i18n="hero.ctaBack">Zur Übersicht</a>
     </div>
   </div>
   <div class="hero-visual" aria-hidden="true">
@@ -248,27 +284,27 @@
 </section>
 
 <section class="section" id="details">
-  <p class="pill">Warum dieser Becher</p>
-  <h2 class="section-title">Tägliche Routine, ruhiger Kopf.</h2>
-  <p class="section-sub">
+  <p class="pill" data-i18n="why.pill">Warum dieser Becher</p>
+  <h2 class="section-title" data-i18n="why.title">Tägliche Routine, ruhiger Kopf.</h2>
+  <p class="section-sub" data-i18n="why.sub">
     Wir wollten einen Becher, der nicht nur gut aussieht, sondern jede Situation mitmacht: Pendeln, Büro, Spaziergang,
     Wochenendtrip. Der Thermobecher 350 ml ist kompakt, dicht und lässt sich mit einer Hand öffnen.
   </p>
   <div class="grid-2">
     <div class="card">
-      <h3 style="margin-top:0;">Auslaufsicherer Schnellverschluss</h3>
+      <h3 style="margin-top:0;" data-i18n="why.card1Title">Auslaufsicherer Schnellverschluss</h3>
       <ul class="list">
-        <li><span class="list-dot"></span><span>Deckel mit sicherem Dichtungsring, der auch liegend dicht hält.</span></li>
-        <li><span class="list-dot"></span><span>Einhand-Klick: öffnen, trinken, schließen – ohne zu schrauben.</span></li>
-        <li><span class="list-dot"></span><span>Lässt sich zum Reinigen auseinandernehmen.</span></li>
+        <li><span class="list-dot"></span><span data-i18n="why.card1List1">Deckel mit sicherem Dichtungsring, der auch liegend dicht hält.</span></li>
+        <li><span class="list-dot"></span><span data-i18n="why.card1List2">Einhand-Klick: öffnen, trinken, schließen – ohne zu schrauben.</span></li>
+        <li><span class="list-dot"></span><span data-i18n="why.card1List3">Lässt sich zum Reinigen auseinandernehmen.</span></li>
       </ul>
     </div>
     <div class="card">
-      <h3 style="margin-top:0;">Vakuumisolierter Edelstahl</h3>
+      <h3 style="margin-top:0;" data-i18n="why.card2Title">Vakuumisolierter Edelstahl</h3>
       <ul class="list">
-        <li><span class="list-dot"></span><span>Doppelwandiger Edelstahl reduziert Wärmeverlust und Kondensation.</span></li>
-        <li><span class="list-dot"></span><span>Mattes Finish für guten Grip und eine langlebige Optik.</span></li>
-        <li><span class="list-dot"></span><span>Neutraler Geschmack – kein Metallgeruch, keine Geruchsübertragung.</span></li>
+        <li><span class="list-dot"></span><span data-i18n="why.card2List1">Doppelwandiger Edelstahl reduziert Wärmeverlust und Kondensation.</span></li>
+        <li><span class="list-dot"></span><span data-i18n="why.card2List2">Mattes Finish für guten Grip und eine langlebige Optik.</span></li>
+        <li><span class="list-dot"></span><span data-i18n="why.card2List3">Neutraler Geschmack – kein Metallgeruch, keine Geruchsübertragung.</span></li>
       </ul>
     </div>
   </div>
@@ -276,32 +312,32 @@
 
 <section class="section">
   <div class="card">
-    <p class="pill">Technische Daten</p>
-    <h2 class="section-title">Alles, was du wissen möchtest.</h2>
+    <p class="pill" data-i18n="specs.pill">Technische Daten</p>
+    <h2 class="section-title" data-i18n="specs.title">Alles, was du wissen möchtest.</h2>
     <div class="spec-table">
       <div class="spec">
-        <p class="spec-title">Fassungsvermögen</p>
-        <p class="spec-value">350 ml</p>
+        <p class="spec-title" data-i18n="specs.capacityTitle">Fassungsvermögen</p>
+        <p class="spec-value" data-i18n="specs.capacityValue">350 ml</p>
       </div>
       <div class="spec">
-        <p class="spec-title">Material</p>
-        <p class="spec-value">Edelstahl, BPA-frei</p>
+        <p class="spec-title" data-i18n="specs.materialTitle">Material</p>
+        <p class="spec-value" data-i18n="specs.materialValue">Edelstahl, BPA-frei</p>
       </div>
       <div class="spec">
-        <p class="spec-title">Verschluss</p>
-        <p class="spec-value">Schnappverschluss, auslaufsicher</p>
+        <p class="spec-title" data-i18n="specs.lidTitle">Verschluss</p>
+        <p class="spec-value" data-i18n="specs.lidValue">Schnappverschluss, auslaufsicher</p>
       </div>
       <div class="spec">
-        <p class="spec-title">Isolierung</p>
-        <p class="spec-value">Doppelwandig, vakuumisoliert</p>
+        <p class="spec-title" data-i18n="specs.isoTitle">Isolierung</p>
+        <p class="spec-value" data-i18n="specs.isoValue">Doppelwandig, vakuumisoliert</p>
       </div>
       <div class="spec">
-        <p class="spec-title">Oberfläche</p>
-        <p class="spec-value">Mattes Schwarz</p>
+        <p class="spec-title" data-i18n="specs.finishTitle">Oberfläche</p>
+        <p class="spec-value" data-i18n="specs.finishValue">Mattes Schwarz</p>
       </div>
       <div class="spec">
-        <p class="spec-title">Passform</p>
-        <p class="spec-value">Schlanker Boden für Becherhalter</p>
+        <p class="spec-title" data-i18n="specs.fitTitle">Passform</p>
+        <p class="spec-value" data-i18n="specs.fitValue">Schlanker Boden für Becherhalter</p>
       </div>
     </div>
   </div>
@@ -310,68 +346,230 @@
 <section class="section">
   <div class="grid-2">
     <div class="card">
-      <p class="pill">Anwendung</p>
-      <h3 class="section-title">So holst du das Beste heraus.</h3>
+      <p class="pill" data-i18n="usage.pill">Anwendung</p>
+      <h3 class="section-title" data-i18n="usage.title">So holst du das Beste heraus.</h3>
       <ul class="list">
-        <li><span class="list-dot"></span><span>Vorwärmen oder vorkühlen: kurz mit heißem bzw. kaltem Wasser ausspülen.</span></li>
-        <li><span class="list-dot"></span><span>Deckel richtig einrasten lassen, bevor der Becher in die Tasche wandert.</span></li>
-        <li><span class="list-dot"></span><span>Für kohlensäurehaltige Getränke geeignet – einfach den Druck beim Öffnen beachten.</span></li>
+        <li><span class="list-dot"></span><span data-i18n="usage.list1">Vorwärmen oder vorkühlen: kurz mit heißem bzw. kaltem Wasser ausspülen.</span></li>
+        <li><span class="list-dot"></span><span data-i18n="usage.list2">Deckel richtig einrasten lassen, bevor der Becher in die Tasche wandert.</span></li>
+        <li><span class="list-dot"></span><span data-i18n="usage.list3">Für kohlensäurehaltige Getränke geeignet – einfach den Druck beim Öffnen beachten.</span></li>
       </ul>
     </div>
     <div class="card">
-      <p class="pill">Pflege</p>
-      <h3 class="section-title">Schnelle Reinigung, lange Lebensdauer.</h3>
+      <p class="pill" data-i18n="care.pill">Pflege</p>
+      <h3 class="section-title" data-i18n="care.title">Schnelle Reinigung, lange Lebensdauer.</h3>
       <ul class="list">
-        <li><span class="list-dot"></span><span>Deckel nach jeder Nutzung zerlegen, abspülen und trocknen lassen.</span></li>
-        <li><span class="list-dot"></span><span>Handwäsche empfohlen, um die Dichtung zu schonen.</span></li>
-        <li><span class="list-dot"></span><span>Kein hartes Scheuermittel – so bleibt das matte Finish länger schön.</span></li>
+        <li><span class="list-dot"></span><span data-i18n="care.list1">Deckel nach jeder Nutzung zerlegen, abspülen und trocknen lassen.</span></li>
+        <li><span class="list-dot"></span><span data-i18n="care.list2">Handwäsche empfohlen, um die Dichtung zu schonen.</span></li>
+        <li><span class="list-dot"></span><span data-i18n="care.list3">Kein hartes Scheuermittel – so bleibt das matte Finish länger schön.</span></li>
       </ul>
     </div>
   </div>
 </section>
 
 <section class="section" id="faq">
-  <p class="pill">FAQ</p>
-  <h2 class="section-title">Häufige Fragen</h2>
+  <p class="pill" data-i18n="faq.pill">FAQ</p>
+  <h2 class="section-title" data-i18n="faq.title">Häufige Fragen</h2>
   <div class="faq">
     <div class="faq-item">
-      <h4>Passt der Becher in gängige Auto- oder Fahrrad-Becherhalter?</h4>
-      <p>Ja. Der schlanke Fuß ist so gestaltet, dass er in den meisten Standard-Becherhaltern einen sicheren Sitz hat.</p>
+      <h4 data-i18n="faq.q1">Passt der Becher in gängige Auto- oder Fahrrad-Becherhalter?</h4>
+      <p data-i18n="faq.a1">Ja. Der schlanke Fuß ist so gestaltet, dass er in den meisten Standard-Becherhaltern einen sicheren Sitz hat.</p>
     </div>
     <div class="faq-item">
-      <h4>Kann ich den Deckel zerlegen?</h4>
-      <p>Ja. Der Schnellverschluss lässt sich auseinandernehmen, damit du Dichtungen und Spaltbereiche einfach reinigen kannst.</p>
+      <h4 data-i18n="faq.q2">Kann ich den Deckel zerlegen?</h4>
+      <p data-i18n="faq.a2">Ja. Der Schnellverschluss lässt sich auseinandernehmen, damit du Dichtungen und Spaltbereiche einfach reinigen kannst.</p>
     </div>
     <div class="faq-item">
-      <h4>Ist der Becher BPA-frei?</h4>
-      <p>Ja. Innen und außen Edelstahl, dazu BPA-freie Komponenten im Deckel.</p>
+      <h4 data-i18n="faq.q3">Ist der Becher BPA-frei?</h4>
+      <p data-i18n="faq.a3">Ja. Innen und außen Edelstahl, dazu BPA-freie Komponenten im Deckel.</p>
     </div>
     <div class="faq-item">
-      <h4>Darf der Becher in den Geschirrspüler?</h4>
-      <p>Handwäsche wird empfohlen, um die Dichtungen und das matte Finish zu schützen.</p>
+      <h4 data-i18n="faq.q4">Darf der Becher in den Geschirrspüler?</h4>
+      <p data-i18n="faq.a4">Handwäsche wird empfohlen, um die Dichtungen und das matte Finish zu schützen.</p>
     </div>
   </div>
 </section>
 
 <section class="section">
   <div class="card">
-    <p class="pill">Lieferumfang</p>
-    <h2 class="section-title">Was du erhältst</h2>
+    <p class="pill" data-i18n="box.pill">Lieferumfang</p>
+    <h2 class="section-title" data-i18n="box.title">Was du erhältst</h2>
     <ul class="list">
-      <li><span class="list-dot"></span><span>1× Gaia’s Footprint Thermobecher 350 ml in Schwarz.</span></li>
-      <li><span class="list-dot"></span><span>1× Deckel mit auslaufsicherem Schnellverschluss.</span></li>
-      <li><span class="list-dot"></span><span>Kurz-Anleitung für Pflege &amp; Reinigung.</span></li>
+      <li><span class="list-dot"></span><span data-i18n="box.item1">1× Gaia’s Footprint Thermobecher 350 ml in Schwarz.</span></li>
+      <li><span class="list-dot"></span><span data-i18n="box.item2">1× Deckel mit auslaufsicherem Schnellverschluss.</span></li>
+      <li><span class="list-dot"></span><span data-i18n="box.item3">Kurz-Anleitung für Pflege &amp; Reinigung.</span></li>
     </ul>
     <div style="margin-top:18px; display:flex; gap:12px; flex-wrap:wrap; align-items:center;">
-      <a class="btn-primary" href="https://amzn.eu/d/hH6QRSc" target="_blank" rel="noopener noreferrer">Jetzt bestellen</a>
-      <span style="font-size:13px; color:var(--text-soft);">Versand und Service über Amazon.de</span>
+      <a class="btn-primary" href="https://amzn.eu/d/hH6QRSc" target="_blank" rel="noopener noreferrer" data-i18n="box.cta">Jetzt bestellen</a>
+      <span style="font-size:13px; color:var(--text-soft);" data-i18n="box.ship">Versand und Service über Amazon.de</span>
     </div>
   </div>
 </section>
 
-<footer style="text-align:center; padding: 34px 16px 40px; font-size: 13px; color: var(--text-soft);">
+<footer style="text-align:center; padding: 34px 16px 40px; font-size: 13px; color: var(--text-soft);" data-i18n="footer">
   © 2025 Gaia’s Footprint — Thermobecher 350 ml
 </footer>
+
+<script>
+  const translations = {
+    de: {
+      'nav.home': 'Startseite',
+      'nav.details': 'Details',
+      'nav.faq': 'FAQ',
+      'nav.posture': 'Posture Corrector',
+      'nav.tagline': 'Thermobecher 350 ml',
+      'hero.eyebrow': 'Produktdetails',
+      'hero.title': 'Thermobecher 350 ml – auslaufsicher, vakuumisoliert, bereit für jeden Tag.',
+      'hero.sub': 'Unser neuer Gaia’s Footprint Thermobecher kombiniert einen druckstabilen Schnellverschluss mit doppelwandigem Edelstahl. So bleibt dein Getränk geschützt – im Becherhalter, in der Tasche oder in der Hand.',
+      'hero.bullet1': '350 ml Fassungsvermögen für Kaffee, Tee & kalte Drinks.',
+      'hero.bullet2': 'Auslaufsicherer Schnellverschluss – Einhandbedienung.',
+      'hero.bullet3': 'Doppelwandig, vakuumisoliert, außen ohne Kondenswasser.',
+      'hero.bullet4': 'Edelstahl, BPA-frei, geruchsneutral.',
+      'hero.ctaBuy': 'Auf Amazon kaufen',
+      'hero.ctaBack': 'Zur Übersicht',
+      'why.pill': 'Warum dieser Becher',
+      'why.title': 'Tägliche Routine, ruhiger Kopf.',
+      'why.sub': 'Wir wollten einen Becher, der nicht nur gut aussieht, sondern jede Situation mitmacht: Pendeln, Büro, Spaziergang, Wochenendtrip. Der Thermobecher 350 ml ist kompakt, dicht und lässt sich mit einer Hand öffnen.',
+      'why.card1Title': 'Auslaufsicherer Schnellverschluss',
+      'why.card1List1': 'Deckel mit sicherem Dichtungsring, der auch liegend dicht hält.',
+      'why.card1List2': 'Einhand-Klick: öffnen, trinken, schließen – ohne zu schrauben.',
+      'why.card1List3': 'Lässt sich zum Reinigen auseinandernehmen.',
+      'why.card2Title': 'Vakuumisolierter Edelstahl',
+      'why.card2List1': 'Doppelwandiger Edelstahl reduziert Wärmeverlust und Kondensation.',
+      'why.card2List2': 'Mattes Finish für guten Grip und eine langlebige Optik.',
+      'why.card2List3': 'Neutraler Geschmack – kein Metallgeruch, keine Geruchsübertragung.',
+      'specs.pill': 'Technische Daten',
+      'specs.title': 'Alles, was du wissen möchtest.',
+      'specs.capacityTitle': 'Fassungsvermögen',
+      'specs.capacityValue': '350 ml',
+      'specs.materialTitle': 'Material',
+      'specs.materialValue': 'Edelstahl, BPA-frei',
+      'specs.lidTitle': 'Verschluss',
+      'specs.lidValue': 'Schnappverschluss, auslaufsicher',
+      'specs.isoTitle': 'Isolierung',
+      'specs.isoValue': 'Doppelwandig, vakuumisoliert',
+      'specs.finishTitle': 'Oberfläche',
+      'specs.finishValue': 'Mattes Schwarz',
+      'specs.fitTitle': 'Passform',
+      'specs.fitValue': 'Schlanker Boden für Becherhalter',
+      'usage.pill': 'Anwendung',
+      'usage.title': 'So holst du das Beste heraus.',
+      'usage.list1': 'Vorwärmen oder vorkühlen: kurz mit heißem bzw. kaltem Wasser ausspülen.',
+      'usage.list2': 'Deckel richtig einrasten lassen, bevor der Becher in die Tasche wandert.',
+      'usage.list3': 'Für kohlensäurehaltige Getränke geeignet – einfach den Druck beim Öffnen beachten.',
+      'care.pill': 'Pflege',
+      'care.title': 'Schnelle Reinigung, lange Lebensdauer.',
+      'care.list1': 'Deckel nach jeder Nutzung zerlegen, abspülen und trocknen lassen.',
+      'care.list2': 'Handwäsche empfohlen, um die Dichtung zu schonen.',
+      'care.list3': 'Kein hartes Scheuermittel – so bleibt das matte Finish länger schön.',
+      'faq.pill': 'FAQ',
+      'faq.title': 'Häufige Fragen',
+      'faq.q1': 'Passt der Becher in gängige Auto- oder Fahrrad-Becherhalter?',
+      'faq.a1': 'Ja. Der schlanke Fuß ist so gestaltet, dass er in den meisten Standard-Becherhaltern einen sicheren Sitz hat.',
+      'faq.q2': 'Kann ich den Deckel zerlegen?',
+      'faq.a2': 'Ja. Der Schnellverschluss lässt sich auseinandernehmen, damit du Dichtungen und Spaltbereiche einfach reinigen kannst.',
+      'faq.q3': 'Ist der Becher BPA-frei?',
+      'faq.a3': 'Ja. Innen und außen Edelstahl, dazu BPA-freie Komponenten im Deckel.',
+      'faq.q4': 'Darf der Becher in den Geschirrspüler?',
+      'faq.a4': 'Handwäsche wird empfohlen, um die Dichtungen und das matte Finish zu schützen.',
+      'box.pill': 'Lieferumfang',
+      'box.title': 'Was du erhältst',
+      'box.item1': '1× Gaia’s Footprint Thermobecher 350 ml in Schwarz.',
+      'box.item2': '1× Deckel mit auslaufsicherem Schnellverschluss.',
+      'box.item3': 'Kurz-Anleitung für Pflege & Reinigung.',
+      'box.cta': 'Jetzt bestellen',
+      'box.ship': 'Versand und Service über Amazon.de',
+      'footer': '© 2025 Gaia’s Footprint — Thermobecher 350 ml'
+    },
+    en: {
+      'nav.home': 'Home',
+      'nav.details': 'Details',
+      'nav.faq': 'FAQ',
+      'nav.posture': 'Posture Corrector',
+      'nav.tagline': 'Vacuum Mug 350 ml',
+      'hero.eyebrow': 'Product details',
+      'hero.title': 'Vacuum Mug 350 ml – leakproof, vacuum insulated, ready every day.',
+      'hero.sub': 'Our new Gaia’s Footprint vacuum mug pairs a pressure-safe quick lid with double-wall stainless steel, keeping your drink protected in cupholders, bags, or your hand.',
+      'hero.bullet1': '350 ml capacity for coffee, tea, and cold drinks.',
+      'hero.bullet2': 'Leakproof quick lid – one-hand operation.',
+      'hero.bullet3': 'Double-wall, vacuum insulated, no condensation outside.',
+      'hero.bullet4': 'Stainless steel, BPA-free, neutral taste.',
+      'hero.ctaBuy': 'Buy on Amazon',
+      'hero.ctaBack': 'Back to overview',
+      'why.pill': 'Why this mug',
+      'why.title': 'Daily routine, calm mind.',
+      'why.sub': 'We wanted a mug that looks good and works everywhere: commute, office, walks, weekend trips. The 350 ml mug is compact, sealed, and opens with one hand.',
+      'why.card1Title': 'Leakproof quick lid',
+      'why.card1List1': 'Lid with secure sealing ring that stays tight even lying down.',
+      'why.card1List2': 'One-hand click: open, sip, close—no twisting.',
+      'why.card1List3': 'Comes apart for easy cleaning.',
+      'why.card2Title': 'Vacuum-insulated stainless steel',
+      'why.card2List1': 'Double-wall stainless reduces heat loss and condensation.',
+      'why.card2List2': 'Matte finish for good grip and lasting look.',
+      'why.card2List3': 'Neutral taste—no metal smell, no flavour transfer.',
+      'specs.pill': 'Technical data',
+      'specs.title': 'Everything you want to know.',
+      'specs.capacityTitle': 'Capacity',
+      'specs.capacityValue': '350 ml',
+      'specs.materialTitle': 'Material',
+      'specs.materialValue': 'Stainless steel, BPA-free',
+      'specs.lidTitle': 'Lid',
+      'specs.lidValue': 'Snap lid, leakproof',
+      'specs.isoTitle': 'Insulation',
+      'specs.isoValue': 'Double-wall, vacuum insulated',
+      'specs.finishTitle': 'Finish',
+      'specs.finishValue': 'Matte black',
+      'specs.fitTitle': 'Fit',
+      'specs.fitValue': 'Slim base for cupholders',
+      'usage.pill': 'Use',
+      'usage.title': 'Get the most out of it.',
+      'usage.list1': 'Preheat or precool: rinse briefly with hot or cold water.',
+      'usage.list2': 'Lock the lid before tossing it in your bag.',
+      'usage.list3': 'Works with carbonated drinks—just mind the pressure on opening.',
+      'care.pill': 'Care',
+      'care.title': 'Quick cleaning, long life.',
+      'care.list1': 'Disassemble the lid after each use, rinse, and let dry.',
+      'care.list2': 'Hand-wash recommended to protect the seal.',
+      'care.list3': 'No harsh scrubs—keeps the matte finish looking fresh.',
+      'faq.pill': 'FAQ',
+      'faq.title': 'Frequently asked questions',
+      'faq.q1': 'Does it fit standard car or bike cupholders?',
+      'faq.a1': 'Yes. The slim base is designed to sit securely in most standard cupholders.',
+      'faq.q2': 'Can I take the lid apart?',
+      'faq.a2': 'Yes. The quick lid disassembles so you can clean seals and crevices easily.',
+      'faq.q3': 'Is the mug BPA-free?',
+      'faq.a3': 'Yes. Stainless steel inside and out, with BPA-free components in the lid.',
+      'faq.q4': 'Is it dishwasher safe?',
+      'faq.a4': 'Hand-wash recommended to protect the seals and matte finish.',
+      'box.pill': 'Included',
+      'box.title': 'What you get',
+      'box.item1': '1× Gaia’s Footprint Vacuum Mug 350 ml in black.',
+      'box.item2': '1× Lid with leakproof quick closure.',
+      'box.item3': 'Quick guide for care & cleaning.',
+      'box.cta': 'Order now',
+      'box.ship': 'Shipping and service via Amazon.de',
+      'footer': '© 2025 Gaia’s Footprint — Vacuum Mug 350 ml'
+    }
+  };
+
+  function applyTranslations(lang) {
+    const dict = translations[lang] || translations.de;
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.dataset.i18n;
+      if (dict[key]) el.textContent = dict[key];
+    });
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+    localStorage.setItem('gf-lang', lang);
+  }
+
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => applyTranslations(btn.dataset.lang));
+  });
+
+  applyTranslations(localStorage.getItem('gf-lang') || 'de');
+</script>
 
 </body>
 </html>
