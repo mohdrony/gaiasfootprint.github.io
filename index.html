@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gaia’s Footprint – Sustainable Essentials for Modern Living</title>
+  <title>Gaia’s Footprint – Thermobecher & Smart Posture Corrector</title>
   <style>
     :root {
-      --bg: #f7f2ec;
+      --bg: #f5f3ef;
       --card: #ffffff;
-      --accent: #b76b42;
-      --accent-soft: #e4c3a8;
-      --text-main: #2b221b;
-      --text-soft: #6f645c;
-      --brand-green: #0b7b5f;
+      --accent: #0b7b5f;
+      --accent-soft: #e1f1ea;
+      --accent-gold: #b76b42;
+      --text-main: #1f2b2a;
+      --text-soft: #56615f;
+      --border: rgba(0, 0, 0, 0.06);
+      --shadow: 0 18px 40px rgba(0,0,0,0.12);
     }
 
     * { box-sizing: border-box; }
@@ -28,7 +30,7 @@
 
     /* NAVBAR */
     .nav {
-      max-width: 1100px;
+      max-width: 1200px;
       margin: 0 auto;
       padding: 14px 20px 10px;
       display: flex;
@@ -37,323 +39,335 @@
       gap: 16px;
     }
 
-    .nav-left {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+    .nav-left { display: flex; align-items: center; gap: 10px; }
+    .nav-logo-img { width: 36px; height: 36px; border-radius: 8px; }
+    .nav-brand { font-weight: 700; letter-spacing: 0.14em; font-size: 13px; }
 
-    .nav-logo-img {
-      width: 36px;
-      height: 36px;
-      border-radius: 8px;
-    }
-
-    .nav-brand {
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      font-size: 13px;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 16px;
-      font-size: 14px;
-    }
-
-    .nav-link {
-      opacity: 0.8;
-    }
-
-    .nav-link:hover {
-      opacity: 1;
-    }
+    .nav-links { display: flex; gap: 16px; font-size: 14px; flex-wrap: wrap; align-items: center; }
+    .nav-link { opacity: 0.82; }
+    .nav-link:hover { opacity: 1; }
 
     .nav-pill {
       font-size: 12px;
       padding: 6px 12px;
       border-radius: 999px;
-      border: 1px solid rgba(0,0,0,0.06);
-      background: rgba(255,255,255,0.9);
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.92);
+      white-space: nowrap;
     }
 
     /* HERO */
     .hero {
-      max-width: 1100px;
-      margin: 10px auto 50px;
+      max-width: 1200px;
+      margin: 12px auto 60px;
       padding: 0 20px;
       display: grid;
       grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
-      gap: 32px;
+      gap: 40px;
       align-items: center;
     }
 
-    .hero-eyebrow {
-      text-transform: uppercase;
-      font-size: 12px;
-      letter-spacing: 0.16em;
-      color: var(--text-soft);
-      margin-bottom: 8px;
-    }
+    .hero-eyebrow { text-transform: uppercase; font-size: 12px; letter-spacing: 0.16em; color: var(--text-soft); margin-bottom: 10px; }
+    .hero-title { font-size: 42px; line-height: 1.1; margin: 0 0 14px; }
+    .hero-sub { font-size: 17px; color: var(--text-soft); margin-bottom: 20px; max-width: 620px; }
 
-    .hero-title {
-      font-size: 40px;
-      line-height: 1.1;
-      margin: 0 0 14px;
-    }
-
-    .hero-sub {
-      font-size: 16px;
-      color: var(--text-soft);
-      margin-bottom: 18px;
-    }
-
-    .hero-cta-row {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
+    .hero-cta-row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
 
     .btn-primary {
       display: inline-block;
-      background: var(--brand-green);
+      background: var(--accent);
       color: #fff;
-      padding: 11px 20px;
+      padding: 12px 22px;
       border-radius: 999px;
-      font-weight: 600;
+      font-weight: 650;
       font-size: 14px;
+      box-shadow: 0 10px 24px rgba(11, 123, 95, 0.25);
     }
-
-    .btn-primary:hover { background: #08644c; }
-
-    .hero-note {
-      font-size: 12px;
-      color: var(--text-soft);
-    }
-
-    .hero-img-wrap {
-      position: relative;
-    }
-
-    .hero-img {
-      width: 100%;
-      border-radius: 22px;
-      box-shadow: 0 14px 30px rgba(0,0,0,0.18);
-      display: block;
-    }
-
-    .hero-tag {
-      position: absolute;
-      bottom: 14px;
-      left: 14px;
-      background: rgba(0,0,0,0.7);
-      color: white;
-      padding: 6px 10px;
-      border-radius: 999px;
-      font-size: 11px;
-    }
-
-    /* FEATURED PRODUCT STRIP */
-    .strip {
-      max-width: 1100px;
-      margin: 0 auto 50px;
-      padding: 0 20px;
-    }
-
-    .strip-card {
-      background: var(--card);
-      border-radius: 24px;
-      padding: 20px 22px;
-      border: 1px solid rgba(0,0,0,0.05);
-      display: flex;
-      gap: 18px;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .strip-tag {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: var(--text-soft);
-      margin-bottom: 4px;
-    }
-
-    .strip-title {
-      font-size: 18px;
-      margin: 0 0 6px;
-    }
-
-    .strip-text {
-      font-size: 14px;
-      color: var(--text-soft);
-    }
+    .btn-primary:hover { background: #085f49; }
 
     .btn-ghost {
       font-size: 13px;
-      padding: 8px 14px;
+      padding: 10px 16px;
       border-radius: 999px;
-      border: 1px solid rgba(0,0,0,0.08);
+      border: 1px solid var(--border);
       background: transparent;
-    }
-
-    /* IMAGE GRID SECTION */
-    .section {
-      max-width: 1100px;
-      margin: 0 auto 60px;
-      padding: 0 20px;
-    }
-
-    .section-title {
-      font-size: 24px;
-      margin-bottom: 6px;
-    }
-
-    .section-sub {
-      font-size: 15px;
-      color: var(--text-soft);
-      margin-bottom: 20px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0,1fr));
-      gap: 18px;
-    }
-
-    .grid-item {
-      background: var(--card);
-      border-radius: 18px;
-      padding: 10px;
-      border: 1px solid rgba(0,0,0,0.04);
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .grid-img {
-      width: 100%;
-      border-radius: 12px;
-      display: block;
-    }
-
-    .grid-label {
-      font-size: 13px;
       font-weight: 600;
     }
 
-    .grid-text {
-      font-size: 13px;
-      color: var(--text-soft);
+    .hero-visual {
+      background: linear-gradient(140deg, #0b7b5f 0%, #0b7b5f 40%, #1f2b2a 100%);
+      border-radius: 28px;
+      padding: 28px;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow);
     }
-
-    footer {
-      text-align: center;
-      padding: 34px 16px 40px;
-      font-size: 13px;
-      color: var(--text-soft);
+    .hero-visual::after, .hero-visual::before {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
     }
+    .hero-visual::before { width: 180px; height: 180px; right: -40px; top: -20px; }
+    .hero-visual::after { width: 120px; height: 120px; left: -50px; bottom: -30px; }
 
-    @media (max-width: 900px) {
-      .hero {
-        grid-template-columns: minmax(0,1fr);
-      }
+    .render { background: linear-gradient(180deg, #111918, #161f1e); border-radius: 20px; padding: 20px; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04); position: relative; }
+    .render-body { width: 140px; height: 210px; margin: 0 auto; border-radius: 26px 26px 32px 32px; background: linear-gradient(180deg, #1f2b2a 0%, #0f1413 100%); position: relative; box-shadow: inset 0 1px 0 rgba(255,255,255,0.05), 0 22px 38px rgba(0,0,0,0.45); }
+    .render-body::before { content: ""; position: absolute; top: 18px; left: 24px; right: 24px; height: 12px; border-radius: 12px; background: linear-gradient(90deg, rgba(255,255,255,0.12), rgba(255,255,255,0.02)); }
+    .render-body::after { content: ""; position: absolute; top: -12px; left: 16px; right: 16px; height: 22px; border-radius: 18px; background: linear-gradient(180deg, #0c9c76, #0b7b5f); box-shadow: 0 10px 18px rgba(0,0,0,0.25); }
+    .render-label { text-align: center; margin-top: 14px; font-size: 13px; letter-spacing: 0.08em; color: rgba(255,255,255,0.85); }
+
+    /* SECTIONS */
+    .section { max-width: 1200px; margin: 0 auto 68px; padding: 0 20px; }
+    .section-title { font-size: 26px; margin-bottom: 8px; }
+    .section-sub { font-size: 15px; color: var(--text-soft); margin-bottom: 24px; max-width: 900px; }
+
+    .card { background: var(--card); border-radius: 22px; padding: 20px 22px; border: 1px solid var(--border); box-shadow: 0 12px 30px rgba(0,0,0,0.05); }
+
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 12px; }
+
+    .pill { display: inline-block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.16em; color: var(--text-soft); margin-bottom: 8px; }
+
+    .icon { width: 34px; height: 34px; border-radius: 12px; background: var(--accent-soft); display: inline-flex; align-items: center; justify-content: center; margin-bottom: 12px; color: #0b7b5f; font-weight: 700; }
+
+    .list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+    .list li { display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: flex-start; font-size: 14px; color: var(--text-soft); }
+    .list-dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; margin-top: 6px; }
+
+    .chip-row { display: flex; gap: 8px; flex-wrap: wrap; }
+    .chip { background: rgba(255,255,255,0.14); color: #0b7b5f; padding: 8px 12px; border-radius: 12px; font-size: 12px; border: 1px solid rgba(11,123,95,0.16); backdrop-filter: blur(4px); }
+
+    .cta-card { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr); gap: 24px; align-items: center; padding: 26px; background: linear-gradient(120deg, #0b7b5f, #1f2b2a); color: #fff; border-radius: 26px; box-shadow: var(--shadow); }
+    .cta-card.secondary { background: linear-gradient(120deg, #b76b42, #5a3217); box-shadow: 0 18px 34px rgba(183,107,66,0.28); }
+
+    .product-card { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr); gap: 18px; align-items: center; }
+    .product-visual { position: relative; }
+    .product-img { width: 100%; border-radius: 18px; box-shadow: 0 12px 26px rgba(0,0,0,0.16); }
+
+    footer { text-align: center; padding: 34px 16px 40px; font-size: 13px; color: var(--text-soft); }
+
+    @media (max-width: 1000px) {
+      .hero, .cta-card, .product-card { grid-template-columns: minmax(0,1fr); }
+      .grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .grid-4 { grid-template-columns: repeat(2, minmax(0,1fr)); }
     }
 
     @media (max-width: 700px) {
-      .hero-title { font-size: 30px; }
-      .grid {
-        grid-template-columns: repeat(2, minmax(0,1fr));
-      }
-    }
-
-    @media (max-width: 500px) {
-      .grid {
-        grid-template-columns: minmax(0,1fr);
-      }
+      .hero-title { font-size: 32px; }
+      .grid { grid-template-columns: minmax(0,1fr); }
+      .grid-2 { grid-template-columns: minmax(0,1fr); }
+      .cta-card { padding: 20px; }
     }
   </style>
 </head>
 <body>
 
-<!-- NAVBAR -->
 <header class="nav">
   <div class="nav-left">
     <img src="gaias-logo.png" alt="Gaia’s Footprint logo" class="nav-logo-img" />
     <div class="nav-brand">GAIA’S FOOTPRINT</div>
   </div>
   <nav class="nav-links">
-    <a href="index.html" class="nav-link">Home</a>
-    <a href="posture-corrector.html" class="nav-link">Posture Corrector</a>
+    <a href="#produkte" class="nav-link">Produkte</a>
+    <a href="#thermo" class="nav-link">Thermobecher</a>
+    <a href="#posture" class="nav-link">Posture Corrector</a>
+    <a href="thermobecher.html" class="nav-link">Thermobecher-Details</a>
+    <a href="posture-corrector.html" class="nav-link">Posture-Details</a>
   </nav>
-  <div class="nav-pill">Sustainable essentials for modern living</div>
+  <div class="nav-pill">Zwei Essentials für deinen Alltag</div>
 </header>
 
-<!-- HERO -->
 <section class="hero">
   <div>
-    <div class="hero-eyebrow">Introducing</div>
-    <h1 class="hero-title">Feel lighter in your body.<br />Leave a softer footprint.</h1>
+    <div class="hero-eyebrow">Neu im Sortiment</div>
+    <h1 class="hero-title">Thermobecher 350 ml & Smart Posture Corrector.</h1>
     <p class="hero-sub">
-      Gaia’s Footprint creates everyday products that support your body and your routine—starting with a smart posture
-      corrector designed for real life: work, running, home, and everything in between.
+      Gaia’s Footprint vereint Komfort und Funktion: ein auslaufsicherer, vakuumisolierter Thermobecher und ein
+      ergonomischer Haltungstrainer mit Lendenstütze. Für Wege, Workouts und lange Office-Tage.
     </p>
     <div class="hero-cta-row">
-      <a class="btn-primary" href="posture-corrector.html">Explore Posture Corrector</a>
-      <span class="hero-note">More products coming soon.</span>
+      <a class="btn-primary" href="#thermo">Zum Thermobecher</a>
+      <a class="btn-ghost" href="#posture">Zum Posture Corrector</a>
     </div>
   </div>
-
-  <div class="hero-img-wrap">
-    <img src="posture-hero.jpg" alt="Gaia’s Footprint posture corrector" class="hero-img" />
-    <div class="hero-tag">Smart Posture Corrector · By Gaia’s Footprint</div>
+  <div class="hero-visual" aria-hidden="true">
+    <div class="render">
+      <div class="render-body"></div>
+      <div class="render-label">Thermobecher · 350 ml</div>
+    </div>
+    <div class="render-label" style="margin-top:14px; font-weight:600;">Auslaufsicher · Schnellverschluss · Edelstahl</div>
   </div>
 </section>
 
-<!-- FEATURED STRIP -->
-<section class="strip">
-  <div class="strip-card">
-    <div>
-      <div class="strip-tag">Featured product</div>
-      <h2 class="strip-title">Smart Posture Corrector with Lumbar Support</h2>
-      <p class="strip-text">
-        A breathable, adjustable posture brace designed to gently guide your shoulders back, support your lower back,
-        and help reduce everyday back &amp; neck strain.
-      </p>
+<section class="section" id="produkte">
+  <p class="pill">Produktüberblick</p>
+  <h2 class="section-title">Zwei Produkte. Ein Ziel: Alltag leichter machen.</h2>
+  <p class="section-sub">Wähle, was du brauchst: Wärme & Dichtheit für unterwegs oder eine sanfte Erinnerung an bessere Haltung.</p>
+  <div class="grid-2">
+    <div class="card product-card">
+      <div>
+        <p class="pill">Neu · Thermobecher 350 ml</p>
+        <h3 class="section-title" style="margin-bottom:10px;">Auslaufsicher, vakuumisoliert, griffig.</h3>
+        <p class="section-sub" style="margin-bottom:16px;">
+          Edelstahl, BPA-frei, Einhand-Schnellverschluss. Passt in Becherhalter und bleibt außen trocken.
+        </p>
+        <div class="hero-cta-row" style="margin-bottom:8px;">
+          <a class="btn-primary" href="thermobecher.html">Details ansehen</a>
+          <a class="btn-ghost" href="https://amzn.eu/d/hH6QRSc" target="_blank" rel="noopener noreferrer">Jetzt auf Amazon kaufen</a>
+        </div>
+        <div class="chip-row" style="margin-top:10px; display:flex; gap:8px; flex-wrap:wrap;">
+          <div class="chip">350 ml</div>
+          <div class="chip">Auslaufsicher</div>
+          <div class="chip">Vakuumisoliert</div>
+        </div>
+      </div>
+      <div class="product-visual">
+        <div class="render">
+          <div class="render-body"></div>
+          <div class="render-label">Schwarz · Edelstahl</div>
+        </div>
+      </div>
     </div>
-    <a href="posture-corrector.html" class="btn-ghost">View details &amp; Amazon link →</a>
+
+    <div class="card product-card" id="posture">
+      <div>
+        <p class="pill">Klassiker · Smart Posture Corrector</p>
+        <h3 class="section-title" style="margin-bottom:10px;">Leichte Unterstützung für Rücken & Schultern.</h3>
+        <p class="section-sub" style="margin-bottom:16px;">
+          Atmungsaktives, verstellbares Design mit Lendenstütze. Dezent unter Kleidung, geeignet für Arbeit, Sport und Zuhause.
+        </p>
+        <div class="hero-cta-row" style="margin-bottom:8px;">
+          <a class="btn-primary" href="posture-corrector.html">Details ansehen</a>
+          <a class="btn-ghost" href="https://amzn.eu/d/cJO91wE" target="_blank" rel="noopener noreferrer">Jetzt auf Amazon kaufen</a>
+        </div>
+        <div class="chip-row" style="margin-top:10px; display:flex; gap:8px; flex-wrap:wrap;">
+          <div class="chip" style="background:var(--accent-soft); color:#0b7b5f; border:1px solid rgba(11,123,95,0.18);">Atmungsaktiv</div>
+          <div class="chip" style="background:var(--accent-soft); color:#0b7b5f; border:1px solid rgba(11,123,95,0.18);">Unisex Fit</div>
+          <div class="chip" style="background:var(--accent-soft); color:#0b7b5f; border:1px solid rgba(11,123,95,0.18);">Lendenstütze</div>
+        </div>
+      </div>
+      <div class="product-visual">
+        <img src="posture-hero.jpg" alt="Gaia’s Footprint posture corrector" class="product-img" />
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- LIFESTYLE GRID -->
-<section class="section">
-  <h2 class="section-title">Designed for real life</h2>
-  <p class="section-sub">From desk work to runs by the river—your posture support should move with you.</p>
+<section class="section" id="thermo">
+  <p class="pill">Thermobecher Highlights</p>
+  <h2 class="section-title">Wärme sichern, Tropfen verhindern, Alltag vereinfachen.</h2>
+  <p class="section-sub">Robuster Edelstahl, sicherer Schnellverschluss und schlanke Form für Becherhalter – gemacht für Pendeln, Büro und Trips.</p>
+  <div class="grid">
+    <div class="card">
+      <div class="icon">🔥</div>
+      <h3>Vakuumisoliert</h3>
+      <p class="section-sub" style="margin-bottom:0;">Doppelwandig – hält Heißes heiß und Kaltes kalt, ohne Kondenswasser außen.</p>
+    </div>
+    <div class="card">
+      <div class="icon">🔒</div>
+      <h3>Auslaufsicher</h3>
+      <p class="section-sub" style="margin-bottom:0;">Einhand-Schnappverschluss mit Dichtung. Öffnen, trinken, schließen in Sekunden.</p>
+    </div>
+    <div class="card">
+      <div class="icon">🧼</div>
+      <h3>Pflegeleicht</h3>
+      <p class="section-sub" style="margin-bottom:0;">Zerlegbarer Deckel, BPA-frei. Innen & außen Edelstahl für neutralen Geschmack.</p>
+    </div>
+  </div>
+
+  <div style="height:18px;"></div>
+
+  <div class="grid-4">
+    <div class="card" style="text-align:center;">
+      <div class="pill" style="margin-bottom:6px;">Volumen</div>
+      <h3 style="margin:0;font-size:24px;">350 ml</h3>
+      <p class="section-sub" style="margin-bottom:0;">Coffee-Shop Größe für unterwegs.</p>
+    </div>
+    <div class="card" style="text-align:center;">
+      <div class="pill" style="margin-bottom:6px;">Material</div>
+      <h3 style="margin:0;font-size:24px;">Edelstahl</h3>
+      <p class="section-sub" style="margin-bottom:0;">BPA-frei, geruchsneutral.</p>
+    </div>
+    <div class="card" style="text-align:center;">
+      <div class="pill" style="margin-bottom:6px;">Verschluss</div>
+      <h3 style="margin:0;font-size:24px;">Schnell</h3>
+      <p class="section-sub" style="margin-bottom:0;">Einhand-Klick, auslaufsicher.</p>
+    </div>
+    <div class="card" style="text-align:center;">
+      <div class="pill" style="margin-bottom:6px;">Passform</div>
+      <h3 style="margin:0;font-size:24px;">Becherhalter</h3>
+      <p class="section-sub" style="margin-bottom:0;">Schlanker Fuß für Auto & Fahrrad.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="posture-highlights">
+  <p class="pill">Posture Corrector Highlights</p>
+  <h2 class="section-title">Leicht, atmungsaktiv und alltagstauglich.</h2>
+  <p class="section-sub">Bringt Schultern und Rücken in eine entspanntere Position – unauffällig unter Kleidung und anpassbar für Workouts oder lange Bürotage.</p>
+  <div class="grid-2">
+    <div class="card">
+      <h3 style="margin-top:0;">Stabile Rückenführung</h3>
+      <ul class="list">
+        <li><span class="list-dot"></span><span>Verstärkte Rückenschlaufe für gleichmäßige Unterstützung entlang der Wirbelsäule.</span></li>
+        <li><span class="list-dot"></span><span>Breiter Lendengurt stabilisiert den unteren Rücken.</span></li>
+        <li><span class="list-dot"></span><span>Extra langer Gurt für mehr Einstellbereich.</span></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3 style="margin-top:0;">Atmungsaktiver Komfort</h3>
+      <ul class="list">
+        <li><span class="list-dot"></span><span>Weiche, luftige Materialien mit glatten Kanten.</span></li>
+        <li><span class="list-dot"></span><span>Dezent unter Kleidung für Büro und Reisen.</span></li>
+        <li><span class="list-dot"></span><span>Unisex Fit, einstellbar für S–XL.</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="height:18px;"></div>
 
   <div class="grid">
-    <div class="grid-item">
-      <img src="posture-running.jpg" alt="Using posture corrector while running" class="grid-img" />
-      <div class="grid-label">Running &amp; training</div>
-      <div class="grid-text">Stay open through the chest and keep your shoulders relaxed while you move.</div>
+    <div class="card">
+      <img src="posture-running.jpg" alt="Posture corrector beim Laufen" class="product-img" style="width:100%; border-radius:16px;" />
+      <p class="section-sub" style="margin-bottom:0;">Running & Training: Offen bleiben in Brust und Schultern.</p>
     </div>
-
-    <div class="grid-item">
-      <img src="posture-fitness-home.jpg" alt="Fitness and home use" class="grid-img" />
-      <div class="grid-label">Fitness &amp; at home</div>
-      <div class="grid-text">Whether lifting, cleaning or cooking—support that blends into your day.</div>
+    <div class="card">
+      <img src="posture-fitness-home.jpg" alt="Posture corrector zuhause" class="product-img" style="width:100%; border-radius:16px;" />
+      <p class="section-sub" style="margin-bottom:0;">Fitness & Zuhause: Unterstützt bei Heben, Kochen, Aufräumen.</p>
     </div>
+    <div class="card">
+      <img src="posture-office-pain.jpg" alt="Posture corrector im Büro" class="product-img" style="width:100%; border-radius:16px;" />
+      <p class="section-sub" style="margin-bottom:0;">Office Hours: Reduziert typischen Nacken- & Schulterstress.</p>
+    </div>
+  </div>
+</section>
 
-    <div class="grid-item">
-      <img src="posture-office-pain.jpg" alt="Office sitting posture" class="grid-img" />
-      <div class="grid-label">Long desk hours</div>
-      <div class="grid-text">Helps you avoid slouching and relieve tension in your neck and upper back.</div>
+<section class="section">
+  <div class="cta-card secondary">
+    <div>
+      <p class="pill" style="color:rgba(255,255,255,0.8);">Bereit?</p>
+      <h3 style="margin:0 0 10px;font-size:24px; color:#fff;">Wähle deinen Favoriten.</h3>
+      <p style="margin:0 0 16px; color: rgba(255,255,255,0.86);">Thermobecher für den Weg oder Posture Corrector für Rücken & Haltung – beide sofort verfügbar.</p>
+      <div class="hero-cta-row">
+        <a class="btn-primary" href="https://amzn.eu/d/hH6QRSc" target="_blank" rel="noopener noreferrer" style="box-shadow:0 14px 32px rgba(0,0,0,0.25);">Thermobecher kaufen</a>
+        <a class="btn-ghost" href="https://amzn.eu/d/cJO91wE" target="_blank" rel="noopener noreferrer" style="color:#fff; border-color:rgba(255,255,255,0.3);">Posture Corrector kaufen</a>
+      </div>
+    </div>
+    <div style="text-align:right;">
+      <div class="render" style="margin-bottom:14px;">
+        <div class="render-body"></div>
+        <div class="render-label">Thermobecher · 350 ml</div>
+      </div>
+      <img src="posture-closeup.jpg" alt="Posture corrector Detail" class="product-img" style="max-width:240px; border-radius:14px; box-shadow:0 12px 22px rgba(0,0,0,0.18);" />
     </div>
   </div>
 </section>
 
 <footer>
-  © 2025 Gaia’s Footprint — All rights reserved.
+  © 2025 Gaia’s Footprint — Thermobecher 350 ml & Smart Posture Corrector
 </footer>
 
 </body>

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gaia’s Footprint – Thermobecher 350 ml Details</title>
+  <style>
+    :root {
+      --bg: #f5f3ef;
+      --card: #ffffff;
+      --accent: #0b7b5f;
+      --accent-soft: #e1f1ea;
+      --text-main: #1f2b2a;
+      --text-soft: #56615f;
+      --border: rgba(0, 0, 0, 0.06);
+      --shadow: 0 18px 40px rgba(0,0,0,0.12);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text-main);
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 14px 20px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .nav-left { display: flex; align-items: center; gap: 10px; }
+    .nav-logo-img { width: 36px; height: 36px; border-radius: 8px; }
+    .nav-brand { font-weight: 700; letter-spacing: 0.14em; font-size: 13px; }
+
+    .nav-links { display: flex; gap: 16px; font-size: 14px; flex-wrap: wrap; align-items: center; }
+    .nav-link { opacity: 0.82; }
+    .nav-link:hover { opacity: 1; }
+
+    .nav-pill {
+      font-size: 12px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.92);
+      white-space: nowrap;
+    }
+
+    /* HERO */
+    .hero {
+      max-width: 1200px;
+      margin: 12px auto 50px;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr);
+      gap: 36px;
+      align-items: center;
+    }
+
+    .hero-eyebrow {
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      color: var(--text-soft);
+      margin-bottom: 8px;
+    }
+
+    .hero-title {
+      font-size: 36px;
+      line-height: 1.15;
+      margin: 0 0 12px;
+    }
+
+    .hero-sub {
+      font-size: 16px;
+      color: var(--text-soft);
+      margin-bottom: 16px;
+      max-width: 720px;
+    }
+
+    .hero-list { list-style: none; padding: 0; margin: 0 0 16px; display: grid; gap: 8px; }
+    .hero-list li { display: grid; grid-template-columns: auto 1fr; gap: 10px; color: var(--text-soft); font-size: 14px; }
+    .dot { width: 7px; height: 7px; background: var(--accent); border-radius: 50%; margin-top: 5px; }
+
+    .hero-cta-row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 12px 22px;
+      border-radius: 999px;
+      font-weight: 650;
+      font-size: 14px;
+      box-shadow: 0 10px 24px rgba(11, 123, 95, 0.25);
+    }
+
+    .btn-primary:hover { background: #085f49; }
+
+    .btn-ghost {
+      font-size: 13px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: transparent;
+      font-weight: 600;
+    }
+
+    .hero-visual {
+      background: linear-gradient(140deg, #0b7b5f 0%, #0b7b5f 38%, #1f2b2a 100%);
+      border-radius: 26px;
+      padding: 26px;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .hero-visual::after, .hero-visual::before {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.08);
+    }
+    .hero-visual::before { width: 180px; height: 180px; right: -50px; top: -20px; }
+    .hero-visual::after { width: 120px; height: 120px; left: -60px; bottom: -30px; }
+
+    .render { background: linear-gradient(180deg, #111918, #161f1e); border-radius: 18px; padding: 18px; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05); }
+    .render-body {
+      width: 130px;
+      height: 200px;
+      margin: 0 auto;
+      border-radius: 24px 24px 30px 30px;
+      background: linear-gradient(180deg, #1f2b2a 0%, #0f1413 100%);
+      position: relative;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 18px 32px rgba(0,0,0,0.45);
+    }
+    .render-body::before {
+      content: "";
+      position: absolute;
+      top: 16px;
+      left: 22px;
+      right: 22px;
+      height: 12px;
+      border-radius: 12px;
+      background: linear-gradient(90deg, rgba(255,255,255,0.12), rgba(255,255,255,0.02));
+    }
+    .render-body::after {
+      content: "";
+      position: absolute;
+      top: -11px;
+      left: 16px;
+      right: 16px;
+      height: 20px;
+      border-radius: 18px;
+      background: linear-gradient(180deg, #0c9c76, #0b7b5f);
+      box-shadow: 0 9px 16px rgba(0,0,0,0.25);
+    }
+    .render-label { text-align: center; margin-top: 12px; font-size: 13px; letter-spacing: 0.08em; color: rgba(255,255,255,0.85); }
+
+    /* LAYOUT */
+    .section { max-width: 1200px; margin: 0 auto 64px; padding: 0 20px; }
+    .section-title { font-size: 24px; margin-bottom: 8px; }
+    .section-sub { font-size: 15px; color: var(--text-soft); margin-bottom: 20px; max-width: 900px; }
+
+    .card { background: var(--card); border-radius: 22px; padding: 20px 22px; border: 1px solid var(--border); box-shadow: 0 12px 30px rgba(0,0,0,0.05); }
+    .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; }
+
+    .pill { display: inline-block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.16em; color: var(--text-soft); margin-bottom: 8px; }
+
+    .list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+    .list li { display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: flex-start; font-size: 14px; color: var(--text-soft); }
+    .list-dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; margin-top: 6px; }
+
+    .spec-table { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 12px; margin-top: 8px; }
+    .spec { background: var(--accent-soft); border-radius: 12px; padding: 12px 14px; border: 1px solid rgba(11, 123, 95, 0.1); }
+    .spec-title { font-size: 12px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-soft); margin: 0 0 4px; }
+    .spec-value { margin: 0; font-weight: 700; color: var(--text-main); }
+
+    .faq { display: grid; gap: 12px; }
+    .faq-item { background: var(--card); border-radius: 16px; padding: 14px 16px; border: 1px solid var(--border); box-shadow: 0 8px 20px rgba(0,0,0,0.04); }
+    .faq-item h4 { margin: 0 0 6px; font-size: 15px; }
+    .faq-item p { margin: 0; color: var(--text-soft); font-size: 14px; }
+
+    @media (max-width: 1000px) {
+      .hero { grid-template-columns: minmax(0,1fr); }
+      .grid-2 { grid-template-columns: minmax(0,1fr); }
+      .grid-3 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .spec-table { grid-template-columns: minmax(0,1fr); }
+    }
+
+    @media (max-width: 680px) {
+      .hero-title { font-size: 30px; }
+      .grid-3 { grid-template-columns: minmax(0,1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-left">
+    <img src="gaias-logo.png" alt="Gaia’s Footprint logo" class="nav-logo-img" />
+    <div class="nav-brand">GAIA’S FOOTPRINT</div>
+  </div>
+  <nav class="nav-links">
+    <a href="index.html" class="nav-link">Startseite</a>
+    <a href="#details" class="nav-link">Details</a>
+    <a href="#faq" class="nav-link">FAQ</a>
+    <a href="posture-corrector.html" class="nav-link">Posture Corrector</a>
+  </nav>
+  <div class="nav-pill">Thermobecher 350 ml</div>
+</header>
+
+<section class="hero" id="top">
+  <div>
+    <div class="hero-eyebrow">Produktdetails</div>
+    <h1 class="hero-title">Thermobecher 350&nbsp;ml – auslaufsicher, vakuumisoliert, bereit für jeden Tag.</h1>
+    <p class="hero-sub">
+      Unser neuer Gaia’s Footprint Thermobecher kombiniert einen druckstabilen Schnellverschluss mit doppelwandigem
+      Edelstahl. So bleibt dein Getränk geschützt – im Becherhalter, in der Tasche oder in der Hand.
+    </p>
+    <ul class="hero-list">
+      <li><span class="dot"></span><span>350&nbsp;ml Fassungsvermögen für Kaffee, Tee &amp; kalte Drinks.</span></li>
+      <li><span class="dot"></span><span>Auslaufsicherer Schnellverschluss – Einhandbedienung.</span></li>
+      <li><span class="dot"></span><span>Doppelwandig, vakuumisoliert, außen ohne Kondenswasser.</span></li>
+      <li><span class="dot"></span><span>Edelstahl, BPA-frei, geruchsneutral.</span></li>
+    </ul>
+    <div class="hero-cta-row">
+      <a class="btn-primary" href="https://amzn.eu/d/hH6QRSc" target="_blank" rel="noopener noreferrer">Auf Amazon kaufen</a>
+      <a class="btn-ghost" href="index.html">Zur Übersicht</a>
+    </div>
+  </div>
+  <div class="hero-visual" aria-hidden="true">
+    <div class="render">
+      <div class="render-body"></div>
+      <div class="render-label">350 ml · Schwarz</div>
+    </div>
+    <div class="render-label" style="margin-top:14px; font-weight:600;">Auslaufsicher · Schnellverschluss · Edelstahl</div>
+  </div>
+</section>
+
+<section class="section" id="details">
+  <p class="pill">Warum dieser Becher</p>
+  <h2 class="section-title">Tägliche Routine, ruhiger Kopf.</h2>
+  <p class="section-sub">
+    Wir wollten einen Becher, der nicht nur gut aussieht, sondern jede Situation mitmacht: Pendeln, Büro, Spaziergang,
+    Wochenendtrip. Der Thermobecher 350 ml ist kompakt, dicht und lässt sich mit einer Hand öffnen.
+  </p>
+  <div class="grid-2">
+    <div class="card">
+      <h3 style="margin-top:0;">Auslaufsicherer Schnellverschluss</h3>
+      <ul class="list">
+        <li><span class="list-dot"></span><span>Deckel mit sicherem Dichtungsring, der auch liegend dicht hält.</span></li>
+        <li><span class="list-dot"></span><span>Einhand-Klick: öffnen, trinken, schließen – ohne zu schrauben.</span></li>
+        <li><span class="list-dot"></span><span>Lässt sich zum Reinigen auseinandernehmen.</span></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3 style="margin-top:0;">Vakuumisolierter Edelstahl</h3>
+      <ul class="list">
+        <li><span class="list-dot"></span><span>Doppelwandiger Edelstahl reduziert Wärmeverlust und Kondensation.</span></li>
+        <li><span class="list-dot"></span><span>Mattes Finish für guten Grip und eine langlebige Optik.</span></li>
+        <li><span class="list-dot"></span><span>Neutraler Geschmack – kein Metallgeruch, keine Geruchsübertragung.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="card">
+    <p class="pill">Technische Daten</p>
+    <h2 class="section-title">Alles, was du wissen möchtest.</h2>
+    <div class="spec-table">
+      <div class="spec">
+        <p class="spec-title">Fassungsvermögen</p>
+        <p class="spec-value">350 ml</p>
+      </div>
+      <div class="spec">
+        <p class="spec-title">Material</p>
+        <p class="spec-value">Edelstahl, BPA-frei</p>
+      </div>
+      <div class="spec">
+        <p class="spec-title">Verschluss</p>
+        <p class="spec-value">Schnappverschluss, auslaufsicher</p>
+      </div>
+      <div class="spec">
+        <p class="spec-title">Isolierung</p>
+        <p class="spec-value">Doppelwandig, vakuumisoliert</p>
+      </div>
+      <div class="spec">
+        <p class="spec-title">Oberfläche</p>
+        <p class="spec-value">Mattes Schwarz</p>
+      </div>
+      <div class="spec">
+        <p class="spec-title">Passform</p>
+        <p class="spec-value">Schlanker Boden für Becherhalter</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="grid-2">
+    <div class="card">
+      <p class="pill">Anwendung</p>
+      <h3 class="section-title">So holst du das Beste heraus.</h3>
+      <ul class="list">
+        <li><span class="list-dot"></span><span>Vorwärmen oder vorkühlen: kurz mit heißem bzw. kaltem Wasser ausspülen.</span></li>
+        <li><span class="list-dot"></span><span>Deckel richtig einrasten lassen, bevor der Becher in die Tasche wandert.</span></li>
+        <li><span class="list-dot"></span><span>Für kohlensäurehaltige Getränke geeignet – einfach den Druck beim Öffnen beachten.</span></li>
+      </ul>
+    </div>
+    <div class="card">
+      <p class="pill">Pflege</p>
+      <h3 class="section-title">Schnelle Reinigung, lange Lebensdauer.</h3>
+      <ul class="list">
+        <li><span class="list-dot"></span><span>Deckel nach jeder Nutzung zerlegen, abspülen und trocknen lassen.</span></li>
+        <li><span class="list-dot"></span><span>Handwäsche empfohlen, um die Dichtung zu schonen.</span></li>
+        <li><span class="list-dot"></span><span>Kein hartes Scheuermittel – so bleibt das matte Finish länger schön.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <p class="pill">FAQ</p>
+  <h2 class="section-title">Häufige Fragen</h2>
+  <div class="faq">
+    <div class="faq-item">
+      <h4>Passt der Becher in gängige Auto- oder Fahrrad-Becherhalter?</h4>
+      <p>Ja. Der schlanke Fuß ist so gestaltet, dass er in den meisten Standard-Becherhaltern einen sicheren Sitz hat.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Kann ich den Deckel zerlegen?</h4>
+      <p>Ja. Der Schnellverschluss lässt sich auseinandernehmen, damit du Dichtungen und Spaltbereiche einfach reinigen kannst.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Ist der Becher BPA-frei?</h4>
+      <p>Ja. Innen und außen Edelstahl, dazu BPA-freie Komponenten im Deckel.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Darf der Becher in den Geschirrspüler?</h4>
+      <p>Handwäsche wird empfohlen, um die Dichtungen und das matte Finish zu schützen.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="card">
+    <p class="pill">Lieferumfang</p>
+    <h2 class="section-title">Was du erhältst</h2>
+    <ul class="list">
+      <li><span class="list-dot"></span><span>1× Gaia’s Footprint Thermobecher 350 ml in Schwarz.</span></li>
+      <li><span class="list-dot"></span><span>1× Deckel mit auslaufsicherem Schnellverschluss.</span></li>
+      <li><span class="list-dot"></span><span>Kurz-Anleitung für Pflege &amp; Reinigung.</span></li>
+    </ul>
+    <div style="margin-top:18px; display:flex; gap:12px; flex-wrap:wrap; align-items:center;">
+      <a class="btn-primary" href="https://amzn.eu/d/hH6QRSc" target="_blank" rel="noopener noreferrer">Jetzt bestellen</a>
+      <span style="font-size:13px; color:var(--text-soft);">Versand und Service über Amazon.de</span>
+    </div>
+  </div>
+</section>
+
+<footer style="text-align:center; padding: 34px 16px 40px; font-size: 13px; color: var(--text-soft);">
+  © 2025 Gaia’s Footprint — Thermobecher 350 ml
+</footer>
+
+</body>
+</html>
