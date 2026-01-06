@@ -147,11 +147,16 @@
     .hero-visual {
       background: linear-gradient(140deg, #0b7b5f 0%, #0b7b5f 38%, #1f2b2a 100%);
       border-radius: 26px;
-      padding: 26px;
+      padding: 20px;
       color: #fff;
       position: relative;
       overflow: hidden;
       box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      align-items: center;
+      justify-items: center;
     }
     .hero-visual::after, .hero-visual::before {
       content: "";
@@ -162,38 +167,29 @@
     .hero-visual::before { width: 180px; height: 180px; right: -50px; top: -20px; }
     .hero-visual::after { width: 120px; height: 120px; left: -60px; bottom: -30px; }
 
-    .render { background: linear-gradient(180deg, #111918, #161f1e); border-radius: 18px; padding: 18px; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05); }
-    .render-body {
-      width: 130px;
-      height: 200px;
-      margin: 0 auto;
-      border-radius: 24px 24px 30px 30px;
-      background: linear-gradient(180deg, #1f2b2a 0%, #0f1413 100%);
-      position: relative;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 18px 32px rgba(0,0,0,0.45);
+    .hero-visual img {
+      width: 100%;
+      max-width: 340px;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.05);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
     }
-    .render-body::before {
-      content: "";
-      position: absolute;
-      top: 16px;
-      left: 22px;
-      right: 22px;
-      height: 12px;
-      border-radius: 12px;
-      background: linear-gradient(90deg, rgba(255,255,255,0.12), rgba(255,255,255,0.02));
+
+    .render-label { text-align: center; margin-top: 4px; font-size: 13px; letter-spacing: 0.08em; color: rgba(255,255,255,0.92); }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.06);
     }
-    .render-body::after {
-      content: "";
-      position: absolute;
-      top: -11px;
-      left: 16px;
-      right: 16px;
-      height: 20px;
-      border-radius: 18px;
-      background: linear-gradient(180deg, #0c9c76, #0b7b5f);
-      box-shadow: 0 9px 16px rgba(0,0,0,0.25);
-    }
-    .render-label { text-align: center; margin-top: 12px; font-size: 13px; letter-spacing: 0.08em; color: rgba(255,255,255,0.85); }
 
     /* LAYOUT */
     .section { max-width: 1200px; margin: 0 auto 64px; padding: 0 20px; }
@@ -215,6 +211,36 @@
     .spec-title { font-size: 12px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-soft); margin: 0 0 4px; }
     .spec-value { margin: 0; font-weight: 700; color: var(--text-main); }
 
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .media-card {
+      background: #fff;
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+      overflow: hidden;
+      display: grid;
+      gap: 0;
+      grid-template-rows: auto 1fr;
+      height: 100%;
+    }
+    .media-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .media-card .media-caption {
+      padding: 12px 14px;
+      font-size: 14px;
+      color: var(--text-soft);
+      background: #fff;
+      border-top: 1px solid var(--border);
+    }
+
     .faq { display: grid; gap: 12px; }
     .faq-item { background: var(--card); border-radius: 16px; padding: 14px 16px; border: 1px solid var(--border); box-shadow: 0 8px 20px rgba(0,0,0,0.04); }
     .faq-item h4 { margin: 0 0 6px; font-size: 15px; }
@@ -224,12 +250,14 @@
       .hero { grid-template-columns: minmax(0,1fr); }
       .grid-2 { grid-template-columns: minmax(0,1fr); }
       .grid-3 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .media-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
       .spec-table { grid-template-columns: minmax(0,1fr); }
     }
 
     @media (max-width: 680px) {
       .hero-title { font-size: 30px; }
       .grid-3 { grid-template-columns: minmax(0,1fr); }
+      .media-grid { grid-template-columns: minmax(0,1fr); }
     }
   </style>
 </head>
@@ -275,11 +303,9 @@
     </div>
   </div>
   <div class="hero-visual" aria-hidden="true">
-    <div class="render">
-      <div class="render-body"></div>
-      <div class="render-label">350 ml · Schwarz</div>
-    </div>
-    <div class="render-label" style="margin-top:14px; font-weight:600;">Auslaufsicher · Schnellverschluss · Edelstahl</div>
+    <div class="badge" data-i18n="hero.badge">Vakuumisoliert · 350 ml</div>
+    <img src="assets/images/vacuum-mug/mug-product.svg" alt="Gaia’s Footprint Thermobecher" />
+    <div class="render-label" style="font-weight:600;" data-i18n="hero.renderSub">Auslaufsicher · Schnellverschluss · Edelstahl</div>
   </div>
 </section>
 
@@ -306,6 +332,38 @@
         <li><span class="list-dot"></span><span data-i18n="why.card2List2">Mattes Finish für guten Grip und eine langlebige Optik.</span></li>
         <li><span class="list-dot"></span><span data-i18n="why.card2List3">Neutraler Geschmack – kein Metallgeruch, keine Geruchsübertragung.</span></li>
       </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="gallery">
+  <p class="pill" data-i18n="gallery.pill">Bild-Galerie</p>
+  <h2 class="section-title" data-i18n="gallery.title">Produktfotos für Winter, Sommer und unterwegs.</h2>
+  <p class="section-sub" data-i18n="gallery.sub">Eindrücke für Kälte, Hitze, weiten Becherrand, Features sowie Outdoor- und Autoeinsatz.</p>
+  <div class="media-grid">
+    <div class="media-card">
+      <img src="assets/images/vacuum-mug/mug-hot-cold.svg" alt="Thermobecher-Collage für Sommer und Winter" />
+      <div class="media-caption" data-i18n="gallery.caption1">Hält kalt und warm – Sommer &amp; Winter.</div>
+    </div>
+    <div class="media-card">
+      <img src="assets/images/vacuum-mug/mug-wide-mouth.svg" alt="Offener Becher mit weitem Rand" />
+      <div class="media-caption" data-i18n="gallery.caption2">8,2&nbsp;cm weiter Rand: Eiswürfel einfüllen, leicht reinigen.</div>
+    </div>
+    <div class="media-card">
+      <img src="assets/images/vacuum-mug/mug-feature-icons.svg" alt="Feature-Grafik zu Materialien und Isolierung" />
+      <div class="media-caption" data-i18n="gallery.caption3">Leakproof Push-Button, Edelstahl, vakuumisoliert.</div>
+    </div>
+    <div class="media-card">
+      <img src="assets/images/vacuum-mug/mug-camp.svg" alt="Thermobecher im Outdoor-Setup" />
+      <div class="media-caption" data-i18n="gallery.caption4">Outdoor-tauglich – Wärme, die mitreist.</div>
+    </div>
+    <div class="media-card">
+      <img src="assets/images/vacuum-mug/mug-car.svg" alt="Thermobecher im Auto" />
+      <div class="media-caption" data-i18n="gallery.caption5">Schlanker Fuß für Becherhalter, dicht beim Transport.</div>
+    </div>
+    <div class="media-card">
+      <img src="assets/images/vacuum-mug/mug-product.svg" alt="Freigestelltes Produktbild des Thermobechers" />
+      <div class="media-caption" data-i18n="gallery.caption6">Klares Produktbild – mattschwarzer Edelstahl.</div>
     </div>
   </div>
 </section>
@@ -424,6 +482,8 @@
       'hero.bullet2': 'Auslaufsicherer Schnellverschluss – Einhandbedienung.',
       'hero.bullet3': 'Doppelwandig, vakuumisoliert, außen ohne Kondenswasser.',
       'hero.bullet4': 'Edelstahl, BPA-frei, geruchsneutral.',
+      'hero.badge': 'Vakuumisoliert · 350 ml',
+      'hero.renderSub': 'Auslaufsicher · Schnellverschluss · Edelstahl',
       'hero.ctaBuy': 'Auf Amazon kaufen',
       'hero.ctaBack': 'Zur Übersicht',
       'why.pill': 'Warum dieser Becher',
@@ -437,6 +497,15 @@
       'why.card2List1': 'Doppelwandiger Edelstahl reduziert Wärmeverlust und Kondensation.',
       'why.card2List2': 'Mattes Finish für guten Grip und eine langlebige Optik.',
       'why.card2List3': 'Neutraler Geschmack – kein Metallgeruch, keine Geruchsübertragung.',
+      'gallery.pill': 'Bild-Galerie',
+      'gallery.title': 'Produktfotos für Winter, Sommer und unterwegs.',
+      'gallery.sub': 'Eindrücke für Kälte, Hitze, weiten Becherrand, Features sowie Outdoor- und Autoeinsatz.',
+      'gallery.caption1': 'Hält kalt und warm – Sommer & Winter.',
+      'gallery.caption2': '8,2 cm weiter Rand: Eiswürfel einfüllen, leicht reinigen.',
+      'gallery.caption3': 'Leakproof Push-Button, Edelstahl, vakuumisoliert.',
+      'gallery.caption4': 'Outdoor-tauglich – Wärme, die mitreist.',
+      'gallery.caption5': 'Schlanker Fuß für Becherhalter, dicht beim Transport.',
+      'gallery.caption6': 'Klares Produktbild – mattschwarzer Edelstahl.',
       'specs.pill': 'Technische Daten',
       'specs.title': 'Alles, was du wissen möchtest.',
       'specs.capacityTitle': 'Fassungsvermögen',
@@ -493,6 +562,8 @@
       'hero.bullet2': 'Leakproof quick lid – one-hand operation.',
       'hero.bullet3': 'Double-wall, vacuum insulated, no condensation outside.',
       'hero.bullet4': 'Stainless steel, BPA-free, neutral taste.',
+      'hero.badge': 'Vacuum insulated · 350 ml',
+      'hero.renderSub': 'Leakproof · Quick lid · Stainless steel',
       'hero.ctaBuy': 'Buy on Amazon',
       'hero.ctaBack': 'Back to overview',
       'why.pill': 'Why this mug',
@@ -506,6 +577,15 @@
       'why.card2List1': 'Double-wall stainless reduces heat loss and condensation.',
       'why.card2List2': 'Matte finish for good grip and lasting look.',
       'why.card2List3': 'Neutral taste—no metal smell, no flavour transfer.',
+      'gallery.pill': 'Image gallery',
+      'gallery.title': 'Product shots for winter, summer, and on the go.',
+      'gallery.sub': 'Shots for cold and hot use, wide mouth, feature icons, plus outdoor and in-car use.',
+      'gallery.caption1': 'Keeps drinks cold or hot—summer & winter.',
+      'gallery.caption2': '8.2 cm wide mouth: add ice cubes, easy cleaning.',
+      'gallery.caption3': 'Leakproof push button, stainless steel, vacuum insulation.',
+      'gallery.caption4': 'Outdoor-ready—warmth that travels.',
+      'gallery.caption5': 'Slim base for cupholders, leakproof in transit.',
+      'gallery.caption6': 'Clean product shot—matte black stainless steel.',
       'specs.pill': 'Technical data',
       'specs.title': 'Everything you want to know.',
       'specs.capacityTitle': 'Capacity',
