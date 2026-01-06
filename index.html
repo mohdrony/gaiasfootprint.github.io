@@ -56,6 +56,66 @@
       white-space: nowrap;
     }
 
+    .lang-switch {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.9);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .lang-btn {
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      padding: 4px 8px;
+      border-radius: 999px;
+      font-weight: 700;
+      color: var(--text-main);
+      opacity: 0.7;
+    }
+
+    .lang-btn.active {
+      background: var(--accent-soft);
+      color: #0b7b5f;
+      opacity: 1;
+      border: 1px solid rgba(11,123,95,0.2);
+    }
+
+    .lang-switch {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.9);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .lang-btn {
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      padding: 4px 8px;
+      border-radius: 999px;
+      font-weight: 700;
+      color: var(--text-main);
+      opacity: 0.7;
+    }
+
+    .lang-btn.active {
+      background: var(--accent-soft);
+      color: #0b7b5f;
+      opacity: 1;
+      border: 1px solid rgba(11,123,95,0.2);
+    }
+
     /* HERO */
     .hero {
       max-width: 1200px;
@@ -171,82 +231,88 @@
     <div class="nav-brand">GAIA’S FOOTPRINT</div>
   </div>
   <nav class="nav-links">
-    <a href="#produkte" class="nav-link">Produkte</a>
-    <a href="#thermo" class="nav-link">Thermobecher</a>
-    <a href="#posture" class="nav-link">Posture Corrector</a>
-    <a href="thermobecher.html" class="nav-link">Thermobecher-Details</a>
-    <a href="posture-corrector.html" class="nav-link">Posture-Details</a>
+    <a href="#produkte" class="nav-link" data-i18n="nav.products">Produkte</a>
+    <a href="#thermo" class="nav-link" data-i18n="nav.thermo">Thermobecher</a>
+    <a href="#posture" class="nav-link" data-i18n="nav.posture">Posture Corrector</a>
+    <a href="thermobecher.html" class="nav-link" data-i18n="nav.thermoDetails">Thermobecher-Details</a>
+    <a href="posture-corrector.html" class="nav-link" data-i18n="nav.postureDetails">Posture-Details</a>
   </nav>
-  <div class="nav-pill">Zwei Essentials für deinen Alltag</div>
+  <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+    <div class="lang-switch" aria-label="Language switch">
+      <button class="lang-btn active" data-lang="de">DE</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+    <div class="nav-pill" data-i18n="nav.tagline">Zwei Essentials für deinen Alltag</div>
+  </div>
 </header>
 
 <section class="hero">
   <div>
-    <div class="hero-eyebrow">Neu im Sortiment</div>
-    <h1 class="hero-title">Thermobecher 350 ml & Smart Posture Corrector.</h1>
-    <p class="hero-sub">
+    <div class="hero-eyebrow" data-i18n="hero.eyebrow">Neu im Sortiment</div>
+    <h1 class="hero-title" data-i18n="hero.title">Thermobecher 350 ml & Smart Posture Corrector.</h1>
+    <p class="hero-sub" data-i18n="hero.sub">
       Gaia’s Footprint vereint Komfort und Funktion: ein auslaufsicherer, vakuumisolierter Thermobecher und ein
       ergonomischer Haltungstrainer mit Lendenstütze. Für Wege, Workouts und lange Office-Tage.
     </p>
     <div class="hero-cta-row">
-      <a class="btn-primary" href="#thermo">Zum Thermobecher</a>
-      <a class="btn-ghost" href="#posture">Zum Posture Corrector</a>
+      <a class="btn-primary" href="#thermo" data-i18n="hero.ctaThermo">Zum Thermobecher</a>
+      <a class="btn-ghost" href="#posture" data-i18n="hero.ctaPosture">Zum Posture Corrector</a>
     </div>
   </div>
   <div class="hero-visual" aria-hidden="true">
     <div class="render">
       <div class="render-body"></div>
-      <div class="render-label">Thermobecher · 350 ml</div>
+      <div class="render-label" data-i18n="hero.renderLabel">Thermobecher · 350 ml</div>
     </div>
-    <div class="render-label" style="margin-top:14px; font-weight:600;">Auslaufsicher · Schnellverschluss · Edelstahl</div>
+    <div class="render-label" style="margin-top:14px; font-weight:600;" data-i18n="hero.renderSub">Auslaufsicher · Schnellverschluss · Edelstahl</div>
   </div>
 </section>
 
 <section class="section" id="produkte">
-  <p class="pill">Produktüberblick</p>
-  <h2 class="section-title">Zwei Produkte. Ein Ziel: Alltag leichter machen.</h2>
-  <p class="section-sub">Wähle, was du brauchst: Wärme & Dichtheit für unterwegs oder eine sanfte Erinnerung an bessere Haltung.</p>
+  <p class="pill" data-i18n="overview.pill">Produktüberblick</p>
+  <h2 class="section-title" data-i18n="overview.title">Zwei Produkte. Ein Ziel: Alltag leichter machen.</h2>
+  <p class="section-sub" data-i18n="overview.sub">Wähle, was du brauchst: Wärme & Dichtheit für unterwegs oder eine sanfte Erinnerung an bessere Haltung.</p>
   <div class="grid-2">
     <div class="card product-card">
       <div>
-        <p class="pill">Neu · Thermobecher 350 ml</p>
-        <h3 class="section-title" style="margin-bottom:10px;">Auslaufsicher, vakuumisoliert, griffig.</h3>
-        <p class="section-sub" style="margin-bottom:16px;">
+        <p class="pill" data-i18n="thermo.cardPill">Neu · Thermobecher 350 ml</p>
+        <h3 class="section-title" style="margin-bottom:10px;" data-i18n="thermo.cardTitle">Auslaufsicher, vakuumisoliert, griffig.</h3>
+        <p class="section-sub" style="margin-bottom:16px;" data-i18n="thermo.cardBody">
           Edelstahl, BPA-frei, Einhand-Schnellverschluss. Passt in Becherhalter und bleibt außen trocken.
         </p>
         <div class="hero-cta-row" style="margin-bottom:8px;">
-          <a class="btn-primary" href="thermobecher.html">Details ansehen</a>
-          <a class="btn-ghost" href="https://amzn.eu/d/hH6QRSc" target="_blank" rel="noopener noreferrer">Jetzt auf Amazon kaufen</a>
+          <a class="btn-primary" href="thermobecher.html" data-i18n="thermo.cardDetails">Details ansehen</a>
+          <a class="btn-ghost" href="https://amzn.eu/d/hH6QRSc" target="_blank" rel="noopener noreferrer" data-i18n="thermo.cardAmazon">Jetzt auf Amazon kaufen</a>
         </div>
         <div class="chip-row" style="margin-top:10px; display:flex; gap:8px; flex-wrap:wrap;">
-          <div class="chip">350 ml</div>
-          <div class="chip">Auslaufsicher</div>
-          <div class="chip">Vakuumisoliert</div>
+          <div class="chip" data-i18n="thermo.chip1">350 ml</div>
+          <div class="chip" data-i18n="thermo.chip2">Auslaufsicher</div>
+          <div class="chip" data-i18n="thermo.chip3">Vakuumisoliert</div>
         </div>
       </div>
       <div class="product-visual">
         <div class="render">
           <div class="render-body"></div>
-          <div class="render-label">Schwarz · Edelstahl</div>
+          <div class="render-label" data-i18n="thermo.renderLabel">Schwarz · Edelstahl</div>
         </div>
       </div>
     </div>
 
     <div class="card product-card" id="posture">
       <div>
-        <p class="pill">Klassiker · Smart Posture Corrector</p>
-        <h3 class="section-title" style="margin-bottom:10px;">Leichte Unterstützung für Rücken & Schultern.</h3>
-        <p class="section-sub" style="margin-bottom:16px;">
+        <p class="pill" data-i18n="posture.cardPill">Klassiker · Smart Posture Corrector</p>
+        <h3 class="section-title" style="margin-bottom:10px;" data-i18n="posture.cardTitle">Leichte Unterstützung für Rücken & Schultern.</h3>
+        <p class="section-sub" style="margin-bottom:16px;" data-i18n="posture.cardBody">
           Atmungsaktives, verstellbares Design mit Lendenstütze. Dezent unter Kleidung, geeignet für Arbeit, Sport und Zuhause.
         </p>
         <div class="hero-cta-row" style="margin-bottom:8px;">
-          <a class="btn-primary" href="posture-corrector.html">Details ansehen</a>
-          <a class="btn-ghost" href="https://amzn.eu/d/cJO91wE" target="_blank" rel="noopener noreferrer">Jetzt auf Amazon kaufen</a>
+          <a class="btn-primary" href="posture-corrector.html" data-i18n="posture.cardDetails">Details ansehen</a>
+          <a class="btn-ghost" href="https://amzn.eu/d/cJO91wE" target="_blank" rel="noopener noreferrer" data-i18n="posture.cardAmazon">Jetzt auf Amazon kaufen</a>
         </div>
         <div class="chip-row" style="margin-top:10px; display:flex; gap:8px; flex-wrap:wrap;">
-          <div class="chip" style="background:var(--accent-soft); color:#0b7b5f; border:1px solid rgba(11,123,95,0.18);">Atmungsaktiv</div>
-          <div class="chip" style="background:var(--accent-soft); color:#0b7b5f; border:1px solid rgba(11,123,95,0.18);">Unisex Fit</div>
-          <div class="chip" style="background:var(--accent-soft); color:#0b7b5f; border:1px solid rgba(11,123,95,0.18);">Lendenstütze</div>
+          <div class="chip" style="background:var(--accent-soft); color:#0b7b5f; border:1px solid rgba(11,123,95,0.18);" data-i18n="posture.chip1">Atmungsaktiv</div>
+          <div class="chip" style="background:var(--accent-soft); color:#0b7b5f; border:1px solid rgba(11,123,95,0.18);" data-i18n="posture.chip2">Unisex Fit</div>
+          <div class="chip" style="background:var(--accent-soft); color:#0b7b5f; border:1px solid rgba(11,123,95,0.18);" data-i18n="posture.chip3">Lendenstütze</div>
         </div>
       </div>
       <div class="product-visual">
@@ -257,24 +323,24 @@
 </section>
 
 <section class="section" id="thermo">
-  <p class="pill">Thermobecher Highlights</p>
-  <h2 class="section-title">Wärme sichern, Tropfen verhindern, Alltag vereinfachen.</h2>
-  <p class="section-sub">Robuster Edelstahl, sicherer Schnellverschluss und schlanke Form für Becherhalter – gemacht für Pendeln, Büro und Trips.</p>
+  <p class="pill" data-i18n="thermoHighlights.pill">Thermobecher Highlights</p>
+  <h2 class="section-title" data-i18n="thermoHighlights.title">Wärme sichern, Tropfen verhindern, Alltag vereinfachen.</h2>
+  <p class="section-sub" data-i18n="thermoHighlights.sub">Robuster Edelstahl, sicherer Schnellverschluss und schlanke Form für Becherhalter – gemacht für Pendeln, Büro und Trips.</p>
   <div class="grid">
     <div class="card">
       <div class="icon">🔥</div>
-      <h3>Vakuumisoliert</h3>
-      <p class="section-sub" style="margin-bottom:0;">Doppelwandig – hält Heißes heiß und Kaltes kalt, ohne Kondenswasser außen.</p>
+      <h3 data-i18n="thermoHighlights.card1Title">Vakuumisoliert</h3>
+      <p class="section-sub" style="margin-bottom:0;" data-i18n="thermoHighlights.card1Body">Doppelwandig – hält Heißes heiß und Kaltes kalt, ohne Kondenswasser außen.</p>
     </div>
     <div class="card">
       <div class="icon">🔒</div>
-      <h3>Auslaufsicher</h3>
-      <p class="section-sub" style="margin-bottom:0;">Einhand-Schnappverschluss mit Dichtung. Öffnen, trinken, schließen in Sekunden.</p>
+      <h3 data-i18n="thermoHighlights.card2Title">Auslaufsicher</h3>
+      <p class="section-sub" style="margin-bottom:0;" data-i18n="thermoHighlights.card2Body">Einhand-Schnappverschluss mit Dichtung. Öffnen, trinken, schließen in Sekunden.</p>
     </div>
     <div class="card">
       <div class="icon">🧼</div>
-      <h3>Pflegeleicht</h3>
-      <p class="section-sub" style="margin-bottom:0;">Zerlegbarer Deckel, BPA-frei. Innen & außen Edelstahl für neutralen Geschmack.</p>
+      <h3 data-i18n="thermoHighlights.card3Title">Pflegeleicht</h3>
+      <p class="section-sub" style="margin-bottom:0;" data-i18n="thermoHighlights.card3Body">Zerlegbarer Deckel, BPA-frei. Innen & außen Edelstahl für neutralen Geschmack.</p>
     </div>
   </div>
 
@@ -282,47 +348,47 @@
 
   <div class="grid-4">
     <div class="card" style="text-align:center;">
-      <div class="pill" style="margin-bottom:6px;">Volumen</div>
-      <h3 style="margin:0;font-size:24px;">350 ml</h3>
-      <p class="section-sub" style="margin-bottom:0;">Coffee-Shop Größe für unterwegs.</p>
+      <div class="pill" style="margin-bottom:6px;" data-i18n="thermoGrid.pill1">Volumen</div>
+      <h3 style="margin:0;font-size:24px;" data-i18n="thermoGrid.title1">350 ml</h3>
+      <p class="section-sub" style="margin-bottom:0;" data-i18n="thermoGrid.body1">Coffee-Shop Größe für unterwegs.</p>
     </div>
     <div class="card" style="text-align:center;">
-      <div class="pill" style="margin-bottom:6px;">Material</div>
-      <h3 style="margin:0;font-size:24px;">Edelstahl</h3>
-      <p class="section-sub" style="margin-bottom:0;">BPA-frei, geruchsneutral.</p>
+      <div class="pill" style="margin-bottom:6px;" data-i18n="thermoGrid.pill2">Material</div>
+      <h3 style="margin:0;font-size:24px;" data-i18n="thermoGrid.title2">Edelstahl</h3>
+      <p class="section-sub" style="margin-bottom:0;" data-i18n="thermoGrid.body2">BPA-frei, geruchsneutral.</p>
     </div>
     <div class="card" style="text-align:center;">
-      <div class="pill" style="margin-bottom:6px;">Verschluss</div>
-      <h3 style="margin:0;font-size:24px;">Schnell</h3>
-      <p class="section-sub" style="margin-bottom:0;">Einhand-Klick, auslaufsicher.</p>
+      <div class="pill" style="margin-bottom:6px;" data-i18n="thermoGrid.pill3">Verschluss</div>
+      <h3 style="margin:0;font-size:24px;" data-i18n="thermoGrid.title3">Schnell</h3>
+      <p class="section-sub" style="margin-bottom:0;" data-i18n="thermoGrid.body3">Einhand-Klick, auslaufsicher.</p>
     </div>
     <div class="card" style="text-align:center;">
-      <div class="pill" style="margin-bottom:6px;">Passform</div>
-      <h3 style="margin:0;font-size:24px;">Becherhalter</h3>
-      <p class="section-sub" style="margin-bottom:0;">Schlanker Fuß für Auto & Fahrrad.</p>
+      <div class="pill" style="margin-bottom:6px;" data-i18n="thermoGrid.pill4">Passform</div>
+      <h3 style="margin:0;font-size:24px;" data-i18n="thermoGrid.title4">Becherhalter</h3>
+      <p class="section-sub" style="margin-bottom:0;" data-i18n="thermoGrid.body4">Schlanker Fuß für Auto & Fahrrad.</p>
     </div>
   </div>
 </section>
 
 <section class="section" id="posture-highlights">
-  <p class="pill">Posture Corrector Highlights</p>
-  <h2 class="section-title">Leicht, atmungsaktiv und alltagstauglich.</h2>
-  <p class="section-sub">Bringt Schultern und Rücken in eine entspanntere Position – unauffällig unter Kleidung und anpassbar für Workouts oder lange Bürotage.</p>
+  <p class="pill" data-i18n="postureHighlights.pill">Posture Corrector Highlights</p>
+  <h2 class="section-title" data-i18n="postureHighlights.title">Leicht, atmungsaktiv und alltagstauglich.</h2>
+  <p class="section-sub" data-i18n="postureHighlights.sub">Bringt Schultern und Rücken in eine entspanntere Position – unauffällig unter Kleidung und anpassbar für Workouts oder lange Bürotage.</p>
   <div class="grid-2">
     <div class="card">
-      <h3 style="margin-top:0;">Stabile Rückenführung</h3>
+      <h3 style="margin-top:0;" data-i18n="postureHighlights.card1Title">Stabile Rückenführung</h3>
       <ul class="list">
-        <li><span class="list-dot"></span><span>Verstärkte Rückenschlaufe für gleichmäßige Unterstützung entlang der Wirbelsäule.</span></li>
-        <li><span class="list-dot"></span><span>Breiter Lendengurt stabilisiert den unteren Rücken.</span></li>
-        <li><span class="list-dot"></span><span>Extra langer Gurt für mehr Einstellbereich.</span></li>
+        <li><span class="list-dot"></span><span data-i18n="postureHighlights.card1List1">Verstärkte Rückenschlaufe für gleichmäßige Unterstützung entlang der Wirbelsäule.</span></li>
+        <li><span class="list-dot"></span><span data-i18n="postureHighlights.card1List2">Breiter Lendengurt stabilisiert den unteren Rücken.</span></li>
+        <li><span class="list-dot"></span><span data-i18n="postureHighlights.card1List3">Extra langer Gurt für mehr Einstellbereich.</span></li>
       </ul>
     </div>
     <div class="card">
-      <h3 style="margin-top:0;">Atmungsaktiver Komfort</h3>
+      <h3 style="margin-top:0;" data-i18n="postureHighlights.card2Title">Atmungsaktiver Komfort</h3>
       <ul class="list">
-        <li><span class="list-dot"></span><span>Weiche, luftige Materialien mit glatten Kanten.</span></li>
-        <li><span class="list-dot"></span><span>Dezent unter Kleidung für Büro und Reisen.</span></li>
-        <li><span class="list-dot"></span><span>Unisex Fit, einstellbar für S–XL.</span></li>
+        <li><span class="list-dot"></span><span data-i18n="postureHighlights.card2List1">Weiche, luftige Materialien mit glatten Kanten.</span></li>
+        <li><span class="list-dot"></span><span data-i18n="postureHighlights.card2List2">Dezent unter Kleidung für Büro und Reisen.</span></li>
+        <li><span class="list-dot"></span><span data-i18n="postureHighlights.card2List3">Unisex Fit, einstellbar für S–XL.</span></li>
       </ul>
     </div>
   </div>
@@ -332,15 +398,15 @@
   <div class="grid">
     <div class="card">
       <img src="posture-running.jpg" alt="Posture corrector beim Laufen" class="product-img" style="width:100%; border-radius:16px;" />
-      <p class="section-sub" style="margin-bottom:0;">Running & Training: Offen bleiben in Brust und Schultern.</p>
+      <p class="section-sub" style="margin-bottom:0;" data-i18n="postureHighlights.grid1">Running & Training: Offen bleiben in Brust und Schultern.</p>
     </div>
     <div class="card">
       <img src="posture-fitness-home.jpg" alt="Posture corrector zuhause" class="product-img" style="width:100%; border-radius:16px;" />
-      <p class="section-sub" style="margin-bottom:0;">Fitness & Zuhause: Unterstützt bei Heben, Kochen, Aufräumen.</p>
+      <p class="section-sub" style="margin-bottom:0;" data-i18n="postureHighlights.grid2">Fitness & Zuhause: Unterstützt bei Heben, Kochen, Aufräumen.</p>
     </div>
     <div class="card">
       <img src="posture-office-pain.jpg" alt="Posture corrector im Büro" class="product-img" style="width:100%; border-radius:16px;" />
-      <p class="section-sub" style="margin-bottom:0;">Office Hours: Reduziert typischen Nacken- & Schulterstress.</p>
+      <p class="section-sub" style="margin-bottom:0;" data-i18n="postureHighlights.grid3">Office Hours: Reduziert typischen Nacken- & Schulterstress.</p>
     </div>
   </div>
 </section>
@@ -348,27 +414,205 @@
 <section class="section">
   <div class="cta-card secondary">
     <div>
-      <p class="pill" style="color:rgba(255,255,255,0.8);">Bereit?</p>
-      <h3 style="margin:0 0 10px;font-size:24px; color:#fff;">Wähle deinen Favoriten.</h3>
-      <p style="margin:0 0 16px; color: rgba(255,255,255,0.86);">Thermobecher für den Weg oder Posture Corrector für Rücken & Haltung – beide sofort verfügbar.</p>
+      <p class="pill" style="color:rgba(255,255,255,0.8);" data-i18n="cta.pill">Bereit?</p>
+      <h3 style="margin:0 0 10px;font-size:24px; color:#fff;" data-i18n="cta.title">Wähle deinen Favoriten.</h3>
+      <p style="margin:0 0 16px; color: rgba(255,255,255,0.86);" data-i18n="cta.body">Thermobecher für den Weg oder Posture Corrector für Rücken & Haltung – beide sofort verfügbar.</p>
       <div class="hero-cta-row">
-        <a class="btn-primary" href="https://amzn.eu/d/hH6QRSc" target="_blank" rel="noopener noreferrer" style="box-shadow:0 14px 32px rgba(0,0,0,0.25);">Thermobecher kaufen</a>
-        <a class="btn-ghost" href="https://amzn.eu/d/cJO91wE" target="_blank" rel="noopener noreferrer" style="color:#fff; border-color:rgba(255,255,255,0.3);">Posture Corrector kaufen</a>
+        <a class="btn-primary" href="https://amzn.eu/d/hH6QRSc" target="_blank" rel="noopener noreferrer" style="box-shadow:0 14px 32px rgba(0,0,0,0.25);" data-i18n="cta.thermo">Thermobecher kaufen</a>
+        <a class="btn-ghost" href="https://amzn.eu/d/cJO91wE" target="_blank" rel="noopener noreferrer" style="color:#fff; border-color:rgba(255,255,255,0.3);" data-i18n="cta.posture">Posture Corrector kaufen</a>
       </div>
     </div>
     <div style="text-align:right;">
       <div class="render" style="margin-bottom:14px;">
         <div class="render-body"></div>
-        <div class="render-label">Thermobecher · 350 ml</div>
+        <div class="render-label" data-i18n="cta.renderLabel">Thermobecher · 350 ml</div>
       </div>
       <img src="posture-closeup.jpg" alt="Posture corrector Detail" class="product-img" style="max-width:240px; border-radius:14px; box-shadow:0 12px 22px rgba(0,0,0,0.18);" />
     </div>
   </div>
 </section>
 
-<footer>
+<footer data-i18n="footer">
   © 2025 Gaia’s Footprint — Thermobecher 350 ml & Smart Posture Corrector
 </footer>
+
+<script>
+  const translations = {
+    de: {
+      'nav.products': 'Produkte',
+      'nav.thermo': 'Thermobecher',
+      'nav.posture': 'Posture Corrector',
+      'nav.thermoDetails': 'Thermobecher-Details',
+      'nav.postureDetails': 'Posture-Details',
+      'nav.tagline': 'Zwei Essentials für deinen Alltag',
+      'hero.eyebrow': 'Neu im Sortiment',
+      'hero.title': 'Thermobecher 350 ml & Smart Posture Corrector.',
+      'hero.sub': 'Gaia’s Footprint vereint Komfort und Funktion: ein auslaufsicherer, vakuumisolierter Thermobecher und ein ergonomischer Haltungstrainer mit Lendenstütze. Für Wege, Workouts und lange Office-Tage.',
+      'hero.ctaThermo': 'Zum Thermobecher',
+      'hero.ctaPosture': 'Zum Posture Corrector',
+      'hero.renderLabel': 'Thermobecher · 350 ml',
+      'hero.renderSub': 'Auslaufsicher · Schnellverschluss · Edelstahl',
+      'overview.pill': 'Produktüberblick',
+      'overview.title': 'Zwei Produkte. Ein Ziel: Alltag leichter machen.',
+      'overview.sub': 'Wähle, was du brauchst: Wärme & Dichtheit für unterwegs oder eine sanfte Erinnerung an bessere Haltung.',
+      'thermo.cardPill': 'Neu · Thermobecher 350 ml',
+      'thermo.cardTitle': 'Auslaufsicher, vakuumisoliert, griffig.',
+      'thermo.cardBody': 'Edelstahl, BPA-frei, Einhand-Schnellverschluss. Passt in Becherhalter und bleibt außen trocken.',
+      'thermo.cardDetails': 'Details ansehen',
+      'thermo.cardAmazon': 'Jetzt auf Amazon kaufen',
+      'thermo.chip1': '350 ml',
+      'thermo.chip2': 'Auslaufsicher',
+      'thermo.chip3': 'Vakuumisoliert',
+      'thermo.renderLabel': 'Schwarz · Edelstahl',
+      'posture.cardPill': 'Klassiker · Smart Posture Corrector',
+      'posture.cardTitle': 'Leichte Unterstützung für Rücken & Schultern.',
+      'posture.cardBody': 'Atmungsaktives, verstellbares Design mit Lendenstütze. Dezent unter Kleidung, geeignet für Arbeit, Sport und Zuhause.',
+      'posture.cardDetails': 'Details ansehen',
+      'posture.cardAmazon': 'Jetzt auf Amazon kaufen',
+      'posture.chip1': 'Atmungsaktiv',
+      'posture.chip2': 'Unisex Fit',
+      'posture.chip3': 'Lendenstütze',
+      'thermoHighlights.pill': 'Thermobecher Highlights',
+      'thermoHighlights.title': 'Wärme sichern, Tropfen verhindern, Alltag vereinfachen.',
+      'thermoHighlights.sub': 'Robuster Edelstahl, sicherer Schnellverschluss und schlanke Form für Becherhalter – gemacht für Pendeln, Büro und Trips.',
+      'thermoHighlights.card1Title': 'Vakuumisoliert',
+      'thermoHighlights.card1Body': 'Doppelwandig – hält Heißes heiß und Kaltes kalt, ohne Kondenswasser außen.',
+      'thermoHighlights.card2Title': 'Auslaufsicher',
+      'thermoHighlights.card2Body': 'Einhand-Schnappverschluss mit Dichtung. Öffnen, trinken, schließen in Sekunden.',
+      'thermoHighlights.card3Title': 'Pflegeleicht',
+      'thermoHighlights.card3Body': 'Zerlegbarer Deckel, BPA-frei. Innen & außen Edelstahl für neutralen Geschmack.',
+      'thermoGrid.pill1': 'Volumen',
+      'thermoGrid.title1': '350 ml',
+      'thermoGrid.body1': 'Coffee-Shop Größe für unterwegs.',
+      'thermoGrid.pill2': 'Material',
+      'thermoGrid.title2': 'Edelstahl',
+      'thermoGrid.body2': 'BPA-frei, geruchsneutral.',
+      'thermoGrid.pill3': 'Verschluss',
+      'thermoGrid.title3': 'Schnell',
+      'thermoGrid.body3': 'Einhand-Klick, auslaufsicher.',
+      'thermoGrid.pill4': 'Passform',
+      'thermoGrid.title4': 'Becherhalter',
+      'thermoGrid.body4': 'Schlanker Fuß für Auto & Fahrrad.',
+      'postureHighlights.pill': 'Posture Corrector Highlights',
+      'postureHighlights.title': 'Leicht, atmungsaktiv und alltagstauglich.',
+      'postureHighlights.sub': 'Bringt Schultern und Rücken in eine entspanntere Position – unauffällig unter Kleidung und anpassbar für Workouts oder lange Bürotage.',
+      'postureHighlights.card1Title': 'Stabile Rückenführung',
+      'postureHighlights.card1List1': 'Verstärkte Rückenschlaufe für gleichmäßige Unterstützung entlang der Wirbelsäule.',
+      'postureHighlights.card1List2': 'Breiter Lendengurt stabilisiert den unteren Rücken.',
+      'postureHighlights.card1List3': 'Extra langer Gurt für mehr Einstellbereich.',
+      'postureHighlights.card2Title': 'Atmungsaktiver Komfort',
+      'postureHighlights.card2List1': 'Weiche, luftige Materialien mit glatten Kanten.',
+      'postureHighlights.card2List2': 'Dezent unter Kleidung für Büro und Reisen.',
+      'postureHighlights.card2List3': 'Unisex Fit, einstellbar für S–XL.',
+      'postureHighlights.grid1': 'Running & Training: Offen bleiben in Brust und Schultern.',
+      'postureHighlights.grid2': 'Fitness & Zuhause: Unterstützt bei Heben, Kochen, Aufräumen.',
+      'postureHighlights.grid3': 'Office Hours: Reduziert typischen Nacken- & Schulterstress.',
+      'cta.pill': 'Bereit?',
+      'cta.title': 'Wähle deinen Favoriten.',
+      'cta.body': 'Thermobecher für den Weg oder Posture Corrector für Rücken & Haltung – beide sofort verfügbar.',
+      'cta.thermo': 'Thermobecher kaufen',
+      'cta.posture': 'Posture Corrector kaufen',
+      'cta.renderLabel': 'Thermobecher · 350 ml',
+      'footer': '© 2025 Gaia’s Footprint — Thermobecher 350 ml & Smart Posture Corrector'
+    },
+    en: {
+      'nav.products': 'Products',
+      'nav.thermo': 'Vacuum Mug',
+      'nav.posture': 'Posture Corrector',
+      'nav.thermoDetails': 'Vacuum Mug Details',
+      'nav.postureDetails': 'Posture Details',
+      'nav.tagline': 'Two essentials for your everyday',
+      'hero.eyebrow': 'New in store',
+      'hero.title': 'Vacuum Mug 350 ml & Smart Posture Corrector.',
+      'hero.sub': 'Gaia’s Footprint combines comfort and function: a leakproof, vacuum-insulated mug and an ergonomic posture trainer with lumbar support. Built for commutes, workouts, and long office days.',
+      'hero.ctaThermo': 'See the mug',
+      'hero.ctaPosture': 'See the posture corrector',
+      'hero.renderLabel': 'Vacuum Mug · 350 ml',
+      'hero.renderSub': 'Leakproof · Quick lid · Stainless steel',
+      'overview.pill': 'Product overview',
+      'overview.title': 'Two products. One goal: make every day easier.',
+      'overview.sub': 'Choose what you need: warmth and spill protection on the go, or a gentle reminder for better posture.',
+      'thermo.cardPill': 'New · Vacuum Mug 350 ml',
+      'thermo.cardTitle': 'Leakproof, vacuum insulated, grippy.',
+      'thermo.cardBody': 'Stainless steel, BPA-free, one-hand quick lid. Fits cupholders and stays dry outside.',
+      'thermo.cardDetails': 'View details',
+      'thermo.cardAmazon': 'Buy on Amazon',
+      'thermo.chip1': '350 ml',
+      'thermo.chip2': 'Leakproof',
+      'thermo.chip3': 'Vacuum insulated',
+      'thermo.renderLabel': 'Black · Stainless steel',
+      'posture.cardPill': 'Classic · Smart Posture Corrector',
+      'posture.cardTitle': 'Light support for back and shoulders.',
+      'posture.cardBody': 'Breathable, adjustable design with lumbar belt. Discreet under clothing, great for work, sport, and home.',
+      'posture.cardDetails': 'View details',
+      'posture.cardAmazon': 'Buy on Amazon',
+      'posture.chip1': 'Breathable',
+      'posture.chip2': 'Unisex fit',
+      'posture.chip3': 'Lumbar support',
+      'thermoHighlights.pill': 'Vacuum Mug Highlights',
+      'thermoHighlights.title': 'Keep heat, stop drips, simplify the everyday.',
+      'thermoHighlights.sub': 'Durable stainless steel, a secure quick lid, and a slim base for cupholders—made for commutes, office, and trips.',
+      'thermoHighlights.card1Title': 'Vacuum insulated',
+      'thermoHighlights.card1Body': 'Double-wall—keeps hot drinks hot and cold drinks cold, without condensation outside.',
+      'thermoHighlights.card2Title': 'Leakproof',
+      'thermoHighlights.card2Body': 'One-hand snap lid with seal. Open, sip, close in seconds.',
+      'thermoHighlights.card3Title': 'Easy care',
+      'thermoHighlights.card3Body': 'Detachable lid, BPA-free. Stainless steel inside and out for neutral taste.',
+      'thermoGrid.pill1': 'Volume',
+      'thermoGrid.title1': '350 ml',
+      'thermoGrid.body1': 'Coffee shop size to go.',
+      'thermoGrid.pill2': 'Material',
+      'thermoGrid.title2': 'Stainless steel',
+      'thermoGrid.body2': 'BPA-free, neutral taste.',
+      'thermoGrid.pill3': 'Lid',
+      'thermoGrid.title3': 'Quick',
+      'thermoGrid.body3': 'One-hand click, leakproof.',
+      'thermoGrid.pill4': 'Fit',
+      'thermoGrid.title4': 'Cupholder',
+      'thermoGrid.body4': 'Slim base for car and bike.',
+      'postureHighlights.pill': 'Posture Corrector Highlights',
+      'postureHighlights.title': 'Lightweight, breathable, made for daily wear.',
+      'postureHighlights.sub': 'Helps shoulders and back into a relaxed position—discreet under clothes and adjustable for workouts or long office hours.',
+      'postureHighlights.card1Title': 'Stable back guidance',
+      'postureHighlights.card1List1': 'Reinforced back strap for even support along the spine.',
+      'postureHighlights.card1List2': 'Wide lumbar belt stabilises the lower back.',
+      'postureHighlights.card1List3': 'Extra-long strap for more adjustment range.',
+      'postureHighlights.card2Title': 'Breathable comfort',
+      'postureHighlights.card2List1': 'Soft, airy materials with smooth edges.',
+      'postureHighlights.card2List2': 'Low profile under clothing for office and travel.',
+      'postureHighlights.card2List3': 'Unisex fit, adjustable for sizes S–XL.',
+      'postureHighlights.grid1': 'Running & training: stay open in chest and shoulders.',
+      'postureHighlights.grid2': 'Fitness & home: support lifting, cooking, tidying.',
+      'postureHighlights.grid3': 'Office hours: ease typical neck and shoulder strain.',
+      'cta.pill': 'Ready?',
+      'cta.title': 'Pick your favourite.',
+      'cta.body': 'Vacuum mug for the road or posture corrector for back & posture—both available now.',
+      'cta.thermo': 'Buy the vacuum mug',
+      'cta.posture': 'Buy the posture corrector',
+      'cta.renderLabel': 'Vacuum Mug · 350 ml',
+      'footer': '© 2025 Gaia’s Footprint — Vacuum Mug 350 ml & Smart Posture Corrector'
+    }
+  };
+
+  function applyTranslations(lang) {
+    const dict = translations[lang] || translations.de;
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.dataset.i18n;
+      if (dict[key]) el.textContent = dict[key];
+    });
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+    localStorage.setItem('gf-lang', lang);
+  }
+
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => applyTranslations(btn.dataset.lang));
+  });
+
+  applyTranslations(localStorage.getItem('gf-lang') || 'de');
+</script>
 
 </body>
 </html>
