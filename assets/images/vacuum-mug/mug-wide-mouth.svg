@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" fill="none">
+  <rect width="1200" height="1200" fill="#f5f3ef"/>
+  <rect x="110" y="140" width="980" height="920" rx="34" fill="#fff" stroke="#0b7b5f" stroke-width="10"/>
+  <text x="50%" y="45%" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="60" font-weight="700" fill="#0b7b5f">Wide mouth</text>
+  <text x="50%" y="54%" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="40" font-weight="600" fill="#0b7b5f">8.2 cm placeholder</text>
+  <text x="50%" y="63%" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="28" font-weight="500" fill="#1f2b2a">Replace with lid + ice cube image</text>
+</svg>
