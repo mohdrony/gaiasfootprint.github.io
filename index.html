@@ -2,641 +2,594 @@
 <html lang="de">
 <head>
 
-  
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6SV5D9BCN8"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-6SV5D9BCN8');
 </script>
 
-  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gaia’s Footprint – Thermobecher & Smart Posture Corrector</title>
+  <title>Gaia’s Footprint — Thermobecher 350 ml &amp; Haltungstrainer</title>
+  <meta name="description" content="Gaia’s Footprint macht genau zwei Dinge: einen auslaufsicheren, vakuumisolierten Thermobecher (350 ml, Edelstahl) und einen atmungsaktiven Haltungstrainer (S–XL). Erhältlich auf Amazon.de." />
+  <link rel="canonical" href="https://gaiasfootprint.com/" />
+  <link rel="icon" href="gaias-logo.png" />
+  <link rel="apple-touch-icon" href="gaias-logo.png" />
+  <meta name="theme-color" content="#095d40" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Gaia’s Footprint" />
+  <meta property="og:title" content="Gaia’s Footprint — Thermobecher 350 ml &amp; Haltungstrainer" />
+  <meta property="og:description" content="Zwei Gegenstände, die funktionieren: ein vakuumisolierter Thermobecher aus Edelstahl und ein atmungsaktiver Haltungstrainer. Erhältlich auf Amazon.de." />
+  <meta property="og:url" content="https://gaiasfootprint.com/" />
+  <meta property="og:image" content="https://gaiasfootprint.com/gaias-logo.png" />
+  <meta property="og:image:width" content="500" />
+  <meta property="og:image:height" content="500" />
+  <meta property="og:locale" content="de_DE" />
+  <meta property="og:locale:alternate" content="en_US" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Gaia’s Footprint — Thermobecher 350 ml &amp; Haltungstrainer" />
+  <meta name="twitter:description" content="Zwei Gegenstände, die funktionieren: ein vakuumisolierter Thermobecher aus Edelstahl und ein atmungsaktiver Haltungstrainer." />
+  <meta name="twitter:image" content="https://gaiasfootprint.com/gaias-logo.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://gaiasfootprint.com/#organization",
+        "name": "Gaia’s Footprint",
+        "url": "https://gaiasfootprint.com/",
+        "logo": "https://gaiasfootprint.com/gaias-logo.png"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://gaiasfootprint.com/#website",
+        "name": "Gaia’s Footprint",
+        "url": "https://gaiasfootprint.com/",
+        "inLanguage": "de",
+        "publisher": { "@id": "https://gaiasfootprint.com/#organization" }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+
   <style>
     :root {
-      --bg: #f5f3ef;
-      --card: #ffffff;
-      --accent: #0b7b5f;
-      --accent-soft: #e1f1ea;
-      --accent-gold: #b76b42;
-      --text-main: #1f2b2a;
-      --text-soft: #56615f;
-      --border: rgba(0, 0, 0, 0.06);
-      --shadow: 0 18px 40px rgba(0,0,0,0.12);
+      --paper: #faf8f3;
+      --ink: #16150f;
+      --muted: #6f6b60;
+      --line: #dcd7cb;
+      --accent: #095d40;
     }
 
-    * { box-sizing: border-box; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
 
     body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text-main);
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
     }
+
+    ::selection { background: var(--ink); color: var(--paper); }
 
     a { color: inherit; text-decoration: none; }
 
-    /* NAVBAR */
-    .nav {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 14px 20px 10px;
+    .serif { font-family: "Instrument Serif", Georgia, serif; font-weight: 400; }
+
+    .wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+
+    .label {
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* ---------- header ---------- */
+
+    header {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .header-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
+      gap: 24px;
+      padding-block: 22px;
     }
 
-    .nav-left { display: flex; align-items: center; gap: 10px; }
-    .nav-logo-img { width: 36px; height: 36px; border-radius: 8px; }
-    .nav-brand { font-weight: 700; letter-spacing: 0.14em; font-size: 13px; }
+    .brand { display: inline-flex; align-items: center; gap: 14px; }
 
-    .nav-links { display: flex; gap: 16px; font-size: 14px; flex-wrap: wrap; align-items: center; }
-    .nav-link { opacity: 0.82; }
-    .nav-link:hover { opacity: 1; }
+    .brand-logo { width: 34px; height: 34px; display: block; }
 
-    .nav-pill {
-      font-size: 12px;
-      padding: 6px 12px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,0.92);
-      white-space: nowrap;
-    }
-
-    .lang-switch {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 12px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,0.9);
-      font-size: 12px;
-      font-weight: 600;
-    }
-
-    .lang-btn {
-      border: none;
-      background: transparent;
-      cursor: pointer;
-      padding: 4px 8px;
-      border-radius: 999px;
-      font-weight: 700;
-      color: var(--text-main);
-      opacity: 0.7;
-    }
-
-    .lang-btn.active {
-      background: var(--accent-soft);
-      color: #0b7b5f;
-      opacity: 1;
-      border: 1px solid rgba(11,123,95,0.2);
-    }
-
-    .lang-switch {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 12px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,0.9);
-      font-size: 12px;
-      font-weight: 600;
-    }
-
-    .lang-btn {
-      border: none;
-      background: transparent;
-      cursor: pointer;
-      padding: 4px 8px;
-      border-radius: 999px;
-      font-weight: 700;
-      color: var(--text-main);
-      opacity: 0.7;
-    }
-
-    .lang-btn.active {
-      background: var(--accent-soft);
-      color: #0b7b5f;
-      opacity: 1;
-      border: 1px solid rgba(11,123,95,0.2);
-    }
-
-    /* HERO */
-    .hero {
-      max-width: 1200px;
-      margin: 12px auto 60px;
-      padding: 0 20px;
-      display: grid;
-      grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
-      gap: 40px;
-      align-items: center;
-    }
-
-    .hero-eyebrow { text-transform: uppercase; font-size: 12px; letter-spacing: 0.16em; color: var(--text-soft); margin-bottom: 10px; }
-    .hero-title { font-size: 42px; line-height: 1.1; margin: 0 0 14px; }
-    .hero-sub { font-size: 17px; color: var(--text-soft); margin-bottom: 20px; max-width: 620px; }
-
-    .hero-cta-row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
-
-    .btn-primary {
-      display: inline-block;
-      background: var(--accent);
-      color: #fff;
-      padding: 12px 22px;
-      border-radius: 999px;
-      font-weight: 650;
-      font-size: 14px;
-      box-shadow: 0 10px 24px rgba(11, 123, 95, 0.25);
-    }
-    .btn-primary:hover { background: #085f49; }
-
-    .btn-ghost {
+    .wordmark {
       font-size: 13px;
-      padding: 10px 16px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      background: transparent;
       font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
     }
 
-    .hero-visual {
-      background: linear-gradient(140deg, #0b7b5f 0%, #0b7b5f 40%, #1f2b2a 100%);
-      border-radius: 28px;
-      padding: 28px;
-      color: #fff;
-      position: relative;
-      overflow: hidden;
-      box-shadow: var(--shadow);
+    .header-nav { display: flex; align-items: baseline; gap: 28px; }
+
+    .header-nav a {
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
     }
-    .hero-visual::after, .hero-visual::before {
-      content: "";
+    .header-nav a:hover { color: var(--ink); }
+
+    .lang {
+      display: inline-flex;
+      gap: 2px;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+    }
+    .lang button {
+      border: 0;
+      background: none;
+      font: inherit;
+      letter-spacing: inherit;
+      color: var(--muted);
+      cursor: pointer;
+      padding: 0 4px;
+      text-transform: uppercase;
+    }
+    .lang button.active {
+      color: var(--ink);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+    .lang span { color: var(--line); }
+
+    /* ---------- hero ---------- */
+
+    .hero { padding-block: 12vh 10vh; }
+
+    .hero h1 {
+      font-size: clamp(3rem, 8.5vw, 6.75rem);
+      line-height: 1.02;
+      letter-spacing: -0.01em;
+      max-width: 14ch;
+    }
+
+    .hero p {
+      margin-top: 32px;
+      max-width: 54ch;
+      font-size: 17px;
+      color: var(--muted);
+    }
+
+    /* ---------- index / table of contents ---------- */
+
+    .toc { margin-bottom: 4vh; }
+
+    .toc-row {
+      display: grid;
+      grid-template-columns: 64px minmax(0, 1fr) auto auto;
+      align-items: baseline;
+      gap: 24px;
+      padding: 26px 0;
+      border-top: 1px solid var(--line);
+    }
+    .toc-row:last-child { border-bottom: 1px solid var(--line); }
+
+    .toc-num { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+
+    .toc-name { font-size: clamp(1.6rem, 3.2vw, 2.4rem); line-height: 1.1; }
+
+    .toc-desc { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+
+    .toc-arrow { font-size: 18px; color: var(--muted); transition: transform 0.15s ease; }
+
+    .toc-row:hover .toc-name { color: var(--accent); }
+    .toc-row:hover .toc-arrow { transform: translate(3px, 3px); color: var(--accent); }
+
+    /* ---------- product sections ---------- */
+
+    .product { padding: 9vh 0 11vh; border-top: 1px solid var(--ink); }
+
+    .product-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-bottom: 6vh;
+    }
+
+    .product-num { font-size: 13px; color: var(--muted); display: block; margin-bottom: 12px; font-variant-numeric: tabular-nums; }
+
+    .product-title { font-size: clamp(2.6rem, 6vw, 4.5rem); line-height: 1; letter-spacing: -0.01em; }
+
+    .product-body {
+      display: grid;
+      grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+      gap: 56px;
+      align-items: start;
+    }
+
+    .product-body.flip { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
+    .product-body.flip .figs { order: 2; }
+    .product-body.flip .copy { order: 1; }
+
+    /* figures */
+
+    .figs { display: grid; gap: 40px; }
+
+    .fig-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+
+    figure img {
+      display: block;
+      width: 100%;
+      height: auto;
+      background: #edeae2;
+    }
+
+    .crop { overflow: hidden; }
+    .crop img { height: 100%; object-fit: cover; }
+
+    .crop-left { aspect-ratio: 2 / 3; }
+    .crop-left img { object-position: 0% 50%; }
+
+    .crop-camp { aspect-ratio: 2 / 3; position: relative; }
+    .crop-camp img {
       position: absolute;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.08);
-    }
-    .hero-visual::before { width: 180px; height: 180px; right: -40px; top: -20px; }
-    .hero-visual::after { width: 120px; height: 120px; left: -50px; bottom: -30px; }
-
-    .render { background: linear-gradient(180deg, #111918, #161f1e); border-radius: 20px; padding: 20px; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04); position: relative; }
-    .render-body { width: 140px; height: 210px; margin: 0 auto; border-radius: 26px 26px 32px 32px; background: linear-gradient(180deg, #1f2b2a 0%, #0f1413 100%); position: relative; box-shadow: inset 0 1px 0 rgba(255,255,255,0.05), 0 22px 38px rgba(0,0,0,0.45); }
-    .render-body::before { content: ""; position: absolute; top: 18px; left: 24px; right: 24px; height: 12px; border-radius: 12px; background: linear-gradient(90deg, rgba(255,255,255,0.12), rgba(255,255,255,0.02)); }
-    .render-body::after { content: ""; position: absolute; top: -12px; left: 16px; right: 16px; height: 22px; border-radius: 18px; background: linear-gradient(180deg, #0c9c76, #0b7b5f); box-shadow: 0 10px 18px rgba(0,0,0,0.25); }
-    .render-label { text-align: center; margin-top: 14px; font-size: 13px; letter-spacing: 0.08em; color: rgba(255,255,255,0.85); }
-
-    /* SECTIONS */
-    .section { max-width: 1200px; margin: 0 auto 68px; padding: 0 20px; }
-    .section-title { font-size: 26px; margin-bottom: 8px; }
-    .section-sub { font-size: 15px; color: var(--text-soft); margin-bottom: 24px; max-width: 900px; }
-
-    .card { background: var(--card); border-radius: 22px; padding: 20px 22px; border: 1px solid var(--border); box-shadow: 0 12px 30px rgba(0,0,0,0.05); }
-
-    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
-    .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
-    .grid-4 { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 12px; }
-
-    .pill { display: inline-block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.16em; color: var(--text-soft); margin-bottom: 8px; }
-
-    .icon { width: 34px; height: 34px; border-radius: 12px; background: var(--accent-soft); display: inline-flex; align-items: center; justify-content: center; margin-bottom: 12px; color: #0b7b5f; font-weight: 700; }
-
-    .list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
-    .list li { display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: flex-start; font-size: 14px; color: var(--text-soft); }
-    .list-dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; margin-top: 6px; }
-
-    .chip-row { display: flex; gap: 8px; flex-wrap: wrap; }
-    .chip { background: rgba(255,255,255,0.14); color: #0b7b5f; padding: 8px 12px; border-radius: 12px; font-size: 12px; border: 1px solid rgba(11,123,95,0.16); backdrop-filter: blur(4px); }
-
-    .cta-card { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr); gap: 24px; align-items: center; padding: 26px; background: linear-gradient(120deg, #0b7b5f, #1f2b2a); color: #fff; border-radius: 26px; box-shadow: var(--shadow); }
-    .cta-card.secondary { background: linear-gradient(120deg, #b76b42, #5a3217); box-shadow: 0 18px 34px rgba(183,107,66,0.28); }
-
-    .product-card { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr); gap: 18px; align-items: center; }
-    .product-visual { position: relative; }
-    .product-img { width: 100%; border-radius: 18px; box-shadow: 0 12px 26px rgba(0,0,0,0.16); }
-
-    footer { text-align: center; padding: 34px 16px 40px; font-size: 13px; color: var(--text-soft); }
-
-    @media (max-width: 1000px) {
-      .hero, .cta-card, .product-card { grid-template-columns: minmax(0,1fr); }
-      .grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
-      .grid-4 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      width: 210%;
+      height: auto;
+      left: -18%;
+      bottom: 0;
     }
 
-    @media (max-width: 700px) {
-      .hero-title { font-size: 32px; }
-      .grid { grid-template-columns: minmax(0,1fr); }
-      .grid-2 { grid-template-columns: minmax(0,1fr); }
-      .cta-card { padding: 20px; }
+    .crop-bottom { aspect-ratio: 4 / 3; }
+    .crop-bottom img { object-position: 50% 100%; }
+
+    .mono img { filter: grayscale(1); }
+
+    figcaption {
+      margin-top: 10px;
+      font-size: 11.5px;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+    }
+
+    /* copy column */
+
+    .copy > p {
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--ink);
+      max-width: 46ch;
+    }
+
+    .specs { margin-top: 48px; }
+
+    .specs .label { display: block; margin-bottom: 4px; }
+
+    .spec-row {
+      display: grid;
+      grid-template-columns: minmax(110px, 1fr) 2fr;
+      gap: 16px;
+      padding: 13px 0;
+      border-top: 1px solid var(--line);
+      font-size: 14px;
+    }
+    .spec-row:last-of-type { border-bottom: 1px solid var(--line); }
+
+    .spec-row dt { color: var(--muted); }
+    .spec-row dd { font-variant-numeric: tabular-nums; }
+
+    .buy {
+      display: inline-block;
+      margin-top: 44px;
+      border: 1px solid var(--ink);
+      padding: 16px 30px;
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      transition: background 0.12s ease, color 0.12s ease;
+    }
+    .buy:hover { background: var(--ink); color: var(--paper); }
+
+    .buy-note {
+      display: block;
+      margin-top: 12px;
+      font-size: 11.5px;
+      color: var(--muted);
+    }
+
+    /* ---------- footer ---------- */
+
+    footer { border-top: 1px solid var(--ink); }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 24px;
+      flex-wrap: wrap;
+      padding-block: 32px 48px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .footer-links { display: flex; gap: 24px; }
+    .footer-links a { color: var(--muted); text-decoration: underline; text-underline-offset: 3px; }
+    .footer-links a:hover { color: var(--accent); }
+
+    /* ---------- responsive ---------- */
+
+    @media (max-width: 900px) {
+      .hero { padding-block: 9vh 7vh; }
+
+      .product-body,
+      .product-body.flip { grid-template-columns: minmax(0, 1fr); gap: 40px; }
+      .product-body.flip .figs { order: 1; }
+      .product-body.flip .copy { order: 2; }
+
+      .toc-row { grid-template-columns: 40px minmax(0, 1fr) auto; }
+      .toc-desc { display: none; }
+    }
+
+    @media (max-width: 560px) {
+      .header-inner { flex-wrap: wrap; gap: 12px; }
+      .header-nav { flex-wrap: wrap; gap: 14px 20px; }
+      .fig-pair { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
-<header class="nav">
-  <div class="nav-left">
-    <img src="gaias-logo.png" alt="Gaia’s Footprint logo" class="nav-logo-img" />
-    <div class="nav-brand">GAIA’S FOOTPRINT</div>
-  </div>
-  <nav class="nav-links">
-    <a href="#produkte" class="nav-link" data-i18n="nav.products">Produkte</a>
-    <a href="#thermo" class="nav-link" data-i18n="nav.thermo">Thermobecher</a>
-    <a href="#posture" class="nav-link" data-i18n="nav.posture">Posture Corrector</a>
-    <a href="thermobecher.html" class="nav-link" data-i18n="nav.thermoDetails">Thermobecher-Details</a>
-    <a href="posture-corrector.html" class="nav-link" data-i18n="nav.postureDetails">Posture-Details</a>
-  </nav>
-  <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
-    <div class="lang-switch" aria-label="Language switch">
-      <button class="lang-btn active" data-lang="de">DE</button>
-      <button class="lang-btn" data-lang="en">EN</button>
-    </div>
-    <div class="nav-pill" data-i18n="nav.tagline">Zwei Essentials für deinen Alltag</div>
+<header>
+  <div class="wrap header-inner">
+    <a href="#top" class="brand">
+      <img src="gaias-logo.png" alt="Gaia’s Footprint Logo" class="brand-logo" width="34" height="34" />
+      <span class="wordmark">Gaia’s Footprint</span>
+    </a>
+    <nav class="header-nav">
+      <a href="#thermobecher" data-i18n="nav.thermo">Thermobecher</a>
+      <a href="#haltungstrainer" data-i18n="nav.posture">Haltungstrainer</a>
+      <div class="lang" aria-label="Sprache / Language">
+        <button class="lang-btn active" data-lang="de">DE</button>
+        <span>/</span>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+    </nav>
   </div>
 </header>
 
-<section class="hero">
-  <div>
-    <div class="hero-eyebrow" data-i18n="hero.eyebrow">Neu im Sortiment</div>
-    <h1 class="hero-title" data-i18n="hero.title">Thermobecher 350 ml & Smart Posture Corrector.</h1>
-    <p class="hero-sub" data-i18n="hero.sub">
-      Gaia’s Footprint vereint Komfort und Funktion: ein auslaufsicherer, vakuumisolierter Thermobecher und ein
-      ergonomischer Haltungstrainer mit Lendenstütze. Für Wege, Workouts und lange Office-Tage.
+<main id="top">
+
+  <section class="hero wrap">
+    <h1 class="serif" data-i18n="hero.title">Weniger, aber&nbsp;besser.</h1>
+    <p data-i18n="hero.sub">
+      Gaia’s Footprint macht genau zwei Dinge: einen Thermobecher aus Edelstahl
+      und einen Haltungstrainer für lange Tage am Schreibtisch. Keine Kollektion,
+      kein Katalog — zwei Gegenstände, die funktionieren.
     </p>
-    <div class="hero-cta-row">
-      <a class="btn-primary" href="#thermo" data-i18n="hero.ctaThermo">Zum Thermobecher</a>
-      <a class="btn-ghost" href="#posture" data-i18n="hero.ctaPosture">Zum Posture Corrector</a>
-    </div>
-  </div>
-  <div class="hero-visual" aria-hidden="true">
-    <img src="assets/images/vacuum-mug/mug-hot-cold.jpg" alt="Thermobecher Illustration Sommer und Winter" class="product-img" style="max-width:320px; margin:0 auto;" />
-    <div class="render-label" style="margin-top:14px; font-weight:600;" data-i18n="hero.renderSub">Auslaufsicher · Schnellverschluss · Edelstahl</div>
-  </div>
-</section>
+  </section>
 
-<section class="section" id="produkte">
-  <p class="pill" data-i18n="overview.pill">Produktüberblick</p>
-  <h2 class="section-title" data-i18n="overview.title">Zwei Produkte. Ein Ziel: Alltag leichter machen.</h2>
-  <p class="section-sub" data-i18n="overview.sub">Wähle, was du brauchst: Wärme & Dichtheit für unterwegs oder eine sanfte Erinnerung an bessere Haltung.</p>
-  <div class="grid-2">
-    <div class="card product-card">
-      <div>
-        <p class="pill" data-i18n="thermo.cardPill">Neu · Thermobecher 350 ml</p>
-        <h3 class="section-title" style="margin-bottom:10px;" data-i18n="thermo.cardTitle">Auslaufsicher, vakuumisoliert, griffig.</h3>
-        <p class="section-sub" style="margin-bottom:16px;" data-i18n="thermo.cardBody">
-          Edelstahl, BPA-frei, Einhand-Schnellverschluss. Passt in Becherhalter und bleibt außen trocken.
-        </p>
-        <div class="hero-cta-row" style="margin-bottom:8px;">
-          <a class="btn-primary" href="thermobecher.html" data-i18n="thermo.cardDetails">Details ansehen</a>
-          <a class="btn-ghost" href="https://amzn.eu/d/hH6QRSc" target="_blank" rel="noopener noreferrer" data-i18n="thermo.cardAmazon">Jetzt auf Amazon kaufen</a>
+  <nav class="toc wrap" aria-label="Produkte">
+    <a class="toc-row" href="#thermobecher">
+      <span class="toc-num">01</span>
+      <span class="toc-name serif" data-i18n="toc.thermo">Thermobecher</span>
+      <span class="toc-desc" data-i18n="toc.thermoDesc">Edelstahl · 350 ml</span>
+      <span class="toc-arrow">↘</span>
+    </a>
+    <a class="toc-row" href="#haltungstrainer">
+      <span class="toc-num">02</span>
+      <span class="toc-name serif" data-i18n="toc.posture">Haltungstrainer</span>
+      <span class="toc-desc" data-i18n="toc.postureDesc">Atmungsaktiv · S–XL</span>
+      <span class="toc-arrow">↘</span>
+    </a>
+  </nav>
+
+  <!-- 01 — Thermobecher -->
+  <section class="product" id="thermobecher">
+    <div class="wrap">
+      <div class="product-head">
+        <div>
+          <span class="product-num">01</span>
+          <h2 class="product-title serif" data-i18n="thermo.title">Thermobecher</h2>
         </div>
-        <div class="chip-row" style="margin-top:10px; display:flex; gap:8px; flex-wrap:wrap;">
-          <div class="chip" data-i18n="thermo.chip1">350 ml</div>
-          <div class="chip" data-i18n="thermo.chip2">Auslaufsicher</div>
-          <div class="chip" data-i18n="thermo.chip3">Vakuumisoliert</div>
+        <span class="label" data-i18n="thermo.tag">Vakuumisoliert · Edelstahl · 350 ml</span>
+      </div>
+
+      <div class="product-body">
+        <div class="figs">
+          <figure>
+            <img src="assets/images/vacuum-mug/mug-product.jpg" alt="Thermobecher aus mattschwarzem Edelstahl, 350 ml" width="264" height="468" loading="lazy" />
+            <figcaption data-i18n="thermo.fig1">Abb. 01 — Edelstahl, mattschwarz. 350 ml.</figcaption>
+          </figure>
+          <div class="fig-pair">
+            <figure class="crop crop-left">
+              <img src="assets/images/vacuum-mug/mug-car.jpg" alt="Thermobecher im Auto, in der Hand gehalten" loading="lazy" />
+              <figcaption data-i18n="thermo.fig2">Abb. 02 — Passt in jeden Becherhalter.</figcaption>
+            </figure>
+            <figure class="crop crop-camp">
+              <img src="assets/images/vacuum-mug/mug-camp.jpg" alt="Thermobecher draußen am Lagerfeuer" loading="lazy" />
+              <figcaption data-i18n="thermo.fig3">Abb. 03 — Hält Wärme, wo es keine Steckdose gibt.</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="copy">
+          <p data-i18n="thermo.body">
+            Doppelwandiger Edelstahl hält Kaffee sechs Stunden heiß und Kaltes
+            zwölf Stunden kalt — ohne Kondenswasser außen. Der Deckel öffnet mit
+            einer Hand, schließt mit einem Klick und bleibt dicht, auch kopfüber
+            in der Tasche. Der schlanke Fuß passt in jeden Becherhalter.
+          </p>
+
+          <dl class="specs">
+            <div class="spec-row"><dt data-i18n="thermo.s1k">Volumen</dt><dd data-i18n="thermo.s1v">350 ml</dd></div>
+            <div class="spec-row"><dt data-i18n="thermo.s2k">Material</dt><dd data-i18n="thermo.s2v">Edelstahl, BPA-frei</dd></div>
+            <div class="spec-row"><dt data-i18n="thermo.s3k">Isolierung</dt><dd data-i18n="thermo.s3v">Doppelwandig, vakuumisoliert — heiß 6 h, kalt 12 h</dd></div>
+            <div class="spec-row"><dt data-i18n="thermo.s4k">Verschluss</dt><dd data-i18n="thermo.s4v">Einhand-Klick, auslaufsicher</dd></div>
+            <div class="spec-row"><dt data-i18n="thermo.s5k">Öffnung</dt><dd data-i18n="thermo.s5v">8,2 cm — leicht zu befüllen und zu reinigen</dd></div>
+            <div class="spec-row"><dt data-i18n="thermo.s6k">Passform</dt><dd data-i18n="thermo.s6v">Becherhalter in Auto und Fahrrad</dd></div>
+          </dl>
+
+          <a class="buy" href="https://amzn.eu/d/hH6QRSc" target="_blank" rel="noopener noreferrer" data-i18n="thermo.buy">Bei Amazon kaufen&nbsp;↗</a>
+          <span class="buy-note" data-i18n="thermo.buyNote">Versand und Kaufabwicklung über Amazon.de</span>
         </div>
       </div>
-      <div class="product-visual">
-        <img src="assets/images/vacuum-mug/mug-product.jpg" alt="Gaia’s Footprint Thermobecher Produktbild" class="product-img" />
-        <div class="render-label" data-i18n="thermo.renderLabel" style="text-align:center; margin-top:8px;">Schwarz · Edelstahl</div>
-      </div>
     </div>
+  </section>
 
-    <div class="card product-card" id="posture">
-      <div>
-        <p class="pill" data-i18n="posture.cardPill">Klassiker · Smart Posture Corrector</p>
-        <h3 class="section-title" style="margin-bottom:10px;" data-i18n="posture.cardTitle">Leichte Unterstützung für Rücken & Schultern.</h3>
-        <p class="section-sub" style="margin-bottom:16px;" data-i18n="posture.cardBody">
-          Atmungsaktives, verstellbares Design mit Lendenstütze. Dezent unter Kleidung, geeignet für Arbeit, Sport und Zuhause.
-        </p>
-        <div class="hero-cta-row" style="margin-bottom:8px;">
-          <a class="btn-primary" href="posture-corrector.html" data-i18n="posture.cardDetails">Details ansehen</a>
-          <a class="btn-ghost" href="https://amzn.eu/d/cJO91wE" target="_blank" rel="noopener noreferrer" data-i18n="posture.cardAmazon">Jetzt auf Amazon kaufen</a>
+  <!-- 02 — Haltungstrainer -->
+  <section class="product" id="haltungstrainer">
+    <div class="wrap">
+      <div class="product-head">
+        <div>
+          <span class="product-num">02</span>
+          <h2 class="product-title serif" data-i18n="posture.title">Haltungstrainer</h2>
         </div>
-        <div class="chip-row" style="margin-top:10px; display:flex; gap:8px; flex-wrap:wrap;">
-          <div class="chip" style="background:var(--accent-soft); color:#0b7b5f; border:1px solid rgba(11,123,95,0.18);" data-i18n="posture.chip1">Atmungsaktiv</div>
-          <div class="chip" style="background:var(--accent-soft); color:#0b7b5f; border:1px solid rgba(11,123,95,0.18);" data-i18n="posture.chip2">Unisex Fit</div>
-          <div class="chip" style="background:var(--accent-soft); color:#0b7b5f; border:1px solid rgba(11,123,95,0.18);" data-i18n="posture.chip3">Lendenstütze</div>
+        <span class="label" data-i18n="posture.tag">Atmungsaktiv · Verstellbar · S–XL</span>
+      </div>
+
+      <div class="product-body flip">
+        <div class="figs">
+          <figure class="mono">
+            <img src="posture-hero.jpg" alt="Haltungstrainer, Vorder- und Rückansicht am Körper" width="1500" height="1500" loading="lazy" />
+            <figcaption data-i18n="posture.fig1">Abb. 04 — Vorder- und Rückansicht.</figcaption>
+          </figure>
+          <figure class="crop crop-bottom">
+            <img src="posture-before-after.jpg" alt="Haltung im Vergleich: ohne und mit Haltungstrainer" loading="lazy" />
+            <figcaption data-i18n="posture.fig2">Abb. 05 — Ohne und mit. Der Unterschied in der ersten Minute.</figcaption>
+          </figure>
+        </div>
+
+        <div class="copy">
+          <p data-i18n="posture.body">
+            Ein leichter Gurt, der Schultern und Rücken sanft an eine aufrechte
+            Haltung erinnert — statt sie zu erzwingen. Atmungsaktives Material,
+            eine verstärkte Rückenführung und ein breiter Lendengurt, dezent
+            genug für unter das Hemd. Für Bürotage, Training und alles dazwischen.
+          </p>
+
+          <dl class="specs">
+            <div class="spec-row"><dt data-i18n="posture.s1k">Größe</dt><dd data-i18n="posture.s1v">Verstellbar S–XL, unisex</dd></div>
+            <div class="spec-row"><dt data-i18n="posture.s2k">Material</dt><dd data-i18n="posture.s2v">Atmungsaktiv, weiche Kanten</dd></div>
+            <div class="spec-row"><dt data-i18n="posture.s3k">Stütze</dt><dd data-i18n="posture.s3v">Verstärkte Rückenschlaufe, breiter Lendengurt</dd></div>
+            <div class="spec-row"><dt data-i18n="posture.s4k">Gurt</dt><dd data-i18n="posture.s4v">Extra lang, großer Einstellbereich</dd></div>
+            <div class="spec-row"><dt data-i18n="posture.s5k">Tragen</dt><dd data-i18n="posture.s5v">Unauffällig unter Kleidung, Büro und Sport</dd></div>
+          </dl>
+
+          <a class="buy" href="https://amzn.eu/d/cJO91wE" target="_blank" rel="noopener noreferrer" data-i18n="posture.buy">Bei Amazon kaufen&nbsp;↗</a>
+          <span class="buy-note" data-i18n="posture.buyNote">Versand und Kaufabwicklung über Amazon.de</span>
         </div>
       </div>
-      <div class="product-visual">
-        <img src="posture-hero.jpg" alt="Gaia’s Footprint posture corrector" class="product-img" />
-      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-inner">
+    <span data-i18n="footer.copy">© 2026 Gaia’s Footprint</span>
+    <div class="footer-links">
+      <a href="https://amzn.eu/d/hH6QRSc" target="_blank" rel="noopener noreferrer" data-i18n="footer.thermo">Thermobecher auf Amazon</a>
+      <a href="https://amzn.eu/d/cJO91wE" target="_blank" rel="noopener noreferrer" data-i18n="footer.posture">Haltungstrainer auf Amazon</a>
     </div>
   </div>
-</section>
-
-<section class="section" id="thermo">
-  <p class="pill" data-i18n="thermoHighlights.pill">Thermobecher Highlights</p>
-  <h2 class="section-title" data-i18n="thermoHighlights.title">Wärme sichern, Tropfen verhindern, Alltag vereinfachen.</h2>
-  <p class="section-sub" data-i18n="thermoHighlights.sub">Robuster Edelstahl, sicherer Schnellverschluss und schlanke Form für Becherhalter – gemacht für Pendeln, Büro und Trips.</p>
-  <div class="grid">
-    <div class="card">
-      <div class="icon">🔥</div>
-      <h3 data-i18n="thermoHighlights.card1Title">Vakuumisoliert</h3>
-      <p class="section-sub" style="margin-bottom:0;" data-i18n="thermoHighlights.card1Body">Doppelwandig – hält Heißes heiß und Kaltes kalt, ohne Kondenswasser außen.</p>
-    </div>
-    <div class="card">
-      <div class="icon">🔒</div>
-      <h3 data-i18n="thermoHighlights.card2Title">Auslaufsicher</h3>
-      <p class="section-sub" style="margin-bottom:0;" data-i18n="thermoHighlights.card2Body">Einhand-Schnappverschluss mit Dichtung. Öffnen, trinken, schließen in Sekunden.</p>
-    </div>
-    <div class="card">
-      <div class="icon">🧼</div>
-      <h3 data-i18n="thermoHighlights.card3Title">Pflegeleicht</h3>
-      <p class="section-sub" style="margin-bottom:0;" data-i18n="thermoHighlights.card3Body">Zerlegbarer Deckel, BPA-frei. Innen & außen Edelstahl für neutralen Geschmack.</p>
-    </div>
-  </div>
-
-  <div style="height:16px;"></div>
-
-  <div class="grid-2">
-    <div class="card product-card">
-      <div>
-        <p class="pill" data-i18n="thermoMedia.pill1">Sommer & Winter</p>
-        <h3 class="section-title" style="margin-bottom:8px;" data-i18n="thermoMedia.title1">Hält kalt, hält warm.</h3>
-        <p class="section-sub" style="margin-bottom:0;" data-i18n="thermoMedia.body1">Eisgekühlte Drinks oder dampfender Kaffee – der Becher hält beides.</p>
-      </div>
-      <div class="product-visual">
-        <img src="assets/images/vacuum-mug/mug-hot-cold.jpg" alt="Thermobecher Collage für Sommer und Winter" class="product-img" />
-      </div>
-    </div>
-
-    <div class="card product-card">
-      <div>
-        <p class="pill" data-i18n="thermoMedia.pill2">Weite Öffnung</p>
-        <h3 class="section-title" style="margin-bottom:8px;" data-i18n="thermoMedia.title2">8,2 cm Randbreite.</h3>
-        <p class="section-sub" style="margin-bottom:0;" data-i18n="thermoMedia.body2">Eiswürfel einfüllen, ausgießen und reinigen geht leichter.</p>
-      </div>
-      <div class="product-visual">
-        <img src="assets/images/vacuum-mug/mug-wide-mouth.jpg" alt="Thermobecher mit weitem Rand und Eiswürfel" class="product-img" />
-      </div>
-    </div>
-  </div>
-
-  <div style="height:18px;"></div>
-
-  <div class="grid-4">
-    <div class="card" style="text-align:center;">
-      <div class="pill" style="margin-bottom:6px;" data-i18n="thermoGrid.pill1">Volumen</div>
-      <h3 style="margin:0;font-size:24px;" data-i18n="thermoGrid.title1">350 ml</h3>
-      <p class="section-sub" style="margin-bottom:0;" data-i18n="thermoGrid.body1">Coffee-Shop Größe für unterwegs.</p>
-    </div>
-    <div class="card" style="text-align:center;">
-      <div class="pill" style="margin-bottom:6px;" data-i18n="thermoGrid.pill2">Material</div>
-      <h3 style="margin:0;font-size:24px;" data-i18n="thermoGrid.title2">Edelstahl</h3>
-      <p class="section-sub" style="margin-bottom:0;" data-i18n="thermoGrid.body2">BPA-frei, geruchsneutral.</p>
-    </div>
-    <div class="card" style="text-align:center;">
-      <div class="pill" style="margin-bottom:6px;" data-i18n="thermoGrid.pill3">Verschluss</div>
-      <h3 style="margin:0;font-size:24px;" data-i18n="thermoGrid.title3">Schnell</h3>
-      <p class="section-sub" style="margin-bottom:0;" data-i18n="thermoGrid.body3">Einhand-Klick, auslaufsicher.</p>
-    </div>
-    <div class="card" style="text-align:center;">
-      <div class="pill" style="margin-bottom:6px;" data-i18n="thermoGrid.pill4">Passform</div>
-      <h3 style="margin:0;font-size:24px;" data-i18n="thermoGrid.title4">Becherhalter</h3>
-      <p class="section-sub" style="margin-bottom:0;" data-i18n="thermoGrid.body4">Schlanker Fuß für Auto & Fahrrad.</p>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="posture-highlights">
-  <p class="pill" data-i18n="postureHighlights.pill">Posture Corrector Highlights</p>
-  <h2 class="section-title" data-i18n="postureHighlights.title">Leicht, atmungsaktiv und alltagstauglich.</h2>
-  <p class="section-sub" data-i18n="postureHighlights.sub">Bringt Schultern und Rücken in eine entspanntere Position – unauffällig unter Kleidung und anpassbar für Workouts oder lange Bürotage.</p>
-  <div class="grid-2">
-    <div class="card">
-      <h3 style="margin-top:0;" data-i18n="postureHighlights.card1Title">Stabile Rückenführung</h3>
-      <ul class="list">
-        <li><span class="list-dot"></span><span data-i18n="postureHighlights.card1List1">Verstärkte Rückenschlaufe für gleichmäßige Unterstützung entlang der Wirbelsäule.</span></li>
-        <li><span class="list-dot"></span><span data-i18n="postureHighlights.card1List2">Breiter Lendengurt stabilisiert den unteren Rücken.</span></li>
-        <li><span class="list-dot"></span><span data-i18n="postureHighlights.card1List3">Extra langer Gurt für mehr Einstellbereich.</span></li>
-      </ul>
-    </div>
-    <div class="card">
-      <h3 style="margin-top:0;" data-i18n="postureHighlights.card2Title">Atmungsaktiver Komfort</h3>
-      <ul class="list">
-        <li><span class="list-dot"></span><span data-i18n="postureHighlights.card2List1">Weiche, luftige Materialien mit glatten Kanten.</span></li>
-        <li><span class="list-dot"></span><span data-i18n="postureHighlights.card2List2">Dezent unter Kleidung für Büro und Reisen.</span></li>
-        <li><span class="list-dot"></span><span data-i18n="postureHighlights.card2List3">Unisex Fit, einstellbar für S–XL.</span></li>
-      </ul>
-    </div>
-  </div>
-
-  <div style="height:18px;"></div>
-
-  <div class="grid">
-    <div class="card">
-      <img src="posture-running.jpg" alt="Posture corrector beim Laufen" class="product-img" style="width:100%; border-radius:16px;" />
-      <p class="section-sub" style="margin-bottom:0;" data-i18n="postureHighlights.grid1">Running & Training: Offen bleiben in Brust und Schultern.</p>
-    </div>
-    <div class="card">
-      <img src="posture-fitness-home.jpg" alt="Posture corrector zuhause" class="product-img" style="width:100%; border-radius:16px;" />
-      <p class="section-sub" style="margin-bottom:0;" data-i18n="postureHighlights.grid2">Fitness & Zuhause: Unterstützt bei Heben, Kochen, Aufräumen.</p>
-    </div>
-    <div class="card">
-      <img src="posture-office-pain.jpg" alt="Posture corrector im Büro" class="product-img" style="width:100%; border-radius:16px;" />
-      <p class="section-sub" style="margin-bottom:0;" data-i18n="postureHighlights.grid3">Office Hours: Reduziert typischen Nacken- & Schulterstress.</p>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="cta-card secondary">
-    <div>
-      <p class="pill" style="color:rgba(255,255,255,0.8);" data-i18n="cta.pill">Bereit?</p>
-      <h3 style="margin:0 0 10px;font-size:24px; color:#fff;" data-i18n="cta.title">Wähle deinen Favoriten.</h3>
-      <p style="margin:0 0 16px; color: rgba(255,255,255,0.86);" data-i18n="cta.body">Thermobecher für den Weg oder Posture Corrector für Rücken & Haltung – beide sofort verfügbar.</p>
-      <div class="hero-cta-row">
-        <a class="btn-primary" href="https://amzn.eu/d/hH6QRSc" target="_blank" rel="noopener noreferrer" style="box-shadow:0 14px 32px rgba(0,0,0,0.25);" data-i18n="cta.thermo">Thermobecher kaufen</a>
-        <a class="btn-ghost" href="https://amzn.eu/d/cJO91wE" target="_blank" rel="noopener noreferrer" style="color:#fff; border-color:rgba(255,255,255,0.3);" data-i18n="cta.posture">Posture Corrector kaufen</a>
-      </div>
-    </div>
-    <div style="text-align:right;">
-      <div class="render" style="margin-bottom:14px;">
-        <div class="render-body"></div>
-        <div class="render-label" data-i18n="cta.renderLabel">Thermobecher · 350 ml</div>
-      </div>
-      <img src="posture-closeup.jpg" alt="Posture corrector Detail" class="product-img" style="max-width:240px; border-radius:14px; box-shadow:0 12px 22px rgba(0,0,0,0.18);" />
-    </div>
-  </div>
-</section>
-
-<footer data-i18n="footer">
-  © 2025 Gaia’s Footprint — Thermobecher 350 ml & Smart Posture Corrector
 </footer>
 
 <script>
   const translations = {
     de: {
-      'nav.products': 'Produkte',
       'nav.thermo': 'Thermobecher',
-      'nav.posture': 'Posture Corrector',
-      'nav.thermoDetails': 'Thermobecher-Details',
-      'nav.postureDetails': 'Posture-Details',
-      'nav.tagline': 'Zwei Essentials für deinen Alltag',
-      'hero.eyebrow': 'Neu im Sortiment',
-      'hero.title': 'Thermobecher 350 ml & Smart Posture Corrector.',
-      'hero.sub': 'Gaia’s Footprint vereint Komfort und Funktion: ein auslaufsicherer, vakuumisolierter Thermobecher und ein ergonomischer Haltungstrainer mit Lendenstütze. Für Wege, Workouts und lange Office-Tage.',
-      'hero.ctaThermo': 'Zum Thermobecher',
-      'hero.ctaPosture': 'Zum Posture Corrector',
-      'hero.renderLabel': 'Thermobecher · 350 ml',
-      'hero.renderSub': 'Auslaufsicher · Schnellverschluss · Edelstahl',
-      'overview.pill': 'Produktüberblick',
-      'overview.title': 'Zwei Produkte. Ein Ziel: Alltag leichter machen.',
-      'overview.sub': 'Wähle, was du brauchst: Wärme & Dichtheit für unterwegs oder eine sanfte Erinnerung an bessere Haltung.',
-      'thermo.cardPill': 'Neu · Thermobecher 350 ml',
-      'thermo.cardTitle': 'Auslaufsicher, vakuumisoliert, griffig.',
-      'thermo.cardBody': 'Edelstahl, BPA-frei, Einhand-Schnellverschluss. Passt in Becherhalter und bleibt außen trocken.',
-      'thermo.cardDetails': 'Details ansehen',
-      'thermo.cardAmazon': 'Jetzt auf Amazon kaufen',
-      'thermo.chip1': '350 ml',
-      'thermo.chip2': 'Auslaufsicher',
-      'thermo.chip3': 'Vakuumisoliert',
-      'thermo.renderLabel': 'Schwarz · Edelstahl',
-      'thermoMedia.pill1': 'Sommer & Winter',
-      'thermoMedia.title1': 'Hält kalt, hält warm.',
-      'thermoMedia.body1': 'Eisgekühlte Drinks oder dampfender Kaffee – der Becher hält beides.',
-      'thermoMedia.pill2': 'Weite Öffnung',
-      'thermoMedia.title2': '8,2 cm Randbreite.',
-      'thermoMedia.body2': 'Eiswürfel einfüllen, ausgießen und reinigen geht leichter.',
-      'posture.cardPill': 'Klassiker · Smart Posture Corrector',
-      'posture.cardTitle': 'Leichte Unterstützung für Rücken & Schultern.',
-      'posture.cardBody': 'Atmungsaktives, verstellbares Design mit Lendenstütze. Dezent unter Kleidung, geeignet für Arbeit, Sport und Zuhause.',
-      'posture.cardDetails': 'Details ansehen',
-      'posture.cardAmazon': 'Jetzt auf Amazon kaufen',
-      'posture.chip1': 'Atmungsaktiv',
-      'posture.chip2': 'Unisex Fit',
-      'posture.chip3': 'Lendenstütze',
-      'thermoHighlights.pill': 'Thermobecher Highlights',
-      'thermoHighlights.title': 'Wärme sichern, Tropfen verhindern, Alltag vereinfachen.',
-      'thermoHighlights.sub': 'Robuster Edelstahl, sicherer Schnellverschluss und schlanke Form für Becherhalter – gemacht für Pendeln, Büro und Trips.',
-      'thermoHighlights.card1Title': 'Vakuumisoliert',
-      'thermoHighlights.card1Body': 'Doppelwandig – hält Heißes heiß und Kaltes kalt, ohne Kondenswasser außen.',
-      'thermoHighlights.card2Title': 'Auslaufsicher',
-      'thermoHighlights.card2Body': 'Einhand-Schnappverschluss mit Dichtung. Öffnen, trinken, schließen in Sekunden.',
-      'thermoHighlights.card3Title': 'Pflegeleicht',
-      'thermoHighlights.card3Body': 'Zerlegbarer Deckel, BPA-frei. Innen & außen Edelstahl für neutralen Geschmack.',
-      'thermoGrid.pill1': 'Volumen',
-      'thermoGrid.title1': '350 ml',
-      'thermoGrid.body1': 'Coffee-Shop Größe für unterwegs.',
-      'thermoGrid.pill2': 'Material',
-      'thermoGrid.title2': 'Edelstahl',
-      'thermoGrid.body2': 'BPA-frei, geruchsneutral.',
-      'thermoGrid.pill3': 'Verschluss',
-      'thermoGrid.title3': 'Schnell',
-      'thermoGrid.body3': 'Einhand-Klick, auslaufsicher.',
-      'thermoGrid.pill4': 'Passform',
-      'thermoGrid.title4': 'Becherhalter',
-      'thermoGrid.body4': 'Schlanker Fuß für Auto & Fahrrad.',
-      'postureHighlights.pill': 'Posture Corrector Highlights',
-      'postureHighlights.title': 'Leicht, atmungsaktiv und alltagstauglich.',
-      'postureHighlights.sub': 'Bringt Schultern und Rücken in eine entspanntere Position – unauffällig unter Kleidung und anpassbar für Workouts oder lange Bürotage.',
-      'postureHighlights.card1Title': 'Stabile Rückenführung',
-      'postureHighlights.card1List1': 'Verstärkte Rückenschlaufe für gleichmäßige Unterstützung entlang der Wirbelsäule.',
-      'postureHighlights.card1List2': 'Breiter Lendengurt stabilisiert den unteren Rücken.',
-      'postureHighlights.card1List3': 'Extra langer Gurt für mehr Einstellbereich.',
-      'postureHighlights.card2Title': 'Atmungsaktiver Komfort',
-      'postureHighlights.card2List1': 'Weiche, luftige Materialien mit glatten Kanten.',
-      'postureHighlights.card2List2': 'Dezent unter Kleidung für Büro und Reisen.',
-      'postureHighlights.card2List3': 'Unisex Fit, einstellbar für S–XL.',
-      'postureHighlights.grid1': 'Running & Training: Offen bleiben in Brust und Schultern.',
-      'postureHighlights.grid2': 'Fitness & Zuhause: Unterstützt bei Heben, Kochen, Aufräumen.',
-      'postureHighlights.grid3': 'Office Hours: Reduziert typischen Nacken- & Schulterstress.',
-      'cta.pill': 'Bereit?',
-      'cta.title': 'Wähle deinen Favoriten.',
-      'cta.body': 'Thermobecher für den Weg oder Posture Corrector für Rücken & Haltung – beide sofort verfügbar.',
-      'cta.thermo': 'Thermobecher kaufen',
-      'cta.posture': 'Posture Corrector kaufen',
-      'cta.renderLabel': 'Thermobecher · 350 ml',
-      'footer': '© 2025 Gaia’s Footprint — Thermobecher 350 ml & Smart Posture Corrector'
+      'nav.posture': 'Haltungstrainer',
+      'hero.title': 'Weniger, aber besser.',
+      'hero.sub': 'Gaia’s Footprint macht genau zwei Dinge: einen Thermobecher aus Edelstahl und einen Haltungstrainer für lange Tage am Schreibtisch. Keine Kollektion, kein Katalog — zwei Gegenstände, die funktionieren.',
+      'toc.thermo': 'Thermobecher',
+      'toc.thermoDesc': 'Edelstahl · 350 ml',
+      'toc.posture': 'Haltungstrainer',
+      'toc.postureDesc': 'Atmungsaktiv · S–XL',
+      'thermo.title': 'Thermobecher',
+      'thermo.tag': 'Vakuumisoliert · Edelstahl · 350 ml',
+      'thermo.body': 'Doppelwandiger Edelstahl hält Kaffee sechs Stunden heiß und Kaltes zwölf Stunden kalt — ohne Kondenswasser außen. Der Deckel öffnet mit einer Hand, schließt mit einem Klick und bleibt dicht, auch kopfüber in der Tasche. Der schlanke Fuß passt in jeden Becherhalter.',
+      'thermo.fig1': 'Abb. 01 — Edelstahl, mattschwarz. 350 ml.',
+      'thermo.fig2': 'Abb. 02 — Passt in jeden Becherhalter.',
+      'thermo.fig3': 'Abb. 03 — Hält Wärme, wo es keine Steckdose gibt.',
+      'thermo.s1k': 'Volumen', 'thermo.s1v': '350 ml',
+      'thermo.s2k': 'Material', 'thermo.s2v': 'Edelstahl, BPA-frei',
+      'thermo.s3k': 'Isolierung', 'thermo.s3v': 'Doppelwandig, vakuumisoliert — heiß 6 h, kalt 12 h',
+      'thermo.s4k': 'Verschluss', 'thermo.s4v': 'Einhand-Klick, auslaufsicher',
+      'thermo.s5k': 'Öffnung', 'thermo.s5v': '8,2 cm — leicht zu befüllen und zu reinigen',
+      'thermo.s6k': 'Passform', 'thermo.s6v': 'Becherhalter in Auto und Fahrrad',
+      'thermo.buy': 'Bei Amazon kaufen ↗',
+      'thermo.buyNote': 'Versand und Kaufabwicklung über Amazon.de',
+      'posture.title': 'Haltungstrainer',
+      'posture.tag': 'Atmungsaktiv · Verstellbar · S–XL',
+      'posture.body': 'Ein leichter Gurt, der Schultern und Rücken sanft an eine aufrechte Haltung erinnert — statt sie zu erzwingen. Atmungsaktives Material, eine verstärkte Rückenführung und ein breiter Lendengurt, dezent genug für unter das Hemd. Für Bürotage, Training und alles dazwischen.',
+      'posture.fig1': 'Abb. 04 — Vorder- und Rückansicht.',
+      'posture.fig2': 'Abb. 05 — Ohne und mit. Der Unterschied in der ersten Minute.',
+      'posture.s1k': 'Größe', 'posture.s1v': 'Verstellbar S–XL, unisex',
+      'posture.s2k': 'Material', 'posture.s2v': 'Atmungsaktiv, weiche Kanten',
+      'posture.s3k': 'Stütze', 'posture.s3v': 'Verstärkte Rückenschlaufe, breiter Lendengurt',
+      'posture.s4k': 'Gurt', 'posture.s4v': 'Extra lang, großer Einstellbereich',
+      'posture.s5k': 'Tragen', 'posture.s5v': 'Unauffällig unter Kleidung, Büro und Sport',
+      'posture.buy': 'Bei Amazon kaufen ↗',
+      'posture.buyNote': 'Versand und Kaufabwicklung über Amazon.de',
+      'footer.copy': '© 2026 Gaia’s Footprint',
+      'footer.thermo': 'Thermobecher auf Amazon',
+      'footer.posture': 'Haltungstrainer auf Amazon'
     },
     en: {
-      'nav.products': 'Products',
-      'nav.thermo': 'Vacuum Mug',
-      'nav.posture': 'Posture Corrector',
-      'nav.thermoDetails': 'Vacuum Mug Details',
-      'nav.postureDetails': 'Posture Details',
-      'nav.tagline': 'Two essentials for your everyday',
-      'hero.eyebrow': 'New in store',
-      'hero.title': 'Vacuum Mug 350 ml & Smart Posture Corrector.',
-      'hero.sub': 'Gaia’s Footprint combines comfort and function: a leakproof, vacuum-insulated mug and an ergonomic posture trainer with lumbar support. Built for commutes, workouts, and long office days.',
-      'hero.ctaThermo': 'See the mug',
-      'hero.ctaPosture': 'See the posture corrector',
-      'hero.renderLabel': 'Vacuum Mug · 350 ml',
-      'hero.renderSub': 'Leakproof · Quick lid · Stainless steel',
-      'overview.pill': 'Product overview',
-      'overview.title': 'Two products. One goal: make every day easier.',
-      'overview.sub': 'Choose what you need: warmth and spill protection on the go, or a gentle reminder for better posture.',
-      'thermo.cardPill': 'New · Vacuum Mug 350 ml',
-      'thermo.cardTitle': 'Leakproof, vacuum insulated, grippy.',
-      'thermo.cardBody': 'Stainless steel, BPA-free, one-hand quick lid. Fits cupholders and stays dry outside.',
-      'thermo.cardDetails': 'View details',
-      'thermo.cardAmazon': 'Buy on Amazon',
-      'thermo.chip1': '350 ml',
-      'thermo.chip2': 'Leakproof',
-      'thermo.chip3': 'Vacuum insulated',
-      'thermo.renderLabel': 'Black · Stainless steel',
-      'thermoMedia.pill1': 'Summer & winter',
-      'thermoMedia.title1': 'Keeps cold, keeps hot.',
-      'thermoMedia.body1': 'Iced drinks or steaming coffee—the mug handles both.',
-      'thermoMedia.pill2': 'Wide opening',
-      'thermoMedia.title2': '8.2 cm mouth.',
-      'thermoMedia.body2': 'Easier to add ice cubes, pour out, and clean.',
-      'posture.cardPill': 'Classic · Smart Posture Corrector',
-      'posture.cardTitle': 'Light support for back and shoulders.',
-      'posture.cardBody': 'Breathable, adjustable design with lumbar belt. Discreet under clothing, great for work, sport, and home.',
-      'posture.cardDetails': 'View details',
-      'posture.cardAmazon': 'Buy on Amazon',
-      'posture.chip1': 'Breathable',
-      'posture.chip2': 'Unisex fit',
-      'posture.chip3': 'Lumbar support',
-      'thermoHighlights.pill': 'Vacuum Mug Highlights',
-      'thermoHighlights.title': 'Keep heat, stop drips, simplify the everyday.',
-      'thermoHighlights.sub': 'Durable stainless steel, a secure quick lid, and a slim base for cupholders—made for commutes, office, and trips.',
-      'thermoHighlights.card1Title': 'Vacuum insulated',
-      'thermoHighlights.card1Body': 'Double-wall—keeps hot drinks hot and cold drinks cold, without condensation outside.',
-      'thermoHighlights.card2Title': 'Leakproof',
-      'thermoHighlights.card2Body': 'One-hand snap lid with seal. Open, sip, close in seconds.',
-      'thermoHighlights.card3Title': 'Easy care',
-      'thermoHighlights.card3Body': 'Detachable lid, BPA-free. Stainless steel inside and out for neutral taste.',
-      'thermoGrid.pill1': 'Volume',
-      'thermoGrid.title1': '350 ml',
-      'thermoGrid.body1': 'Coffee shop size to go.',
-      'thermoGrid.pill2': 'Material',
-      'thermoGrid.title2': 'Stainless steel',
-      'thermoGrid.body2': 'BPA-free, neutral taste.',
-      'thermoGrid.pill3': 'Lid',
-      'thermoGrid.title3': 'Quick',
-      'thermoGrid.body3': 'One-hand click, leakproof.',
-      'thermoGrid.pill4': 'Fit',
-      'thermoGrid.title4': 'Cupholder',
-      'thermoGrid.body4': 'Slim base for car and bike.',
-      'postureHighlights.pill': 'Posture Corrector Highlights',
-      'postureHighlights.title': 'Lightweight, breathable, made for daily wear.',
-      'postureHighlights.sub': 'Helps shoulders and back into a relaxed position—discreet under clothes and adjustable for workouts or long office hours.',
-      'postureHighlights.card1Title': 'Stable back guidance',
-      'postureHighlights.card1List1': 'Reinforced back strap for even support along the spine.',
-      'postureHighlights.card1List2': 'Wide lumbar belt stabilises the lower back.',
-      'postureHighlights.card1List3': 'Extra-long strap for more adjustment range.',
-      'postureHighlights.card2Title': 'Breathable comfort',
-      'postureHighlights.card2List1': 'Soft, airy materials with smooth edges.',
-      'postureHighlights.card2List2': 'Low profile under clothing for office and travel.',
-      'postureHighlights.card2List3': 'Unisex fit, adjustable for sizes S–XL.',
-      'postureHighlights.grid1': 'Running & training: stay open in chest and shoulders.',
-      'postureHighlights.grid2': 'Fitness & home: support lifting, cooking, tidying.',
-      'postureHighlights.grid3': 'Office hours: ease typical neck and shoulder strain.',
-      'cta.pill': 'Ready?',
-      'cta.title': 'Pick your favourite.',
-      'cta.body': 'Vacuum mug for the road or posture corrector for back & posture—both available now.',
-      'cta.thermo': 'Buy the vacuum mug',
-      'cta.posture': 'Buy the posture corrector',
-      'cta.renderLabel': 'Vacuum Mug · 350 ml',
-      'footer': '© 2025 Gaia’s Footprint — Vacuum Mug 350 ml & Smart Posture Corrector'
+      'nav.thermo': 'Travel Mug',
+      'nav.posture': 'Posture Trainer',
+      'hero.title': 'Less, but better.',
+      'hero.sub': 'Gaia’s Footprint makes exactly two things: a stainless-steel travel mug and a posture trainer for long days at a desk. No collection, no catalogue — two objects that work.',
+      'toc.thermo': 'Travel Mug',
+      'toc.thermoDesc': 'Stainless steel · 350 ml',
+      'toc.posture': 'Posture Trainer',
+      'toc.postureDesc': 'Breathable · S–XL',
+      'thermo.title': 'Travel Mug',
+      'thermo.tag': 'Vacuum insulated · Stainless steel · 350 ml',
+      'thermo.body': 'Double-walled stainless steel keeps coffee hot for six hours and cold drinks cold for twelve — with no condensation outside. The lid opens with one hand, closes with a click, and stays sealed even upside down in a bag. The slim base fits any cup holder.',
+      'thermo.fig1': 'Fig. 01 — Stainless steel, matte black. 350 ml.',
+      'thermo.fig2': 'Fig. 02 — Fits any cup holder.',
+      'thermo.fig3': 'Fig. 03 — Keeps heat where there are no outlets.',
+      'thermo.s1k': 'Volume', 'thermo.s1v': '350 ml',
+      'thermo.s2k': 'Material', 'thermo.s2v': 'Stainless steel, BPA-free',
+      'thermo.s3k': 'Insulation', 'thermo.s3v': 'Double-walled, vacuum insulated — hot 6 h, cold 12 h',
+      'thermo.s4k': 'Lid', 'thermo.s4v': 'One-hand click, leakproof',
+      'thermo.s5k': 'Opening', 'thermo.s5v': '8.2 cm — easy to fill and clean',
+      'thermo.s6k': 'Fit', 'thermo.s6v': 'Cup holders in cars and on bikes',
+      'thermo.buy': 'Buy on Amazon ↗',
+      'thermo.buyNote': 'Shipping and checkout handled by Amazon.de',
+      'posture.title': 'Posture Trainer',
+      'posture.tag': 'Breathable · Adjustable · S–XL',
+      'posture.body': 'A lightweight harness that gently reminds shoulders and back to stay upright — rather than forcing them. Breathable fabric, a reinforced back strap, and a wide lumbar belt, discreet enough to wear under a shirt. For office days, training, and everything in between.',
+      'posture.fig1': 'Fig. 04 — Front and back view.',
+      'posture.fig2': 'Fig. 05 — Without and with. The difference in the first minute.',
+      'posture.s1k': 'Size', 'posture.s1v': 'Adjustable S–XL, unisex',
+      'posture.s2k': 'Material', 'posture.s2v': 'Breathable, soft edges',
+      'posture.s3k': 'Support', 'posture.s3v': 'Reinforced back strap, wide lumbar belt',
+      'posture.s4k': 'Strap', 'posture.s4v': 'Extra long, wide adjustment range',
+      'posture.s5k': 'Wearing', 'posture.s5v': 'Low profile under clothing, office and sport',
+      'posture.buy': 'Buy on Amazon ↗',
+      'posture.buyNote': 'Shipping and checkout handled by Amazon.de',
+      'footer.copy': '© 2026 Gaia’s Footprint',
+      'footer.thermo': 'Travel mug on Amazon',
+      'footer.posture': 'Posture trainer on Amazon'
     }
   };
 
