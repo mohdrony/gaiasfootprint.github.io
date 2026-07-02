@@ -242,6 +242,16 @@
       background: #edeae2;
     }
 
+    .plate img {
+      aspect-ratio: 4 / 3;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      padding: 4%;
+      background: #fff;
+      border: 1px solid var(--line);
+    }
+
     .crop { overflow: hidden; }
     .crop img { height: 100%; object-fit: cover; }
 
@@ -413,7 +423,7 @@
 
       <div class="product-body">
         <div class="figs">
-          <figure>
+          <figure class="plate">
             <img src="assets/images/vacuum-mug/mug-product.jpg" alt="Thermobecher aus mattschwarzem Edelstahl, 350 ml" width="264" height="468" loading="lazy" />
             <figcaption data-i18n="thermo.fig1">Abb. 01 — Edelstahl, mattschwarz. 350 ml.</figcaption>
           </figure>
