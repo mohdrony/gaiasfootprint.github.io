@@ -45,7 +45,9 @@
         "@id": "https://gaiasfootprint.com/#organization",
         "name": "Gaia’s Footprint",
         "url": "https://gaiasfootprint.com/",
-        "logo": "https://gaiasfootprint.com/gaias-logo.png"
+        "logo": "https://gaiasfootprint.com/gaias-logo.png",
+        "email": "rony.cml99@gmail.com",
+        "contactPoint": { "@type": "ContactPoint", "email": "rony.cml99@gmail.com", "contactType": "business enquiries" }
       },
       {
         "@type": "WebSite",
@@ -324,6 +326,18 @@
       color: var(--muted);
     }
 
+    /* ---------- business and contact ---------- */
+    .business { border-top: 1px solid var(--line); padding-block: 64px; scroll-margin-top: 24px; }
+    .business-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 48px; }
+    .business h2 { font-size: clamp(32px, 4vw, 48px); line-height: 1.15; margin: 12px 0 24px; }
+    .business h3 { font-size: 18px; margin-bottom: 16px; }
+    .business p { margin-bottom: 18px; max-width: 62ch; }
+    .business address { font-style: normal; border: 1px solid var(--line); padding: 28px; align-self: start; }
+    .business address strong { display: block; font-size: 20px; margin: 8px 0 16px; }
+    .business a { text-decoration: underline; text-underline-offset: 4px; overflow-wrap: anywhere; }
+    .business .contact-label { display: block; color: var(--muted); font-size: 12px; margin-top: 18px; }
+    @media (max-width: 700px) { .business-grid { grid-template-columns: 1fr; gap: 24px; } }
+
     /* ---------- footer ---------- */
 
     footer { border-top: 1px solid var(--ink); }
@@ -339,7 +353,7 @@
       color: var(--muted);
     }
 
-    .footer-links { display: flex; gap: 24px; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 16px 24px; }
     .footer-links a { color: var(--muted); text-decoration: underline; text-underline-offset: 3px; }
     .footer-links a:hover { color: var(--accent); }
 
@@ -375,6 +389,7 @@
     <nav class="header-nav">
       <a href="#thermobecher" data-i18n="nav.thermo">Thermobecher</a>
       <a href="#haltungstrainer" data-i18n="nav.posture">Haltungstrainer</a>
+      <a href="#business-contact" data-i18n="nav.contact">Über uns &amp; Kontakt</a>
       <div class="lang" aria-label="Sprache / Language">
         <button class="lang-btn active" data-lang="de">DE</button>
         <span>/</span>
@@ -509,12 +524,36 @@
     </div>
   </section>
 
+  <section class="business" id="business-contact" aria-labelledby="business-heading">
+    <div class="wrap business-grid">
+      <div>
+        <span class="label" data-i18n="business.label">Gaia’s Footprint · Inhaber &amp; Geschäftstätigkeit</span>
+        <h2 class="serif" id="business-heading" data-i18n="business.title">Über uns &amp; Kontakt</h2>
+        <p data-i18n="business.owner">Gaia’s Footprint wird von Mohd Robiul Alam betrieben. Diese Website stellt die Produkte der Marke vor und verweist auf die jeweiligen Angebote auf Amazon.de.</p>
+        <h3 data-i18n="business.goodsTitle">Unsere Produkte und der Kaufablauf</h3>
+        <p data-i18n="business.goods">Das Sortiment auf dieser Website umfasst einen vakuumisolierten Edelstahl-Thermobecher mit 350 ml Fassungsvermögen und einen verstellbaren Haltungstrainer in den Größen S–XL. Auf den Produktseiten finden Sie Bilder, Materialien, Größen und Angaben zur Verwendung.</p>
+        <p data-i18n="business.checkout">Über die Schaltflächen „Bei Amazon kaufen“ gelangen Sie zum jeweiligen Produktangebot auf Amazon.de. Der Kauf findet dort statt; diese Website nimmt keine Bestellungen oder Zahlungen entgegen. Maßgeblich sind die Preis-, Verkäufer-, Liefer- und Rückgabeinformationen des jeweiligen Amazon-Angebots.</p>
+      </div>
+      <address>
+        <span class="label" data-i18n="business.operatorLabel">Website-Betreiber &amp; Ansprechpartner</span>
+        <strong>Mohd Robiul Alam</strong>
+        <p>Gaia’s Footprint</p>
+        <p data-i18n="business.contactNote">Für Fragen zu dieser Website, den vorgestellten Produkten oder geschäftliche Anfragen kontaktieren Sie mich per E-Mail.</p>
+        <span class="contact-label" data-i18n="business.emailLabel">Kontakt-E-Mail</span>
+        <a href="mailto:rony.cml99@gmail.com">rony.cml99@gmail.com</a>
+        <span class="contact-label" data-i18n="business.websiteLabel">Website</span>
+        <a href="https://gaiasfootprint.com/">gaiasfootprint.com</a>
+      </address>
+    </div>
+  </section>
+
 </main>
 
 <footer>
   <div class="wrap footer-inner">
     <span data-i18n="footer.copy">© 2026 Gaia’s Footprint</span>
     <div class="footer-links">
+      <a href="#business-contact" data-i18n="nav.contact">Über uns &amp; Kontakt</a>
       <a href="https://amzn.eu/d/hH6QRSc" target="_blank" rel="noopener noreferrer" data-i18n="footer.thermo">Thermobecher auf Amazon</a>
       <a href="https://amzn.eu/d/cJO91wE" target="_blank" rel="noopener noreferrer" data-i18n="footer.posture">Haltungstrainer auf Amazon</a>
     </div>
@@ -524,6 +563,17 @@
 <script>
   const translations = {
     de: {
+      "nav.contact": "Über uns & Kontakt",
+      "business.label": "Gaia’s Footprint · Inhaber & Geschäftstätigkeit",
+      "business.title": "Über uns & Kontakt",
+      "business.owner": "Gaia’s Footprint wird von Mohd Robiul Alam betrieben. Diese Website stellt die Produkte der Marke vor und verweist auf die jeweiligen Angebote auf Amazon.de.",
+      "business.goodsTitle": "Unsere Produkte und der Kaufablauf",
+      "business.goods": "Das Sortiment auf dieser Website umfasst einen vakuumisolierten Edelstahl-Thermobecher mit 350 ml Fassungsvermögen und einen verstellbaren Haltungstrainer in den Größen S–XL. Auf den Produktseiten finden Sie Bilder, Materialien, Größen und Angaben zur Verwendung.",
+      "business.checkout": "Über die Schaltflächen „Bei Amazon kaufen“ gelangen Sie zum jeweiligen Produktangebot auf Amazon.de. Der Kauf findet dort statt; diese Website nimmt keine Bestellungen oder Zahlungen entgegen. Maßgeblich sind die Preis-, Verkäufer-, Liefer- und Rückgabeinformationen des jeweiligen Amazon-Angebots.",
+      "business.operatorLabel": "Website-Betreiber & Ansprechpartner",
+      "business.contactNote": "Für Fragen zu dieser Website, den vorgestellten Produkten oder geschäftliche Anfragen kontaktieren Sie mich per E-Mail.",
+      "business.emailLabel": "Kontakt-E-Mail",
+      "business.websiteLabel": "Website",
       'nav.thermo': 'Thermobecher',
       'nav.posture': 'Haltungstrainer',
       'hero.title': 'Weniger, aber besser.',
@@ -563,6 +613,17 @@
       'footer.posture': 'Haltungstrainer auf Amazon'
     },
     en: {
+      "nav.contact": "About & Contact",
+      "business.label": "Gaia’s Footprint · Owner & business activity",
+      "business.title": "About & Contact",
+      "business.owner": "Gaia’s Footprint is operated by Mohd Robiul Alam. This website presents the brand’s products and links to their respective listings on Amazon.de.",
+      "business.goodsTitle": "Our products and how to buy",
+      "business.goods": "The range presented on this website consists of a 350 ml vacuum-insulated stainless-steel travel mug and an adjustable posture trainer in sizes S–XL. The product sections show images, materials, sizes and intended uses.",
+      "business.checkout": "The “Buy on Amazon” buttons take you to the corresponding product listings on Amazon.de. Purchases take place there; this website does not accept orders or collect payments. Refer to each Amazon listing for current pricing, seller details, delivery and return information.",
+      "business.operatorLabel": "Website operator & contact person",
+      "business.contactNote": "For questions about this website, the products presented here or business enquiries, please contact me by email.",
+      "business.emailLabel": "Contact email",
+      "business.websiteLabel": "Website",
       'nav.thermo': 'Travel Mug',
       'nav.posture': 'Posture Trainer',
       'hero.title': 'Less, but better.',
